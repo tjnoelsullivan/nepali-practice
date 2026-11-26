@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { db } from '../db'
+import { db, recordingBlob } from '../db'
 import { gradeEnglish, gradeNepali } from '../core/grade'
 import { recordAttempt } from '../core/record'
 import { formatDuration } from '../core/activity'
@@ -230,8 +230,8 @@ function DrillCard({
   useEffect(() => {
     if (hasAudio) {
       void db.recordings.get(sentence.audioId!).then((r) => {
-        recording.current = r?.blob ?? null
-        if (r && !enToNp && voice.autoplay) playRecording(r.blob).catch(() => {})
+        recording.current = r ? recordingBlob(r) : null
+        if (r && !enToNp && voice.autoplay) playRecording(recordingBlob(r)).catch(() => {})
       })
     } else if (!enToNp && voice.autoplay && dev) speak(dev).catch((e) => setVoiceError(explainError(e)))
     else prefetch(dev)

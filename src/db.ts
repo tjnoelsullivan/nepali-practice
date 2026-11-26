@@ -15,7 +15,11 @@ export type Meta = { key: string; value: unknown }
 export type Recording = {
   id: string
   sentenceId: string
-  blob: Blob
+  /**
+   * The audio bytes. Stored as an ArrayBuffer because iOS Safari often refuses to store Blobs
+   * in IndexedDB ("Error preparing Blob/File data to be stored in object store").
+   */
+  data: ArrayBuffer
   mime: string
   durationMs: number
   createdAt: Date
@@ -124,4 +128,17 @@ export async function addToDay(
 
 export async function addLesson(d: SaathiDB, lesson: Lesson) {
   await d.lessons.put(lesson)
+}
+
+const recordingBlobs = new Map<string, Blob>()
+/** The recording as a Blob for playback; the same Blob each time, so its object URL is reused. */
+export function recordingBlob(r: Recording): Blob {
+  let b = recordingBlobs.get(r.id)
+  if (!b) {
+    // Recordings saved before the ArrayBuffer change (where Safari allowed it) kept a Blob.
+    const legacy = (r as Recording & { blob?: Blob }).blob
+    b = legacy ?? new Blob([r.data], { type: r.mime })
+    recordingBlobs.set(r.id, b)
+  }
+  return b
 }

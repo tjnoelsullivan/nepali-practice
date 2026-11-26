@@ -25,6 +25,7 @@ export async function saveRecording(
     }),
   })
   const res = (await r.json()) as ChunkResult
+  const data = await rec.blob.arrayBuffer()
   const id = 'wife:' + Date.now()
   const newItems = newWordItems(res.newItems ?? [], items, 'wife')
   const known = (x: string) => items.has(x) || newItems.some((i) => i.id === x)
@@ -32,7 +33,14 @@ export async function saveRecording(
   const s = toSentence({ ...res, fromSlides: !!en.trim() }, id, 'wife', known)
   if (!s) throw new Error('Could not prepare this sentence. Check the spelling and try again.')
   const tags = s.tags.includes('wife') ? s.tags : ['wife', ...s.tags]
-  const recording: Recording = { id: 'rec:' + Date.now(), sentenceId: id, createdAt: new Date(), ...rec }
+  const recording: Recording = {
+    id: 'rec:' + Date.now(),
+    sentenceId: id,
+    createdAt: new Date(),
+    data,
+    mime: rec.mime,
+    durationMs: rec.durationMs,
+  }
   const sentence: Sentence = { ...s, tags, audioId: recording.id }
   const used = new Set(sentence.chunks.flatMap((c) => c.items))
   await db.recordings.put(recording)

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { db, type Recording } from '../db'
+import { db, recordingBlob, type Recording } from '../db'
 import type { Deck } from '../hooks/useDeck'
 import { sentenceNepali } from '../core/types'
 import { api, explainError } from '../voice/api'
@@ -278,7 +278,7 @@ export function Recordings({ deck }: { deck: Deck }) {
             const s = byId.get(r.sentenceId)
             return (
               <div key={r.id} className="row">
-                <button className="listen icon" aria-label="Play" onClick={() => playRecording(r.blob).catch(() => {})}>
+                <button className="listen icon" aria-label="Play" onClick={() => playRecording(recordingBlob(r)).catch(() => {})}>
                   ▶
                 </button>
                 <div className="grow">
