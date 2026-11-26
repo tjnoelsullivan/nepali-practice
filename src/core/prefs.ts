@@ -4,8 +4,10 @@ export type Prefs = {
   goalMinutes: number
   /** Weekdays with a tutor lesson, 0 = Sunday. */
   lessonDays: number[]
+  /** Little sounds on right/wrong answers and celebrations. */
+  sounds: boolean
 }
-const DEFAULTS: Prefs = { goalMinutes: 15, lessonDays: [2, 5] }
+const DEFAULTS: Prefs = { goalMinutes: 15, lessonDays: [2, 5], sounds: true }
 export const GOAL_CHOICES = [5, 10, 15, 20, 30, 45, 60]
 
 const KEY = 'saathi.prefs'

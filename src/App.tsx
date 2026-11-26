@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { TabBar, type Tab } from './components/TabBar'
 import { PrayerFlags } from './components/PrayerFlags'
 import { Home } from './screens/Home'
 import { Practice } from './screens/Practice'
 import { Progress } from './screens/Progress'
-import { Library } from './screens/Library'
 import { useDeck } from './hooks/useDeck'
+
+// The Library (lesson import, recordings, backup) is only needed when opened, so it loads separately.
+const Library = lazy(() => import('./screens/Library').then((m) => ({ default: m.Library })))
 
 const TAB_KEY = 'saathi.tab'
 
@@ -53,7 +55,11 @@ export default function App() {
         {tab === 'home' && <Home deck={deck} onStart={() => setTab('practice')} />}
         {tab === 'practice' && <Practice deck={deck} />}
         {tab === 'progress' && <Progress deck={deck} />}
-        {tab === 'library' && <Library deck={deck} />}
+        {tab === 'library' && (
+          <Suspense fallback={<p className="muted center">Loading…</p>}>
+            <Library deck={deck} />
+          </Suspense>
+        )}
       </main>
       <TabBar tab={tab} onChange={setTab} />
     </div>
