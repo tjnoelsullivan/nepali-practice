@@ -19,6 +19,9 @@
     },
     "api/speech-token.ts": {
       "maxDuration": 10
+    },
+    "api/ingest.ts": {
+      "maxDuration": 300
     }
   }
 }
