@@ -1016,3 +1016,95 @@ button {
 .questions li {
   margin-bottom: 6px;
 }
+
+/* Stage 5: Chunu's recordings */
+.recordings {
+  border-top: 3px solid var(--flag-green);
+}
+.btn-row.left {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.rec-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--flag-red);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+.rec-dot.small {
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  animation: none;
+}
+.rec-live {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.rec-live .ghost {
+  margin-top: 0;
+}
+.rec-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+.rec-form .listen {
+  align-self: flex-start;
+}
+.rec-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.rec-form input {
+  font: inherit;
+  font-size: 17px;
+  color: var(--text);
+  background: rgba(255, 247, 234, 0.08);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  outline: none;
+}
+.rec-form input:focus {
+  border-color: var(--sun);
+}
+.recordings .row .grow {
+  flex: 1;
+  min-width: 0;
+}
+.ghost.tiny {
+  margin-top: 0;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+.ideas {
+  margin-top: 14px;
+}
+.row.idea {
+  gap: 8px;
+}
+.idea-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+  background: none;
+  border: 0;
+  color: var(--text);
+  padding: 4px 0;
+  font: inherit;
+}
+.idea-en {
+  font-weight: 600;
+}

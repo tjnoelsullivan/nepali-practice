@@ -32,6 +32,8 @@ export type Sentence = {
   tags: string[]
   source: Source
   verified: boolean
+  /** A human recording (e.g. Chunu's voice) to play instead of the synthetic voice. */
+  audioId?: string
 }
 
 export type Source = 'seed' | 'tutor' | 'lesson' | 'wife' | 'user'
