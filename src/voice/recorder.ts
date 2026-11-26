@@ -1,4 +1,5 @@
 // Records audio with the phone's microphone (MediaRecorder). iPhone Safari records audio/mp4.
+import { micStream, touchMic } from './mic'
 
 export type ActiveRecording = { stop: () => Promise<{ blob: Blob; mime: string; durationMs: number }>; cancel: () => void }
 
@@ -9,16 +10,17 @@ function pickMime(): string {
 }
 
 export async function startRecording(): Promise<ActiveRecording> {
-  const stream = await navigator.mediaDevices.getUserMedia({
-    audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
-  })
+  const stream = await micStream()
   const mime = pickMime()
   const rec = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined)
   const parts: Blob[] = []
   rec.ondataavailable = (e) => e.data.size && parts.push(e.data)
   const started = Date.now()
   rec.start()
-  const release = () => stream.getTracks().forEach((t) => t.stop())
+  const release = () => {
+    stream.getTracks().forEach((t) => t.stop())
+    touchMic()
+  }
   return {
     stop: () =>
       new Promise((resolve) => {

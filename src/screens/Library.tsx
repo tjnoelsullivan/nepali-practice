@@ -78,7 +78,7 @@ export function Library({ deck }: { deck: Deck }) {
 
       <VoiceSettings />
 
-      <p className="muted small center">Version 1.0 · Tap a sentence to hear it</p>
+      <p className="muted small center">Version 1.0.1 · Tap a sentence to hear it</p>
     </>
   )
 }
