@@ -15,6 +15,8 @@ export type Item = {
 export type Chunk = {
   np: string
   en: string
+  /** Devanagari for the voice and speech matching only; never displayed. */
+  dev?: string
   items: string[]
 }
 
@@ -63,4 +65,13 @@ export function sentenceNepali(s: Sentence): string {
     .map((c) => c.np)
     .join(' ')
     .replace(/\s+([?.!,])/g, '$1')
+}
+
+/** Devanagari for the whole sentence (for Azure TTS), or '' if any chunk lacks it. */
+export function sentenceDevanagari(s: Sentence): string {
+  if (s.chunks.some((c) => c.dev === undefined || (c.en && !c.dev))) return ''
+  return s.chunks
+    .map((c) => c.dev)
+    .join(' ')
+    .replace(/\s+([?।!,])/g, '$1')
 }

@@ -1153,6 +1153,14 @@
    "verified": true
   },
   {
+   "id": "w:bhanja",
+   "kind": "word",
+   "np": "bhanja",
+   "en": "nephew (sister's son)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
    "id": "g:greeting",
    "kind": "grammar",
    "np": "namaste",
@@ -1521,6 +1529,7 @@
     {
      "np": "Namaste",
      "en": "hello",
+     "dev": "नमस्ते",
      "items": [
       "w:namaste",
       "g:greeting"
@@ -1529,6 +1538,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -1545,6 +1555,7 @@
     {
      "np": "Tapaaiko",
      "en": "your (respectful)",
+     "dev": "तपाईंको",
      "items": [
       "w:tapaai"
      ]
@@ -1552,6 +1563,7 @@
     {
      "np": "naam",
      "en": "name",
+     "dev": "नाम",
      "items": [
       "w:naam"
      ]
@@ -1559,6 +1571,7 @@
     {
      "np": "ke",
      "en": "what",
+     "dev": "के",
      "items": [
       "w:ke"
      ]
@@ -1566,6 +1579,7 @@
     {
      "np": "ho",
      "en": "is (identity)",
+     "dev": "हो",
      "items": [
       "w:ho",
       "g:ho"
@@ -1574,6 +1588,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -1590,6 +1605,7 @@
     {
      "np": "Mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -1597,6 +1613,7 @@
     {
      "np": "naam",
      "en": "name",
+     "dev": "नाम",
      "items": [
       "w:naam"
      ]
@@ -1604,11 +1621,13 @@
     {
      "np": "TJ",
      "en": "TJ",
+     "dev": "टीजे",
      "items": []
     },
     {
      "np": "ho",
      "en": "is (identity)",
+     "dev": "हो",
      "items": [
       "w:ho",
       "g:ho"
@@ -1617,6 +1636,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -1637,6 +1657,7 @@
     {
      "np": "Tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -1644,6 +1665,7 @@
     {
      "np": "sanchai",
      "en": "well, fine",
+     "dev": "सन्चै",
      "items": [
       "w:sanchai"
      ]
@@ -1651,6 +1673,7 @@
     {
      "np": "hunuhunchha",
      "en": "are (respectful)",
+     "dev": "हुनुहुन्छ",
      "items": [
       "w:hunu",
       "g:honorific-present"
@@ -1659,6 +1682,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -1680,6 +1704,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -1687,6 +1712,7 @@
     {
      "np": "sanchai",
      "en": "well, fine",
+     "dev": "सन्चै",
      "items": [
       "w:sanchai"
      ]
@@ -1694,6 +1720,7 @@
     {
      "np": "chhu",
      "en": "am",
+     "dev": "छु",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -1702,6 +1729,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -1722,6 +1750,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -1729,6 +1758,7 @@
     {
      "np": "pani",
      "en": "too, also",
+     "dev": "पनि",
      "items": [
       "w:pani"
      ]
@@ -1736,6 +1766,7 @@
     {
      "np": "sanchai",
      "en": "well, fine",
+     "dev": "सन्चै",
      "items": [
       "w:sanchai"
      ]
@@ -1743,6 +1774,7 @@
     {
      "np": "chhu",
      "en": "am",
+     "dev": "छु",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -1751,6 +1783,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -1767,6 +1800,7 @@
     {
      "np": "Ani",
      "en": "and (then)",
+     "dev": "अनि",
      "items": [
       "w:ani"
      ]
@@ -1774,6 +1808,7 @@
     {
      "np": "tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -1781,6 +1816,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -1802,6 +1838,7 @@
     {
      "np": "Tapaaile",
      "en": "you (respectful, + le)",
+     "dev": "तपाईंले",
      "items": [
       "w:tapaai"
      ]
@@ -1809,6 +1846,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -1816,6 +1854,7 @@
     {
      "np": "khaanu bhayo",
      "en": "ate (respectful)",
+     "dev": "खानु भयो",
      "items": [
       "w:khaanu",
       "g:honorific-past",
@@ -1825,6 +1864,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -1846,6 +1886,7 @@
     {
      "np": "Maile",
      "en": "I (+ le)",
+     "dev": "मैले",
      "items": [
       "w:ma"
      ]
@@ -1853,6 +1894,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -1860,6 +1902,7 @@
     {
      "np": "khaaeko chhaina",
      "en": "haven't eaten",
+     "dev": "खाएको छैन",
      "items": [
       "w:khaanu",
       "g:perfect",
@@ -1869,6 +1912,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -1889,6 +1933,7 @@
     {
      "np": "Maile",
      "en": "I (+ le)",
+     "dev": "मैले",
      "items": [
       "w:ma"
      ]
@@ -1896,6 +1941,7 @@
     {
      "np": "bharkhar",
      "en": "just (now)",
+     "dev": "भर्खर",
      "items": [
       "w:bharkhar"
      ]
@@ -1903,6 +1949,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -1910,6 +1957,7 @@
     {
      "np": "khaae",
      "en": "ate (I)",
+     "dev": "खाएँ",
      "items": [
       "w:khaanu",
       "g:past",
@@ -1919,6 +1967,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -1939,6 +1988,7 @@
     {
      "np": "Tapaailaai",
      "en": "you / to you (respectful, + laai)",
+     "dev": "तपाईंलाई",
      "items": [
       "w:tapaai"
      ]
@@ -1946,6 +1996,7 @@
     {
      "np": "bhetera",
      "en": "meeting, having met",
+     "dev": "भेटेर",
      "items": [
       "w:bhetnu"
      ]
@@ -1953,6 +2004,7 @@
     {
      "np": "khusi",
      "en": "happy",
+     "dev": "खुसी",
      "items": [
       "w:khushi"
      ]
@@ -1960,6 +2012,7 @@
     {
      "np": "laagyo",
      "en": "felt",
+     "dev": "लाग्यो",
      "items": [
       "w:laagnu",
       "g:feeling"
@@ -1968,6 +2021,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -1985,6 +2039,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -1992,6 +2047,7 @@
     {
      "np": "pani",
      "en": "too, also",
+     "dev": "पनि",
      "items": [
       "w:pani",
       "g:feeling"
@@ -2000,6 +2056,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2016,6 +2073,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -2023,6 +2081,7 @@
     {
      "np": "saag",
      "en": "spinach",
+     "dev": "साग",
      "items": [
       "w:saag"
      ]
@@ -2030,6 +2089,7 @@
     {
      "np": "manparchha",
      "en": "like(s)",
+     "dev": "मनपर्छ",
      "items": [
       "w:manparnu",
       "g:like"
@@ -2038,6 +2098,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2057,6 +2118,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -2064,6 +2126,7 @@
     {
      "np": "falful",
      "en": "fruit",
+     "dev": "फलफूल",
      "items": [
       "w:falful"
      ]
@@ -2071,6 +2134,7 @@
     {
      "np": "manparchha",
      "en": "like(s)",
+     "dev": "मनपर्छ",
      "items": [
       "w:manparnu",
       "g:like"
@@ -2079,6 +2143,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2095,6 +2160,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -2102,6 +2168,7 @@
     {
      "np": "chiyaa",
      "en": "tea",
+     "dev": "चिया",
      "items": [
       "w:chiyaa"
      ]
@@ -2109,6 +2176,7 @@
     {
      "np": "manparchha",
      "en": "like(s)",
+     "dev": "मनपर्छ",
      "items": [
       "w:manparnu",
       "g:like"
@@ -2117,6 +2185,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2133,6 +2202,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -2140,6 +2210,7 @@
     {
      "np": "roti",
      "en": "bread",
+     "dev": "रोटी",
      "items": [
       "w:roti"
      ]
@@ -2147,6 +2218,7 @@
     {
      "np": "manparchha",
      "en": "like(s)",
+     "dev": "मनपर्छ",
      "items": [
       "w:manparnu",
       "g:like"
@@ -2155,6 +2227,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2175,6 +2248,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -2182,6 +2256,7 @@
     {
      "np": "khursaani",
      "en": "chillies",
+     "dev": "खुर्सानी",
      "items": [
       "w:khursaani"
      ]
@@ -2189,6 +2264,7 @@
     {
      "np": "manpardaina",
      "en": "don't like",
+     "dev": "मनपर्दैन",
      "items": [
       "w:manparnu",
       "g:like-not"
@@ -2197,6 +2273,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2216,6 +2293,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -2223,6 +2301,7 @@
     {
      "np": "chauchau",
      "en": "noodles",
+     "dev": "चाउचाउ",
      "items": [
       "w:chauchau"
      ]
@@ -2230,6 +2309,7 @@
     {
      "np": "manpardaina",
      "en": "don't like",
+     "dev": "मनपर्दैन",
      "items": [
       "w:manparnu",
       "g:like-not"
@@ -2238,6 +2318,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2257,6 +2338,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -2264,6 +2346,7 @@
     {
      "np": "piro",
      "en": "spicy",
+     "dev": "पिरो",
      "items": [
       "w:piro"
      ]
@@ -2271,6 +2354,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -2278,6 +2362,7 @@
     {
      "np": "manpardaina",
      "en": "don't like",
+     "dev": "मनपर्दैन",
      "items": [
       "w:manparnu",
       "g:like-not"
@@ -2286,6 +2371,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2305,6 +2391,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -2312,6 +2399,7 @@
     {
      "np": "kaalo",
      "en": "black",
+     "dev": "कालो",
      "items": [
       "w:kaalo"
      ]
@@ -2319,6 +2407,7 @@
     {
      "np": "coffee",
      "en": "coffee",
+     "dev": "कफी",
      "items": [
       "w:coffee"
      ]
@@ -2326,6 +2415,7 @@
     {
      "np": "manpardaina",
      "en": "don't like",
+     "dev": "मनपर्दैन",
      "items": [
       "w:manparnu",
       "g:like-not"
@@ -2334,6 +2424,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2350,6 +2441,7 @@
     {
      "np": "Tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -2357,6 +2449,7 @@
     {
      "np": "kati",
      "en": "how much / how many",
+     "dev": "कति",
      "items": [
       "w:kati"
      ]
@@ -2364,6 +2457,7 @@
     {
      "np": "barsa",
      "en": "year(s)",
+     "dev": "वर्ष",
      "items": [
       "w:barsa"
      ]
@@ -2371,6 +2465,7 @@
     {
      "np": "hunu bhayo",
      "en": "became, are (respectful)",
+     "dev": "हुनु भयो",
      "items": [
       "w:hunu",
       "g:honorific-past"
@@ -2379,6 +2474,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -2396,6 +2492,7 @@
     {
      "np": "Tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -2403,6 +2500,7 @@
     {
      "np": "kahaa",
      "en": "where",
+     "dev": "कहाँ",
      "items": [
       "w:kahaa"
      ]
@@ -2410,6 +2508,7 @@
     {
      "np": "basnu hunchha",
      "en": "live (respectful)",
+     "dev": "बस्नु हुन्छ",
      "items": [
       "w:basnu",
       "g:honorific-present"
@@ -2418,6 +2517,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -2435,6 +2535,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -2442,6 +2543,7 @@
     {
      "np": "Kathmandumaa",
      "en": "in Kathmandu",
+     "dev": "काठमाडौंमा",
      "items": [
       "w:kathmandu",
       "g:maa"
@@ -2450,6 +2552,7 @@
     {
      "np": "baschhu",
      "en": "live (I)",
+     "dev": "बस्छु",
      "items": [
       "w:basnu",
       "g:present"
@@ -2458,6 +2561,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2474,6 +2578,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -2481,6 +2586,7 @@
     {
      "np": "tarkaari",
      "en": "vegetables",
+     "dev": "तरकारी",
      "items": [
       "w:tarkaari"
      ]
@@ -2488,6 +2594,7 @@
     {
      "np": "kinchhu",
      "en": "buy (I)",
+     "dev": "किन्छु",
      "items": [
       "w:kinnu",
       "g:present"
@@ -2496,6 +2603,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2516,6 +2624,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -2523,6 +2632,7 @@
     {
      "np": "tarkaari",
      "en": "vegetables",
+     "dev": "तरकारी",
      "items": [
       "w:tarkaari"
      ]
@@ -2530,6 +2640,7 @@
     {
      "np": "kindina",
      "en": "don't buy (I)",
+     "dev": "किन्दिनँ",
      "items": [
       "w:kinnu",
       "g:present-neg"
@@ -2538,6 +2649,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2554,6 +2666,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -2561,6 +2674,7 @@
     {
      "np": "chiso",
      "en": "cold",
+     "dev": "चिसो",
      "items": [
       "w:chiso"
      ]
@@ -2568,6 +2682,7 @@
     {
      "np": "paani",
      "en": "water, rain",
+     "dev": "पानी",
      "items": [
       "w:paani"
      ]
@@ -2575,6 +2690,7 @@
     {
      "np": "piuchhu",
      "en": "drink (I)",
+     "dev": "पिउँछु",
      "items": [
       "w:piunu",
       "g:present"
@@ -2583,6 +2699,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2602,6 +2719,7 @@
     {
      "np": "Timi",
      "en": "you (familiar)",
+     "dev": "तिमी",
      "items": [
       "w:timi"
      ]
@@ -2609,6 +2727,7 @@
     {
      "np": "syaau",
      "en": "apple",
+     "dev": "स्याउ",
      "items": [
       "w:syaau"
      ]
@@ -2616,6 +2735,7 @@
     {
      "np": "khaanchhau",
      "en": "eat (timi)",
+     "dev": "खान्छौ",
      "items": [
       "w:khaanu",
       "g:present-timi"
@@ -2624,6 +2744,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2641,6 +2762,7 @@
     {
      "np": "Haami",
      "en": "we",
+     "dev": "हामी",
      "items": [
       "w:haami"
      ]
@@ -2648,6 +2770,7 @@
     {
      "np": "pizza",
      "en": "pizza",
+     "dev": "पिज्जा",
      "items": [
       "w:pizza"
      ]
@@ -2655,6 +2778,7 @@
     {
      "np": "banaauchhaun",
      "en": "make (we)",
+     "dev": "बनाउँछौं",
      "items": [
       "w:banaaunu",
       "g:present-haami"
@@ -2663,6 +2787,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2680,6 +2805,7 @@
     {
      "np": "Tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -2687,6 +2813,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -2694,6 +2821,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -2701,6 +2829,7 @@
     {
      "np": "pakaaunu hunchha",
      "en": "cook (respectful)",
+     "dev": "पकाउनु हुन्छ",
      "items": [
       "w:pakaaunu",
       "g:honorific-present"
@@ -2709,6 +2838,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2729,6 +2859,7 @@
     {
      "np": "Wahaa",
      "en": "he / she (respectful)",
+     "dev": "उहाँ",
      "items": [
       "w:wahaa"
      ]
@@ -2736,6 +2867,7 @@
     {
      "np": "guliyo",
      "en": "sweet",
+     "dev": "गुलियो",
      "items": [
       "w:guliyo"
      ]
@@ -2743,6 +2875,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -2750,6 +2883,7 @@
     {
      "np": "khaanu hunchha",
      "en": "eats (respectful)",
+     "dev": "खानु हुन्छ",
      "items": [
       "w:khaanu",
       "g:honorific-present"
@@ -2758,6 +2892,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2778,6 +2913,7 @@
     {
      "np": "Wu",
      "en": "he / she (familiar)",
+     "dev": "ऊ",
      "items": [
       "w:wu"
      ]
@@ -2785,6 +2921,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -2792,6 +2929,7 @@
     {
      "np": "bhaasaa",
      "en": "language",
+     "dev": "भाषा",
      "items": [
       "w:bhaasaa"
      ]
@@ -2799,6 +2937,7 @@
     {
      "np": "bolchha",
      "en": "speaks (he)",
+     "dev": "बोल्छ",
      "items": [
       "w:bolnu",
       "g:present-wu"
@@ -2807,6 +2946,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2826,6 +2966,7 @@
     {
      "np": "Wuni",
      "en": "she",
+     "dev": "उनी",
      "items": [
       "w:wuni"
      ]
@@ -2833,6 +2974,7 @@
     {
      "np": "bajaarbaata",
      "en": "from the market",
+     "dev": "बजारबाट",
      "items": [
       "w:bajaar",
       "g:baata"
@@ -2841,6 +2983,7 @@
     {
      "np": "dherai",
      "en": "a lot, very, many",
+     "dev": "धेरै",
      "items": [
       "w:dherai"
      ]
@@ -2848,6 +2991,7 @@
     {
      "np": "saamaan",
      "en": "things",
+     "dev": "सामान",
      "items": [
       "w:saamaan"
      ]
@@ -2855,6 +2999,7 @@
     {
      "np": "kinchhin",
      "en": "buys (she)",
+     "dev": "किन्छिन्",
      "items": [
       "w:kinnu",
       "g:present-wuni"
@@ -2863,6 +3008,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2882,6 +3028,7 @@
     {
      "np": "Din dinai",
      "en": "every day",
+     "dev": "दिन दिनै",
      "items": [
       "w:harekdin"
      ]
@@ -2889,6 +3036,7 @@
     {
      "np": "wuniharu",
      "en": "they",
+     "dev": "उनीहरू",
      "items": [
       "w:wuniharu"
      ]
@@ -2896,6 +3044,7 @@
     {
      "np": "football",
      "en": "football",
+     "dev": "फुटबल",
      "items": [
       "w:football"
      ]
@@ -2903,6 +3052,7 @@
     {
      "np": "khelchhan",
      "en": "play (they)",
+     "dev": "खेल्छन्",
      "items": [
       "w:khelnu",
       "g:present-wuniharu"
@@ -2911,6 +3061,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2927,6 +3078,7 @@
     {
      "np": "Maile",
      "en": "I (+ le)",
+     "dev": "मैले",
      "items": [
       "w:ma"
      ]
@@ -2934,6 +3086,7 @@
     {
      "np": "diusoko khaana",
      "en": "lunch",
+     "dev": "दिउँसोको खाना",
      "items": [
       "w:diuso"
      ]
@@ -2941,6 +3094,7 @@
     {
      "np": "pakaae",
      "en": "cooked (I)",
+     "dev": "पकाएँ",
      "items": [
       "w:pakaaunu",
       "g:past",
@@ -2950,6 +3104,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -2969,6 +3124,7 @@
     {
      "np": "Maile",
      "en": "I (+ le)",
+     "dev": "मैले",
      "items": [
       "w:ma"
      ]
@@ -2976,6 +3132,7 @@
     {
      "np": "mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -2983,6 +3140,7 @@
     {
      "np": "diusoko khaana",
      "en": "lunch",
+     "dev": "दिउँसोको खाना",
      "items": [
       "w:diuso"
      ]
@@ -2990,6 +3148,7 @@
     {
      "np": "khaaena",
      "en": "didn't eat (I)",
+     "dev": "खाइनँ",
      "items": [
       "w:khaanu",
       "g:past-neg",
@@ -2999,6 +3158,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3015,6 +3175,7 @@
     {
      "np": "Haami",
      "en": "we",
+     "dev": "हामी",
      "items": [
       "w:haami"
      ]
@@ -3022,6 +3183,7 @@
     {
      "np": "haamro",
      "en": "our",
+     "dev": "हाम्रो",
      "items": [
       "w:haami"
      ]
@@ -3029,6 +3191,7 @@
     {
      "np": "saathiko",
      "en": "friend's",
+     "dev": "साथीको",
      "items": [
       "w:saathi"
      ]
@@ -3036,6 +3199,7 @@
     {
      "np": "ghar",
      "en": "house, home",
+     "dev": "घर",
      "items": [
       "w:ghar"
      ]
@@ -3043,6 +3207,7 @@
     {
      "np": "gayaun",
      "en": "went (we)",
+     "dev": "गयौं",
      "items": [
       "w:jaanu",
       "g:past"
@@ -3051,6 +3216,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3070,6 +3236,7 @@
     {
      "np": "Tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -3077,6 +3244,7 @@
     {
      "np": "bihaanako",
      "en": "morning's (am)",
+     "dev": "बिहानको",
      "items": [
       "w:bihaana"
      ]
@@ -3084,6 +3252,7 @@
     {
      "np": "chha baje",
      "en": "at six",
+     "dev": "छ बजे",
      "items": [
       "w:chha-number",
       "g:baje"
@@ -3092,6 +3261,7 @@
     {
      "np": "uthnu bhayo",
      "en": "woke up (respectful)",
+     "dev": "उठ्नु भयो",
      "items": [
       "w:uthnu",
       "g:honorific-past"
@@ -3100,6 +3270,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3119,6 +3290,7 @@
     {
      "np": "Wahaa",
      "en": "he / she (respectful)",
+     "dev": "उहाँ",
      "items": [
       "w:wahaa"
      ]
@@ -3126,6 +3298,7 @@
     {
      "np": "bharkhar",
      "en": "just (now)",
+     "dev": "भर्खर",
      "items": [
       "w:bharkhar"
      ]
@@ -3133,6 +3306,7 @@
     {
      "np": "ghar",
      "en": "house, home",
+     "dev": "घर",
      "items": [
       "w:ghar"
      ]
@@ -3140,6 +3314,7 @@
     {
      "np": "aaunu bhayo",
      "en": "came (respectful)",
+     "dev": "आउनु भयो",
      "items": [
       "w:aaunu",
       "g:honorific-past"
@@ -3148,6 +3323,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3164,6 +3340,7 @@
     {
      "np": "Wusle",
      "en": "he (+ le)",
+     "dev": "उसले",
      "items": [
       "w:wu"
      ]
@@ -3171,6 +3348,7 @@
     {
      "np": "mero laagi",
      "en": "for me",
+     "dev": "मेरो लागि",
      "items": [
       "w:ma",
       "g:ko-laagi"
@@ -3179,6 +3357,7 @@
     {
      "np": "coffee",
      "en": "coffee",
+     "dev": "कफी",
      "items": [
       "w:coffee"
      ]
@@ -3186,6 +3365,7 @@
     {
      "np": "banaayo",
      "en": "made (he)",
+     "dev": "बनायो",
      "items": [
       "w:banaaunu",
       "g:past",
@@ -3195,6 +3375,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3214,6 +3395,7 @@
     {
      "np": "Wunle",
      "en": "she (+ le)",
+     "dev": "उनले",
      "items": [
       "w:wuni"
      ]
@@ -3221,6 +3403,7 @@
     {
      "np": "wunko",
      "en": "her",
+     "dev": "उनको",
      "items": [
       "w:wuni"
      ]
@@ -3228,6 +3411,7 @@
     {
      "np": "aamaasanga",
      "en": "with (her) mom",
+     "dev": "आमासँग",
      "items": [
       "w:aamaa",
       "g:sanga"
@@ -3236,6 +3420,7 @@
     {
      "np": "phonemaa",
      "en": "on the phone",
+     "dev": "फोनमा",
      "items": [
       "w:phone",
       "g:maa"
@@ -3244,6 +3429,7 @@
     {
      "np": "kuraa",
      "en": "talk, things",
+     "dev": "कुरा",
      "items": [
       "w:kuraa"
      ]
@@ -3251,6 +3437,7 @@
     {
      "np": "garin",
      "en": "did (she)",
+     "dev": "गरिन्",
      "items": [
       "w:garnu",
       "g:past",
@@ -3260,6 +3447,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3279,6 +3467,7 @@
     {
      "np": "Maile",
      "en": "I (+ le)",
+     "dev": "मैले",
      "items": [
       "w:ma"
      ]
@@ -3286,6 +3475,7 @@
     {
      "np": "mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -3293,6 +3483,7 @@
     {
      "np": "saasusanga",
      "en": "with mother-in-law",
+     "dev": "सासूसँग",
      "items": [
       "w:saasu",
       "g:sanga"
@@ -3301,6 +3492,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -3308,6 +3500,7 @@
     {
      "np": "boleko chhu",
      "en": "have spoken",
+     "dev": "बोलेको छु",
      "items": [
       "w:bolnu",
       "g:perfect",
@@ -3317,6 +3510,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3336,6 +3530,7 @@
     {
      "np": "Maile",
      "en": "I (+ le)",
+     "dev": "मैले",
      "items": [
       "w:ma"
      ]
@@ -3343,6 +3538,7 @@
     {
      "np": "mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -3350,6 +3546,7 @@
     {
      "np": "saasusanga",
      "en": "with mother-in-law",
+     "dev": "सासूसँग",
      "items": [
       "w:saasu",
       "g:sanga"
@@ -3358,6 +3555,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -3365,6 +3563,7 @@
     {
      "np": "boleko chhaina",
      "en": "haven't spoken",
+     "dev": "बोलेको छैन",
      "items": [
       "w:bolnu",
       "g:perfect-neg",
@@ -3374,6 +3573,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3390,6 +3590,7 @@
     {
      "np": "Maile",
      "en": "I (+ le)",
+     "dev": "मैले",
      "items": [
       "w:ma"
      ]
@@ -3397,6 +3598,7 @@
     {
      "np": "batti",
      "en": "light",
+     "dev": "बत्ती",
      "items": [
       "w:batti"
      ]
@@ -3404,6 +3606,7 @@
     {
      "np": "nibhaaeko chhu",
      "en": "have turned off",
+     "dev": "निभाएको छु",
      "items": [
       "w:nibhaaunu",
       "g:perfect",
@@ -3413,6 +3616,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3429,6 +3633,7 @@
     {
      "np": "Haami",
      "en": "we",
+     "dev": "हामी",
      "items": [
       "w:haami"
      ]
@@ -3436,6 +3641,7 @@
     {
      "np": "dui",
      "en": "two",
+     "dev": "दुई",
      "items": [
       "w:dui"
      ]
@@ -3443,6 +3649,7 @@
     {
      "np": "patak",
      "en": "times",
+     "dev": "पटक",
      "items": [
       "w:patak"
      ]
@@ -3450,6 +3657,7 @@
     {
      "np": "bheteka chhaun",
      "en": "have met (we)",
+     "dev": "भेटेका छौं",
      "items": [
       "w:bhetnu",
       "g:perfect"
@@ -3458,6 +3666,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3477,6 +3686,7 @@
     {
      "np": "Haami",
      "en": "we",
+     "dev": "हामी",
      "items": [
       "w:haami"
      ]
@@ -3484,6 +3694,7 @@
     {
      "np": "ahilesamma",
      "en": "yet, until now",
+     "dev": "अहिलेसम्म",
      "items": [
       "w:ahilesamma"
      ]
@@ -3491,6 +3702,7 @@
     {
      "np": "bheteka chhainaun",
      "en": "haven't met (we)",
+     "dev": "भेटेका छैनौं",
      "items": [
       "w:bhetnu",
       "g:perfect-neg"
@@ -3499,6 +3711,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3515,6 +3728,7 @@
     {
      "np": "Wuniharule",
      "en": "they (+ le)",
+     "dev": "उनीहरूले",
      "items": [
       "w:wuniharu"
      ]
@@ -3522,6 +3736,7 @@
     {
      "np": "mero laagi",
      "en": "for me",
+     "dev": "मेरो लागि",
      "items": [
       "w:ma",
       "g:ko-laagi"
@@ -3530,6 +3745,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -3537,6 +3753,7 @@
     {
      "np": "pakaaeka chhan",
      "en": "have cooked (they)",
+     "dev": "पकाएका छन्",
      "items": [
       "w:pakaaunu",
       "g:perfect",
@@ -3546,6 +3763,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3567,6 +3785,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -3574,6 +3793,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -3581,6 +3801,7 @@
     {
      "np": "khaadai chhu",
      "en": "am eating",
+     "dev": "खाँदै छु",
      "items": [
       "w:khaanu",
       "g:continuous"
@@ -3589,6 +3810,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3608,6 +3830,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -3615,6 +3838,7 @@
     {
      "np": "paani",
      "en": "water, rain",
+     "dev": "पानी",
      "items": [
       "w:paani"
      ]
@@ -3622,6 +3846,7 @@
     {
      "np": "piudai chhu",
      "en": "am drinking",
+     "dev": "पिउँदै छु",
      "items": [
       "w:piunu",
       "g:continuous"
@@ -3630,6 +3855,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3649,6 +3875,7 @@
     {
      "np": "Timi",
      "en": "you (familiar)",
+     "dev": "तिमी",
      "items": [
       "w:timi"
      ]
@@ -3656,6 +3883,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -3663,6 +3891,7 @@
     {
      "np": "bhaasaa",
      "en": "language",
+     "dev": "भाषा",
      "items": [
       "w:bhaasaa"
      ]
@@ -3670,6 +3899,7 @@
     {
      "np": "boldai chhau",
      "en": "are speaking (timi)",
+     "dev": "बोल्दै छौ",
      "items": [
       "w:bolnu",
       "g:continuous"
@@ -3678,6 +3908,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3694,6 +3925,7 @@
     {
      "np": "Timi",
      "en": "you (familiar)",
+     "dev": "तिमी",
      "items": [
       "w:timi"
      ]
@@ -3701,6 +3933,7 @@
     {
      "np": "tarkaari",
      "en": "vegetables",
+     "dev": "तरकारी",
      "items": [
       "w:tarkaari"
      ]
@@ -3708,6 +3941,7 @@
     {
      "np": "kindai chhau",
      "en": "are buying (timi)",
+     "dev": "किन्दै छौ",
      "items": [
       "w:kinnu",
       "g:continuous"
@@ -3716,6 +3950,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3736,6 +3971,7 @@
     {
      "np": "Tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -3743,6 +3979,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -3750,6 +3987,7 @@
     {
      "np": "geet",
      "en": "song(s)",
+     "dev": "गीत",
      "items": [
       "w:geet"
      ]
@@ -3757,6 +3995,7 @@
     {
      "np": "sundai hunuhunchha",
      "en": "are listening (respectful)",
+     "dev": "सुन्दै हुनुहुन्छ",
      "items": [
       "w:sunnu",
       "g:continuous"
@@ -3765,6 +4004,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3784,6 +4024,7 @@
     {
      "np": "Wuniharu",
      "en": "they",
+     "dev": "उनीहरू",
      "items": [
       "w:wuniharu"
      ]
@@ -3791,6 +4032,7 @@
     {
      "np": "momo",
      "en": "momo (dumplings)",
+     "dev": "मम",
      "items": [
       "w:momo"
      ]
@@ -3798,6 +4040,7 @@
     {
      "np": "banaaudai chhan",
      "en": "are making (they)",
+     "dev": "बनाउँदै छन्",
      "items": [
       "w:banaaunu",
       "g:continuous"
@@ -3806,6 +4049,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3828,6 +4072,7 @@
     {
      "np": "Maile",
      "en": "I (+ le)",
+     "dev": "मैले",
      "items": [
       "w:ma"
      ]
@@ -3835,6 +4080,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -3842,6 +4088,7 @@
     {
      "np": "bhaasaa",
      "en": "language",
+     "dev": "भाषा",
      "items": [
       "w:bhaasaa"
      ]
@@ -3849,6 +4096,7 @@
     {
      "np": "siknu parchha",
      "en": "have to learn",
+     "dev": "सिक्नु पर्छ",
      "items": [
       "w:siknu",
       "g:must",
@@ -3858,6 +4106,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3877,6 +4126,7 @@
     {
      "np": "Aaja",
      "en": "today",
+     "dev": "आज",
      "items": [
       "w:aaja"
      ]
@@ -3884,6 +4134,7 @@
     {
      "np": "ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -3891,6 +4142,7 @@
     {
      "np": "kaammaa",
      "en": "to work",
+     "dev": "काममा",
      "items": [
       "w:kaam",
       "g:maa"
@@ -3899,6 +4151,7 @@
     {
      "np": "jaanu parchha",
      "en": "have to go",
+     "dev": "जानु पर्छ",
      "items": [
       "w:jaanu",
       "g:must"
@@ -3907,6 +4160,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3926,6 +4180,7 @@
     {
      "np": "Aaja",
      "en": "today",
+     "dev": "आज",
      "items": [
       "w:aaja"
      ]
@@ -3933,6 +4188,7 @@
     {
      "np": "ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -3940,6 +4196,7 @@
     {
      "np": "kaammaa",
      "en": "to work",
+     "dev": "काममा",
      "items": [
       "w:kaam",
       "g:maa"
@@ -3948,6 +4205,7 @@
     {
      "np": "jaanu pardaina",
      "en": "don't have to go",
+     "dev": "जानु पर्दैन",
      "items": [
       "w:jaanu",
       "g:must-not"
@@ -3956,6 +4214,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -3975,6 +4234,7 @@
     {
      "np": "Bholi",
      "en": "tomorrow",
+     "dev": "भोलि",
      "items": [
       "w:bholi"
      ]
@@ -3982,6 +4242,7 @@
     {
      "np": "ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -3989,6 +4250,7 @@
     {
      "np": "bihaana",
      "en": "morning",
+     "dev": "बिहान",
      "items": [
       "w:bihaana"
      ]
@@ -3996,6 +4258,7 @@
     {
      "np": "chaadai",
      "en": "early",
+     "dev": "चाँडै",
      "items": [
       "w:chaadai"
      ]
@@ -4003,6 +4266,7 @@
     {
      "np": "uthnu parchha",
      "en": "have to wake up",
+     "dev": "उठ्नु पर्छ",
      "items": [
       "w:uthnu",
       "g:must"
@@ -4011,6 +4275,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4030,6 +4295,7 @@
     {
      "np": "Haamile",
      "en": "we (+ le)",
+     "dev": "हामीले",
      "items": [
       "w:haami"
      ]
@@ -4037,6 +4303,7 @@
     {
      "np": "harekdin",
      "en": "every day",
+     "dev": "हरेकदिन",
      "items": [
       "w:harekdin"
      ]
@@ -4044,6 +4311,7 @@
     {
      "np": "exercise",
      "en": "exercise",
+     "dev": "एक्सरसाइज",
      "items": [
       "w:exercise"
      ]
@@ -4051,6 +4319,7 @@
     {
      "np": "garnu parchha",
      "en": "have to do",
+     "dev": "गर्नु पर्छ",
      "items": [
       "w:garnu",
       "g:must",
@@ -4060,6 +4329,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4076,6 +4346,7 @@
     {
      "np": "Gharmaa",
      "en": "at home",
+     "dev": "घरमा",
      "items": [
       "w:ghar",
       "g:maa"
@@ -4084,6 +4355,7 @@
     {
      "np": "hudaa",
      "en": "when (being)",
+     "dev": "हुँदा",
      "items": [
       "w:hudaa",
       "g:when"
@@ -4092,6 +4364,7 @@
     {
      "np": "ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4099,6 +4372,7 @@
     {
      "np": "ghar",
      "en": "house, home",
+     "dev": "घर",
      "items": [
       "w:ghar"
      ]
@@ -4106,6 +4380,7 @@
     {
      "np": "safaa",
      "en": "clean",
+     "dev": "सफा",
      "items": [
       "w:safaa"
      ]
@@ -4113,6 +4388,7 @@
     {
      "np": "garchhu",
      "en": "do (I)",
+     "dev": "गर्छु",
      "items": [
       "w:garnu",
       "g:present"
@@ -4121,6 +4397,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4140,6 +4417,7 @@
     {
      "np": "Kathmandumaa",
      "en": "in Kathmandu",
+     "dev": "काठमाडौंमा",
      "items": [
       "w:kathmandu",
       "g:maa"
@@ -4148,6 +4426,7 @@
     {
      "np": "hudaa",
      "en": "when (being)",
+     "dev": "हुँदा",
      "items": [
       "w:hudaa",
       "g:when"
@@ -4156,6 +4435,7 @@
     {
      "np": "haami",
      "en": "we",
+     "dev": "हामी",
      "items": [
       "w:haami"
      ]
@@ -4163,6 +4443,7 @@
     {
      "np": "dherai",
      "en": "a lot, very, many",
+     "dev": "धेरै",
      "items": [
       "w:dherai"
      ]
@@ -4170,6 +4451,7 @@
     {
      "np": "momo",
      "en": "momo (dumplings)",
+     "dev": "मम",
      "items": [
       "w:momo"
      ]
@@ -4177,6 +4459,7 @@
     {
      "np": "khaanchhaun",
      "en": "eat (we)",
+     "dev": "खान्छौं",
      "items": [
       "w:khaanu",
       "g:present-haami"
@@ -4185,6 +4468,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4205,6 +4489,7 @@
     {
      "np": "Mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -4212,6 +4497,7 @@
     {
      "np": "aamaale",
      "en": "mom (+ le)",
+     "dev": "आमाले",
      "items": [
       "w:aamaa"
      ]
@@ -4219,6 +4505,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -4226,6 +4513,7 @@
     {
      "np": "pakaaudaa",
      "en": "when (she) cooks",
+     "dev": "पकाउँदा",
      "items": [
       "w:pakaaunu",
       "g:when"
@@ -4234,6 +4522,7 @@
     {
      "np": "ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4241,6 +4530,7 @@
     {
      "np": "dherai",
      "en": "a lot, very, many",
+     "dev": "धेरै",
      "items": [
       "w:dherai"
      ]
@@ -4248,6 +4538,7 @@
     {
      "np": "khaanchhu",
      "en": "eat (I)",
+     "dev": "खान्छु",
      "items": [
       "w:khaanu",
       "g:present"
@@ -4256,6 +4547,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4273,6 +4565,7 @@
     {
      "np": "Tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -4280,6 +4573,7 @@
     {
      "np": "mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -4287,6 +4581,7 @@
     {
      "np": "ghar",
      "en": "house, home",
+     "dev": "घर",
      "items": [
       "w:ghar"
      ]
@@ -4294,6 +4589,7 @@
     {
      "np": "kahile",
      "en": "when (question)",
+     "dev": "कहिले",
      "items": [
       "w:kahile"
      ]
@@ -4301,6 +4597,7 @@
     {
      "np": "aaunu hunchha",
      "en": "come (respectful)",
+     "dev": "आउनु हुन्छ",
      "items": [
       "w:aaunu",
       "g:honorific-present"
@@ -4309,6 +4606,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -4330,6 +4628,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4337,6 +4636,7 @@
     {
      "np": "sutnuaghi",
      "en": "before sleeping",
+     "dev": "सुत्नुअघि",
      "items": [
       "w:sutnu",
       "g:before"
@@ -4345,6 +4645,7 @@
     {
      "np": "mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -4352,6 +4653,7 @@
     {
      "np": "mukh",
      "en": "face",
+     "dev": "मुख",
      "items": [
       "w:mukh"
      ]
@@ -4359,6 +4661,7 @@
     {
      "np": "dhunchhu",
      "en": "wash (I)",
+     "dev": "धुन्छु",
      "items": [
       "w:dhunu",
       "g:present"
@@ -4367,6 +4670,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4386,6 +4690,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4393,6 +4698,7 @@
     {
      "np": "mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -4400,6 +4706,7 @@
     {
      "np": "saathiko",
      "en": "friend's",
+     "dev": "साथीको",
      "items": [
       "w:saathi"
      ]
@@ -4407,6 +4714,7 @@
     {
      "np": "ghar",
      "en": "house, home",
+     "dev": "घर",
      "items": [
       "w:ghar"
      ]
@@ -4414,6 +4722,7 @@
     {
      "np": "jaanuaghi",
      "en": "before going",
+     "dev": "जानुअघि",
      "items": [
       "w:jaanu",
       "g:before"
@@ -4422,6 +4731,7 @@
     {
      "np": "kehi",
      "en": "some",
+     "dev": "केही",
      "items": [
       "w:kehi"
      ]
@@ -4429,6 +4739,7 @@
     {
      "np": "falful",
      "en": "fruit",
+     "dev": "फलफूल",
      "items": [
       "w:falful"
      ]
@@ -4436,6 +4747,7 @@
     {
      "np": "kinchhu",
      "en": "buy (I)",
+     "dev": "किन्छु",
      "items": [
       "w:kinnu",
       "g:present"
@@ -4444,6 +4756,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4463,6 +4776,7 @@
     {
      "np": "Dui",
      "en": "two",
+     "dev": "दुई",
      "items": [
       "w:dui"
      ]
@@ -4470,6 +4784,7 @@
     {
      "np": "dinaghi",
      "en": "days ago",
+     "dev": "दिनअघि",
      "items": [
       "w:din",
       "g:before"
@@ -4478,6 +4793,7 @@
     {
      "np": "ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4485,6 +4801,7 @@
     {
      "np": "mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -4492,6 +4809,7 @@
     {
      "np": "officemaa",
      "en": "to the office",
+     "dev": "अफिसमा",
      "items": [
       "w:office",
       "g:maa"
@@ -4500,6 +4818,7 @@
     {
      "np": "gae",
      "en": "went (I)",
+     "dev": "गएँ",
      "items": [
       "w:jaanu",
       "g:past"
@@ -4508,6 +4827,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4528,6 +4848,7 @@
     {
      "np": "Mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -4535,6 +4856,7 @@
     {
      "np": "ghar",
      "en": "house, home",
+     "dev": "घर",
      "items": [
       "w:ghar"
      ]
@@ -4542,6 +4864,7 @@
     {
      "np": "aaepachhi",
      "en": "after coming",
+     "dev": "आएपछि",
      "items": [
       "w:aaunu",
       "g:after"
@@ -4550,6 +4873,7 @@
     {
      "np": "ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4557,6 +4881,7 @@
     {
      "np": "aaraam",
      "en": "rest",
+     "dev": "आराम",
      "items": [
       "w:aaraam"
      ]
@@ -4564,6 +4889,7 @@
     {
      "np": "garchhu",
      "en": "do (I)",
+     "dev": "गर्छु",
      "items": [
       "w:garnu",
       "g:present"
@@ -4572,6 +4898,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4591,6 +4918,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -4598,6 +4926,7 @@
     {
      "np": "sikepachhi",
      "en": "after learning",
+     "dev": "सिकेपछि",
      "items": [
       "w:siknu",
       "g:after"
@@ -4606,6 +4935,7 @@
     {
      "np": "ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4613,6 +4943,7 @@
     {
      "np": "sutchhu",
      "en": "sleep (I)",
+     "dev": "सुत्छु",
      "items": [
       "w:sutnu",
       "g:present"
@@ -4621,6 +4952,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4637,6 +4969,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4644,6 +4977,7 @@
     {
      "np": "uthepachhi",
      "en": "after waking up",
+     "dev": "उठेपछि",
      "items": [
       "w:uthnu",
       "g:after"
@@ -4652,6 +4986,7 @@
     {
      "np": "mero laagi",
      "en": "for me",
+     "dev": "मेरो लागि",
      "items": [
       "w:ma",
       "g:ko-laagi"
@@ -4660,6 +4995,7 @@
     {
      "np": "coffee",
      "en": "coffee",
+     "dev": "कफी",
      "items": [
       "w:coffee"
      ]
@@ -4667,6 +5003,7 @@
     {
      "np": "banaauchhu",
      "en": "make (I)",
+     "dev": "बनाउँछु",
      "items": [
       "w:banaaunu",
       "g:present"
@@ -4675,6 +5012,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4694,6 +5032,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4701,6 +5040,7 @@
     {
      "np": "uthne bittikai",
      "en": "as soon as (I) wake up",
+     "dev": "उठ्ने बित्तिकै",
      "items": [
       "w:uthnu",
       "g:as-soon-as"
@@ -4709,6 +5049,7 @@
     {
      "np": "paani",
      "en": "water, rain",
+     "dev": "पानी",
      "items": [
       "w:paani"
      ]
@@ -4716,6 +5057,7 @@
     {
      "np": "piuchhu",
      "en": "drink (I)",
+     "dev": "पिउँछु",
      "items": [
       "w:piunu",
       "g:present"
@@ -4724,6 +5066,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4743,6 +5086,7 @@
     {
      "np": "Mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -4750,6 +5094,7 @@
     {
      "np": "baithak",
      "en": "meeting",
+     "dev": "बैठक",
      "items": [
       "w:baithak"
      ]
@@ -4757,6 +5102,7 @@
     {
      "np": "sakine bittikai",
      "en": "as soon as (it) is over",
+     "dev": "सकिने बित्तिकै",
      "items": [
       "w:sakinu",
       "g:as-soon-as"
@@ -4765,6 +5111,7 @@
     {
      "np": "ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4772,6 +5119,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -4779,6 +5127,7 @@
     {
      "np": "pakaauchhu",
      "en": "cook (I)",
+     "dev": "पकाउँछु",
      "items": [
       "w:pakaaunu",
       "g:present"
@@ -4787,6 +5136,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4804,6 +5154,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4811,6 +5162,7 @@
     {
      "np": "bidhyaalaya",
      "en": "school",
+     "dev": "विद्यालय",
      "items": [
       "w:bidhyaalaya"
      ]
@@ -4818,6 +5170,7 @@
     {
      "np": "jaana laage",
      "en": "am about to go",
+     "dev": "जान लागें",
      "items": [
       "w:jaanu",
       "g:about-to"
@@ -4826,6 +5179,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4842,6 +5196,7 @@
     {
      "np": "Haami",
      "en": "we",
+     "dev": "हामी",
      "items": [
       "w:haami"
      ]
@@ -4849,6 +5204,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -4856,6 +5212,7 @@
     {
      "np": "pakaauna laagyaun",
      "en": "are about to cook (we)",
+     "dev": "पकाउन लाग्यौं",
      "items": [
       "w:pakaaunu",
       "g:about-to"
@@ -4864,6 +5221,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4884,6 +5242,7 @@
     {
      "np": "Paani",
      "en": "water, rain",
+     "dev": "पानी",
      "items": [
       "w:paani"
      ]
@@ -4891,6 +5250,7 @@
     {
      "np": "parna laagyo",
      "en": "is about to fall (rain)",
+     "dev": "पर्न लाग्यो",
      "items": [
       "w:parnu",
       "g:about-to"
@@ -4899,6 +5259,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4915,6 +5276,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -4922,6 +5284,7 @@
     {
      "np": "timibhandaa",
      "en": "than you",
+     "dev": "तिमीभन्दा",
      "items": [
       "w:timi",
       "g:than"
@@ -4930,6 +5293,7 @@
     {
      "np": "aglo",
      "en": "tall",
+     "dev": "अग्लो",
      "items": [
       "w:aglo"
      ]
@@ -4937,6 +5301,7 @@
     {
      "np": "chhu",
      "en": "am",
+     "dev": "छु",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -4945,6 +5310,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -4961,6 +5327,7 @@
     {
      "np": "Coffee",
      "en": "coffee",
+     "dev": "कफी",
      "items": [
       "w:coffee"
      ]
@@ -4968,6 +5335,7 @@
     {
      "np": "chiyaabhandaa",
      "en": "than tea",
+     "dev": "चियाभन्दा",
      "items": [
       "w:chiyaa",
       "g:than"
@@ -4976,6 +5344,7 @@
     {
      "np": "taato",
      "en": "hot",
+     "dev": "तातो",
      "items": [
       "w:taato"
      ]
@@ -4983,6 +5352,7 @@
     {
      "np": "chha",
      "en": "is",
+     "dev": "छ",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -4991,6 +5361,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5010,6 +5381,7 @@
     {
      "np": "Yo",
      "en": "this",
+     "dev": "यो",
      "items": [
       "w:yo"
      ]
@@ -5017,6 +5389,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -5024,6 +5397,7 @@
     {
      "np": "tyo",
      "en": "that",
+     "dev": "त्यो",
      "items": [
       "w:tyo"
      ]
@@ -5031,6 +5405,7 @@
     {
      "np": "khaanabhandaa",
      "en": "than (that) food",
+     "dev": "खानाभन्दा",
      "items": [
       "w:khaana",
       "g:than"
@@ -5039,6 +5414,7 @@
     {
      "np": "mitho",
      "en": "tasty, delicious",
+     "dev": "मीठो",
      "items": [
       "w:mitho"
      ]
@@ -5046,6 +5422,7 @@
     {
      "np": "chha",
      "en": "is",
+     "dev": "छ",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -5054,6 +5431,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5073,6 +5451,7 @@
     {
      "np": "Aaja",
      "en": "today",
+     "dev": "आज",
      "items": [
       "w:aaja"
      ]
@@ -5080,6 +5459,7 @@
     {
      "np": "ke",
      "en": "what",
+     "dev": "के",
      "items": [
       "w:ke"
      ]
@@ -5087,6 +5467,7 @@
     {
      "np": "baar",
      "en": "day (of the week)",
+     "dev": "बार",
      "items": [
       "w:baar"
      ]
@@ -5094,6 +5475,7 @@
     {
      "np": "ho",
      "en": "is (identity)",
+     "dev": "हो",
      "items": [
       "w:ho",
       "g:ho"
@@ -5102,6 +5484,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -5118,6 +5501,7 @@
     {
      "np": "Aaja",
      "en": "today",
+     "dev": "आज",
      "items": [
       "w:aaja"
      ]
@@ -5125,6 +5509,7 @@
     {
      "np": "Shanibaar",
      "en": "Saturday",
+     "dev": "शनिबार",
      "items": [
       "w:shanibaar"
      ]
@@ -5132,6 +5517,7 @@
     {
      "np": "ho",
      "en": "is (identity)",
+     "dev": "हो",
      "items": [
       "w:ho",
       "g:ho"
@@ -5140,6 +5526,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5156,6 +5543,7 @@
     {
      "np": "Hijo",
      "en": "yesterday",
+     "dev": "हिजो",
      "items": [
       "w:hijo"
      ]
@@ -5163,6 +5551,7 @@
     {
      "np": "Sukrabaar",
      "en": "Friday",
+     "dev": "शुक्रबार",
      "items": [
       "w:sukrabaar"
      ]
@@ -5170,6 +5559,7 @@
     {
      "np": "thiyo",
      "en": "was",
+     "dev": "थियो",
      "items": [
       "w:thiyo",
       "g:thiyo"
@@ -5178,6 +5568,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5194,6 +5585,7 @@
     {
      "np": "Bholi",
      "en": "tomorrow",
+     "dev": "भोलि",
      "items": [
       "w:bholi"
      ]
@@ -5201,6 +5593,7 @@
     {
      "np": "Aaitabaar",
      "en": "Sunday",
+     "dev": "आइतबार",
      "items": [
       "w:aaitabaar"
      ]
@@ -5208,6 +5601,7 @@
     {
      "np": "ho",
      "en": "is (identity)",
+     "dev": "हो",
      "items": [
       "w:ho",
       "g:ho"
@@ -5216,6 +5610,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5235,6 +5630,7 @@
     {
      "np": "Ahile",
      "en": "now",
+     "dev": "अहिले",
      "items": [
       "w:ahile"
      ]
@@ -5242,6 +5638,7 @@
     {
      "np": "kati",
      "en": "how much / how many",
+     "dev": "कति",
      "items": [
       "w:kati"
      ]
@@ -5249,6 +5646,7 @@
     {
      "np": "bajyo",
      "en": "o'clock (it struck)",
+     "dev": "बज्यो",
      "items": [
       "w:bajyo",
       "g:telling-time"
@@ -5257,6 +5655,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -5277,6 +5676,7 @@
     {
      "np": "Ahile",
      "en": "now",
+     "dev": "अहिले",
      "items": [
       "w:ahile"
      ]
@@ -5284,6 +5684,7 @@
     {
      "np": "diusoko",
      "en": "afternoon's (pm)",
+     "dev": "दिउँसोको",
      "items": [
       "w:diuso"
      ]
@@ -5291,6 +5692,7 @@
     {
      "np": "dui",
      "en": "two",
+     "dev": "दुई",
      "items": [
       "w:dui"
      ]
@@ -5298,6 +5700,7 @@
     {
      "np": "bajyo",
      "en": "o'clock (it struck)",
+     "dev": "बज्यो",
      "items": [
       "w:bajyo",
       "g:telling-time"
@@ -5306,6 +5709,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5326,6 +5730,7 @@
     {
      "np": "Ahile",
      "en": "now",
+     "dev": "अहिले",
      "items": [
       "w:ahile"
      ]
@@ -5333,6 +5738,7 @@
     {
      "np": "bihaanako",
      "en": "morning's (am)",
+     "dev": "बिहानको",
      "items": [
       "w:bihaana"
      ]
@@ -5340,6 +5746,7 @@
     {
      "np": "saadhe",
      "en": "half past",
+     "dev": "साढे",
      "items": [
       "w:saadhe"
      ]
@@ -5347,6 +5754,7 @@
     {
      "np": "nau",
      "en": "nine",
+     "dev": "नौ",
      "items": [
       "w:nau"
      ]
@@ -5354,6 +5762,7 @@
     {
      "np": "bajyo",
      "en": "o'clock (it struck)",
+     "dev": "बज्यो",
      "items": [
       "w:bajyo",
       "g:telling-time"
@@ -5362,6 +5771,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5381,6 +5791,7 @@
     {
      "np": "Timi",
      "en": "you (familiar)",
+     "dev": "तिमी",
      "items": [
       "w:timi"
      ]
@@ -5388,6 +5799,7 @@
     {
      "np": "kati",
      "en": "how much / how many",
+     "dev": "कति",
      "items": [
       "w:kati"
      ]
@@ -5395,6 +5807,7 @@
     {
      "np": "baje",
      "en": "at (o'clock)",
+     "dev": "बजे",
      "items": [
       "w:baje",
       "g:baje"
@@ -5403,6 +5816,7 @@
     {
      "np": "uthchhau",
      "en": "wake up (timi)",
+     "dev": "उठ्छौ",
      "items": [
       "w:uthnu",
       "g:present-timi"
@@ -5411,6 +5825,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -5430,6 +5845,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -5437,6 +5853,7 @@
     {
      "np": "dash",
      "en": "ten",
+     "dev": "दश",
      "items": [
       "w:dash"
      ]
@@ -5444,6 +5861,7 @@
     {
      "np": "baje",
      "en": "at (o'clock)",
+     "dev": "बजे",
      "items": [
       "w:baje",
       "g:baje"
@@ -5452,6 +5870,7 @@
     {
      "np": "office",
      "en": "office",
+     "dev": "अफिस",
      "items": [
       "w:office"
      ]
@@ -5459,6 +5878,7 @@
     {
      "np": "jaanchhu",
      "en": "go (I)",
+     "dev": "जान्छु",
      "items": [
       "w:jaanu",
       "g:present"
@@ -5467,6 +5887,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5483,6 +5904,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -5490,6 +5912,7 @@
     {
      "np": "gaadi",
      "en": "car",
+     "dev": "गाडी",
      "items": [
       "w:gaadi"
      ]
@@ -5497,6 +5920,7 @@
     {
      "np": "chalaauna aauchha",
      "en": "know how to drive",
+     "dev": "चलाउन आउँछ",
      "items": [
       "w:chalaaunu",
       "g:know-how"
@@ -5505,6 +5929,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5524,6 +5949,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -5531,6 +5957,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -5538,6 +5965,7 @@
     {
      "np": "pakaauna aaudaina",
      "en": "don't know how to cook",
+     "dev": "पकाउन आउँदैन",
      "items": [
       "w:pakaaunu",
       "g:know-how-not"
@@ -5546,6 +5974,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5562,6 +5991,7 @@
     {
      "np": "Haamilaai",
      "en": "we / to us (+ laai)",
+     "dev": "हामीलाई",
      "items": [
       "w:haami"
      ]
@@ -5569,6 +5999,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -5576,6 +6007,7 @@
     {
      "np": "bolna aauchha",
      "en": "know how to speak",
+     "dev": "बोल्न आउँछ",
      "items": [
       "w:bolnu",
       "g:know-how"
@@ -5584,6 +6016,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5604,6 +6037,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -5611,6 +6045,7 @@
     {
      "np": "bhok",
      "en": "hunger",
+     "dev": "भोक",
      "items": [
       "w:bhok"
      ]
@@ -5618,6 +6053,7 @@
     {
      "np": "laagyo",
      "en": "felt",
+     "dev": "लाग्यो",
      "items": [
       "w:laagnu",
       "g:feeling"
@@ -5626,6 +6062,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5646,6 +6083,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -5653,6 +6091,7 @@
     {
      "np": "tirkhaa",
      "en": "thirst",
+     "dev": "तिर्खा",
      "items": [
       "w:tirkhaa"
      ]
@@ -5660,6 +6099,7 @@
     {
      "np": "laagyo",
      "en": "felt",
+     "dev": "लाग्यो",
      "items": [
       "w:laagnu",
       "g:feeling"
@@ -5668,6 +6108,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5688,6 +6129,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -5695,6 +6137,7 @@
     {
      "np": "thakaai",
      "en": "tiredness",
+     "dev": "थकाइ",
      "items": [
       "w:thakaai"
      ]
@@ -5702,6 +6145,7 @@
     {
      "np": "laagyo",
      "en": "felt",
+     "dev": "लाग्यो",
      "items": [
       "w:laagnu",
       "g:feeling"
@@ -5710,6 +6154,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5730,6 +6175,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -5737,6 +6183,7 @@
     {
      "np": "nindraa",
      "en": "sleepiness",
+     "dev": "निन्द्रा",
      "items": [
       "w:nindraa"
      ]
@@ -5744,6 +6191,7 @@
     {
      "np": "laageko chhaina",
      "en": "don't feel",
+     "dev": "लागेको छैन",
      "items": [
       "w:laagnu",
       "g:feeling-not"
@@ -5752,6 +6200,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5772,6 +6221,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -5779,6 +6229,7 @@
     {
      "np": "khushi",
      "en": "happy",
+     "dev": "खुशी",
      "items": [
       "w:khushi"
      ]
@@ -5786,6 +6237,7 @@
     {
      "np": "laagyo",
      "en": "felt",
+     "dev": "लाग्यो",
      "items": [
       "w:laagnu",
       "g:feeling"
@@ -5794,6 +6246,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5813,6 +6266,7 @@
     {
      "np": "Sutne",
      "en": "to sleep (time to)",
+     "dev": "सुत्ने",
      "items": [
       "w:sutnu"
      ]
@@ -5820,6 +6274,7 @@
     {
      "np": "belaa bhayo",
      "en": "it's time",
+     "dev": "बेला भयो",
      "items": [
       "w:belaa",
       "g:time-to"
@@ -5828,6 +6283,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5847,6 +6303,7 @@
     {
      "np": "Khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -5854,6 +6311,7 @@
     {
      "np": "pakaaune",
      "en": "to cook (time to)",
+     "dev": "पकाउने",
      "items": [
       "w:pakaaunu"
      ]
@@ -5861,6 +6319,7 @@
     {
      "np": "belaa bhayo",
      "en": "it's time",
+     "dev": "बेला भयो",
      "items": [
       "w:belaa",
       "g:time-to"
@@ -5869,6 +6328,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5888,6 +6348,7 @@
     {
      "np": "Office",
      "en": "office",
+     "dev": "अफिस",
      "items": [
       "w:office"
      ]
@@ -5895,6 +6356,7 @@
     {
      "np": "jaane",
      "en": "to go (time to)",
+     "dev": "जाने",
      "items": [
       "w:jaanu"
      ]
@@ -5902,6 +6364,7 @@
     {
      "np": "belaa bhayo",
      "en": "it's time",
+     "dev": "बेला भयो",
      "items": [
       "w:belaa",
       "g:time-to"
@@ -5910,6 +6373,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5930,6 +6394,7 @@
     {
      "np": "Khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -5937,6 +6402,7 @@
     {
      "np": "khaanus",
      "en": "please eat",
+     "dev": "खानुस्",
      "items": [
       "w:khaanu",
       "g:please"
@@ -5945,6 +6411,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5962,6 +6429,7 @@
     {
      "np": "Paani",
      "en": "water, rain",
+     "dev": "पानी",
      "items": [
       "w:paani"
      ]
@@ -5969,6 +6437,7 @@
     {
      "np": "piunus",
      "en": "please drink",
+     "dev": "पिउनुस्",
      "items": [
       "w:piunu",
       "g:please"
@@ -5977,6 +6446,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -5996,6 +6466,7 @@
     {
      "np": "Haat",
      "en": "hand(s)",
+     "dev": "हात",
      "items": [
       "w:haat"
      ]
@@ -6003,6 +6474,7 @@
     {
      "np": "dhunus",
      "en": "please wash",
+     "dev": "धुनुस्",
      "items": [
       "w:dhunu",
       "g:please"
@@ -6011,6 +6483,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6030,6 +6503,7 @@
     {
      "np": "Khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -6037,6 +6511,7 @@
     {
      "np": "nakhaanus",
      "en": "please don't eat",
+     "dev": "नखानुस्",
      "items": [
       "w:khaanu",
       "g:please-not"
@@ -6045,6 +6520,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6061,6 +6537,7 @@
     {
      "np": "Batti",
      "en": "light",
+     "dev": "बत्ती",
      "items": [
       "w:batti"
      ]
@@ -6068,6 +6545,7 @@
     {
      "np": "baalnus",
      "en": "please turn on",
+     "dev": "बाल्नुस्",
      "items": [
       "w:baalnu",
       "g:please"
@@ -6076,6 +6554,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6095,6 +6574,7 @@
     {
      "np": "Kaagati",
      "en": "lemon",
+     "dev": "कागती",
      "items": [
       "w:kaagati"
      ]
@@ -6102,6 +6582,7 @@
     {
      "np": "amilo",
      "en": "sour",
+     "dev": "अमिलो",
      "items": [
       "w:amilo"
      ]
@@ -6109,6 +6590,7 @@
     {
      "np": "chha",
      "en": "is",
+     "dev": "छ",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -6117,6 +6599,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6136,6 +6619,7 @@
     {
      "np": "Aap",
      "en": "mango",
+     "dev": "आँप",
      "items": [
       "w:aap"
      ]
@@ -6143,6 +6627,7 @@
     {
      "np": "guliyo",
      "en": "sweet",
+     "dev": "गुलियो",
      "items": [
       "w:guliyo"
      ]
@@ -6150,6 +6635,7 @@
     {
      "np": "chha",
      "en": "is",
+     "dev": "छ",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -6158,6 +6644,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6174,6 +6661,7 @@
     {
      "np": "Yo",
      "en": "this",
+     "dev": "यो",
      "items": [
       "w:yo"
      ]
@@ -6181,6 +6669,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -6188,6 +6677,7 @@
     {
      "np": "khallo",
      "en": "bland",
+     "dev": "खल्लो",
      "items": [
       "w:khallo"
      ]
@@ -6195,6 +6685,7 @@
     {
      "np": "chha",
      "en": "is",
+     "dev": "छ",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -6203,6 +6694,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6223,6 +6715,7 @@
     {
      "np": "Kasto",
      "en": "how (what kind)",
+     "dev": "कस्तो",
      "items": [
       "w:kasto"
      ]
@@ -6230,6 +6723,7 @@
     {
      "np": "chha",
      "en": "is",
+     "dev": "छ",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -6238,6 +6732,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -6255,6 +6750,7 @@
     {
      "np": "Mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -6262,6 +6758,7 @@
     {
      "np": "ekjanaa",
      "en": "one (person)",
+     "dev": "एकजना",
      "items": [
       "w:ek",
       "g:janaa"
@@ -6270,6 +6767,7 @@
     {
      "np": "daai",
      "en": "elder brother",
+     "dev": "दाइ",
      "items": [
       "w:daai"
      ]
@@ -6277,6 +6775,7 @@
     {
      "np": "chha",
      "en": "is",
+     "dev": "छ",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -6285,6 +6784,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6304,6 +6804,7 @@
     {
      "np": "Tapaaiko",
      "en": "your (respectful)",
+     "dev": "तपाईंको",
      "items": [
       "w:tapaai"
      ]
@@ -6311,6 +6812,7 @@
     {
      "np": "pariwaarmaa",
      "en": "in (your) family",
+     "dev": "परिवारमा",
      "items": [
       "w:pariwaar",
       "g:maa"
@@ -6319,6 +6821,7 @@
     {
      "np": "katijanaa",
      "en": "how many (people)",
+     "dev": "कतिजना",
      "items": [
       "w:kati",
       "g:janaa"
@@ -6327,6 +6830,7 @@
     {
      "np": "sadasya",
      "en": "members",
+     "dev": "सदस्य",
      "items": [
       "w:sadasya"
      ]
@@ -6334,6 +6838,7 @@
     {
      "np": "chhan",
      "en": "are (plural)",
+     "dev": "छन्",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -6342,6 +6847,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -6359,6 +6865,7 @@
     {
      "np": "Mero",
      "en": "my",
+     "dev": "मेरो",
      "items": [
       "w:ma"
      ]
@@ -6366,6 +6873,7 @@
     {
      "np": "eutaa",
      "en": "one (thing)",
+     "dev": "एउटा",
      "items": [
       "w:ek",
       "g:wataa"
@@ -6374,6 +6882,7 @@
     {
      "np": "biraalo",
      "en": "cat",
+     "dev": "बिरालो",
      "items": [
       "w:biraalo"
      ]
@@ -6381,6 +6890,7 @@
     {
      "np": "chha",
      "en": "is",
+     "dev": "छ",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -6389,6 +6899,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6408,16 +6919,19 @@
     {
      "np": "Chunu",
      "en": "Chunu",
+     "dev": "चुनु",
      "items": []
     },
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "timi",
      "en": "you (familiar)",
+     "dev": "तिमी",
      "items": [
       "w:timi"
      ]
@@ -6425,6 +6939,7 @@
     {
      "np": "ke",
      "en": "what",
+     "dev": "के",
      "items": [
       "w:ke"
      ]
@@ -6432,6 +6947,7 @@
     {
      "np": "gardai chhau",
      "en": "are doing (timi)",
+     "dev": "गर्दै छौ",
      "items": [
       "w:garnu",
       "g:continuous"
@@ -6440,6 +6956,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -6459,16 +6976,19 @@
     {
      "np": "Chunu",
      "en": "Chunu",
+     "dev": "चुनु",
      "items": []
     },
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "timilaai",
      "en": "you / to you (familiar, + laai)",
+     "dev": "तिमीलाई",
      "items": [
       "w:timi"
      ]
@@ -6476,6 +6996,7 @@
     {
      "np": "bhok",
      "en": "hunger",
+     "dev": "भोक",
      "items": [
       "w:bhok"
      ]
@@ -6483,6 +7004,7 @@
     {
      "np": "laagyo",
      "en": "felt",
+     "dev": "लाग्यो",
      "items": [
       "w:laagnu",
       "g:feeling"
@@ -6491,6 +7013,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -6511,6 +7034,7 @@
     {
      "np": "Timilaai",
      "en": "you / to you (familiar, + laai)",
+     "dev": "तिमीलाई",
      "items": [
       "w:timi"
      ]
@@ -6518,6 +7042,7 @@
     {
      "np": "thakaai",
      "en": "tiredness",
+     "dev": "थकाइ",
      "items": [
       "w:thakaai"
      ]
@@ -6525,6 +7050,7 @@
     {
      "np": "laagyo",
      "en": "felt",
+     "dev": "लाग्यो",
      "items": [
       "w:laagnu",
       "g:feeling"
@@ -6533,6 +7059,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -6552,6 +7079,7 @@
     {
      "np": "Timilaai",
      "en": "you / to you (familiar, + laai)",
+     "dev": "तिमीलाई",
      "items": [
       "w:timi"
      ]
@@ -6559,6 +7087,7 @@
     {
      "np": "momo",
      "en": "momo (dumplings)",
+     "dev": "मम",
      "items": [
       "w:momo"
      ]
@@ -6566,6 +7095,7 @@
     {
      "np": "manparchha",
      "en": "like(s)",
+     "dev": "मनपर्छ",
      "items": [
       "w:manparnu",
       "g:like"
@@ -6574,6 +7104,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -6595,6 +7126,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -6602,6 +7134,7 @@
     {
      "np": "timro",
      "en": "your (familiar)",
+     "dev": "तिम्रो",
      "items": [
       "w:timi"
      ]
@@ -6609,6 +7142,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -6616,6 +7150,7 @@
     {
      "np": "dherai",
      "en": "a lot, very, many",
+     "dev": "धेरै",
      "items": [
       "w:dherai"
      ]
@@ -6623,6 +7158,7 @@
     {
      "np": "manparchha",
      "en": "like(s)",
+     "dev": "मनपर्छ",
      "items": [
       "w:manparnu",
       "g:like"
@@ -6631,6 +7167,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6652,6 +7189,7 @@
     {
      "np": "Timi",
      "en": "you (familiar)",
+     "dev": "तिमी",
      "items": [
       "w:timi"
      ]
@@ -6659,6 +7197,7 @@
     {
      "np": "kati",
      "en": "how much / how many",
+     "dev": "कति",
      "items": [
       "w:kati"
      ]
@@ -6666,6 +7205,7 @@
     {
      "np": "baje",
      "en": "at (o'clock)",
+     "dev": "बजे",
      "items": [
       "w:baje",
       "g:baje"
@@ -6674,6 +7214,7 @@
     {
      "np": "ghar",
      "en": "house, home",
+     "dev": "घर",
      "items": [
       "w:ghar"
      ]
@@ -6681,6 +7222,7 @@
     {
      "np": "aauchhau",
      "en": "come (timi)",
+     "dev": "आउँछौ",
      "items": [
       "w:aaunu",
       "g:present-timi"
@@ -6689,6 +7231,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -6711,6 +7254,7 @@
     {
      "np": "Aaja",
      "en": "today",
+     "dev": "आज",
      "items": [
       "w:aaja"
      ]
@@ -6718,6 +7262,7 @@
     {
      "np": "belukaa",
      "en": "evening",
+     "dev": "बेलुका",
      "items": [
       "w:belukaa"
      ]
@@ -6725,6 +7270,7 @@
     {
      "np": "ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -6732,6 +7278,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -6739,6 +7286,7 @@
     {
      "np": "pakaauchhu",
      "en": "cook (I)",
+     "dev": "पकाउँछु",
      "items": [
       "w:pakaaunu",
       "g:present"
@@ -6747,6 +7295,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6769,6 +7318,7 @@
     {
      "np": "Bholi",
      "en": "tomorrow",
+     "dev": "भोलि",
      "items": [
       "w:bholi"
      ]
@@ -6776,6 +7326,7 @@
     {
      "np": "haami",
      "en": "we",
+     "dev": "हामी",
      "items": [
       "w:haami"
      ]
@@ -6783,6 +7334,7 @@
     {
      "np": "Aama",
      "en": "Aama (mother-in-law)",
+     "dev": "आमा",
      "items": [
       "w:aamaa"
      ]
@@ -6790,6 +7342,7 @@
     {
      "np": "Buwako",
      "en": "Buwa's",
+     "dev": "बुवाको",
      "items": [
       "w:buwa"
      ]
@@ -6797,6 +7350,7 @@
     {
      "np": "ghar",
      "en": "house, home",
+     "dev": "घर",
      "items": [
       "w:ghar"
      ]
@@ -6804,6 +7358,7 @@
     {
      "np": "jaanchhaun",
      "en": "go (we)",
+     "dev": "जान्छौं",
      "items": [
       "w:jaanu",
       "g:present-haami"
@@ -6812,6 +7367,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6833,6 +7389,7 @@
     {
      "np": "Haami",
      "en": "we",
+     "dev": "हामी",
      "items": [
       "w:haami"
      ]
@@ -6840,6 +7397,7 @@
     {
      "np": "bajaar",
      "en": "market",
+     "dev": "बजार",
      "items": [
       "w:bajaar"
      ]
@@ -6847,6 +7405,7 @@
     {
      "np": "jaanu parchha",
      "en": "have to go",
+     "dev": "जानु पर्छ",
      "items": [
       "w:jaanu",
       "g:must"
@@ -6855,6 +7414,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6875,16 +7435,19 @@
     {
      "np": "Chunu",
      "en": "Chunu",
+     "dev": "चुनु",
      "items": []
     },
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "chiyaa",
      "en": "tea",
+     "dev": "चिया",
      "items": [
       "w:chiyaa"
      ]
@@ -6892,6 +7455,7 @@
     {
      "np": "piune",
      "en": "to drink (time to)",
+     "dev": "पिउने",
      "items": [
       "w:piunu"
      ]
@@ -6899,6 +7463,7 @@
     {
      "np": "belaa bhayo",
      "en": "it's time",
+     "dev": "बेला भयो",
      "items": [
       "w:belaa",
       "g:time-to"
@@ -6907,6 +7472,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6928,6 +7494,7 @@
     {
      "np": "Khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -6935,6 +7502,7 @@
     {
      "np": "khaaepachhi",
      "en": "after eating",
+     "dev": "खाएपछि",
      "items": [
       "w:khaanu",
       "g:after"
@@ -6943,6 +7511,7 @@
     {
      "np": "haami",
      "en": "we",
+     "dev": "हामी",
      "items": [
       "w:haami"
      ]
@@ -6950,6 +7519,7 @@
     {
      "np": "film",
      "en": "movie",
+     "dev": "फिल्म",
      "items": [
       "w:film"
      ]
@@ -6957,6 +7527,7 @@
     {
      "np": "herchhaun",
      "en": "watch (we)",
+     "dev": "हेर्छौं",
      "items": [
       "w:hernu",
       "g:present-haami"
@@ -6965,6 +7536,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -6986,6 +7558,7 @@
     {
      "np": "Ma",
      "en": "I",
+     "dev": "म",
      "items": [
       "w:ma"
      ]
@@ -6993,6 +7566,7 @@
     {
      "np": "office",
      "en": "office",
+     "dev": "अफिस",
      "items": [
       "w:office"
      ]
@@ -7000,6 +7574,7 @@
     {
      "np": "pugne bittikai",
      "en": "as soon as (I) reach",
+     "dev": "पुग्ने बित्तिकै",
      "items": [
       "w:pugnu",
       "g:as-soon-as"
@@ -7008,6 +7583,7 @@
     {
      "np": "timilaai",
      "en": "you / to you (familiar, + laai)",
+     "dev": "तिमीलाई",
      "items": [
       "w:timi"
      ]
@@ -7015,6 +7591,7 @@
     {
      "np": "phone",
      "en": "phone",
+     "dev": "फोन",
      "items": [
       "w:phone"
      ]
@@ -7022,6 +7599,7 @@
     {
      "np": "garchhu",
      "en": "do (I)",
+     "dev": "गर्छु",
      "items": [
       "w:garnu",
       "g:present"
@@ -7030,6 +7608,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -7050,6 +7629,7 @@
     {
      "np": "Timile",
      "en": "you (familiar, + le)",
+     "dev": "तिमीले",
      "items": [
       "w:timi"
      ]
@@ -7057,6 +7637,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -7064,6 +7645,7 @@
     {
      "np": "khaayau",
      "en": "ate (timi)",
+     "dev": "खायौ",
      "items": [
       "w:khaanu",
       "g:past-timi",
@@ -7073,6 +7655,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -7093,6 +7676,7 @@
     {
      "np": "Aama",
      "en": "Aama (mother-in-law)",
+     "dev": "आमा",
      "items": [
       "w:aamaa"
      ]
@@ -7100,11 +7684,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "tapaaile",
      "en": "you (respectful, + le)",
+     "dev": "तपाईंले",
      "items": [
       "w:tapaai"
      ]
@@ -7112,6 +7698,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -7119,6 +7706,7 @@
     {
      "np": "khaanu bhayo",
      "en": "ate (respectful)",
+     "dev": "खानु भयो",
      "items": [
       "w:khaanu",
       "g:honorific-past",
@@ -7128,6 +7716,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -7148,6 +7737,7 @@
     {
      "np": "Buwa",
      "en": "Buwa (father-in-law)",
+     "dev": "बुवा",
      "items": [
       "w:buwa"
      ]
@@ -7155,11 +7745,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -7167,6 +7759,7 @@
     {
      "np": "sanchai",
      "en": "well, fine",
+     "dev": "सन्चै",
      "items": [
       "w:sanchai"
      ]
@@ -7174,6 +7767,7 @@
     {
      "np": "hunuhunchha",
      "en": "are (respectful)",
+     "dev": "हुनुहुन्छ",
      "items": [
       "w:hunu",
       "g:honorific-present"
@@ -7182,6 +7776,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -7198,6 +7793,7 @@
     {
      "np": "Aama",
      "en": "Aama (mother-in-law)",
+     "dev": "आमा",
      "items": [
       "w:aamaa"
      ]
@@ -7205,11 +7801,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "tapaailaai",
      "en": "you / to you (respectful, + laai)",
+     "dev": "तपाईंलाई",
      "items": [
       "w:tapaai"
      ]
@@ -7217,6 +7815,7 @@
     {
      "np": "chiyaa",
      "en": "tea",
+     "dev": "चिया",
      "items": [
       "w:chiyaa"
      ]
@@ -7224,6 +7823,7 @@
     {
      "np": "manparchha",
      "en": "like(s)",
+     "dev": "मनपर्छ",
      "items": [
       "w:manparnu",
       "g:like"
@@ -7232,6 +7832,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -7253,6 +7854,7 @@
     {
      "np": "Aama",
      "en": "Aama (mother-in-law)",
+     "dev": "आमा",
      "items": [
       "w:aamaa"
      ]
@@ -7260,11 +7862,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -7272,6 +7876,7 @@
     {
      "np": "dherai",
      "en": "a lot, very, many",
+     "dev": "धेरै",
      "items": [
       "w:dherai"
      ]
@@ -7279,6 +7884,7 @@
     {
      "np": "mitho",
      "en": "tasty, delicious",
+     "dev": "मीठो",
      "items": [
       "w:mitho"
      ]
@@ -7286,6 +7892,7 @@
     {
      "np": "chha",
      "en": "is",
+     "dev": "छ",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -7294,6 +7901,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -7314,6 +7922,7 @@
     {
      "np": "Buwa",
      "en": "Buwa (father-in-law)",
+     "dev": "बुवा",
      "items": [
       "w:buwa"
      ]
@@ -7321,11 +7930,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "chiyaa",
      "en": "tea",
+     "dev": "चिया",
      "items": [
       "w:chiyaa"
      ]
@@ -7333,6 +7944,7 @@
     {
      "np": "piunus",
      "en": "please drink",
+     "dev": "पिउनुस्",
      "items": [
       "w:piunu",
       "g:please"
@@ -7341,6 +7953,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -7361,6 +7974,7 @@
     {
      "np": "Aama",
      "en": "Aama (mother-in-law)",
+     "dev": "आमा",
      "items": [
       "w:aamaa"
      ]
@@ -7368,11 +7982,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "basnus",
      "en": "please sit",
+     "dev": "बस्नुस्",
      "items": [
       "w:basnu",
       "g:please"
@@ -7381,6 +7997,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -7397,6 +8014,7 @@
     {
      "np": "Aama",
      "en": "Aama (mother-in-law)",
+     "dev": "आमा",
      "items": [
       "w:aamaa"
      ]
@@ -7404,11 +8022,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -7416,6 +8036,7 @@
     {
      "np": "ke",
      "en": "what",
+     "dev": "के",
      "items": [
       "w:ke"
      ]
@@ -7423,6 +8044,7 @@
     {
      "np": "gardai hunuhunchha",
      "en": "are doing (respectful)",
+     "dev": "गर्दै हुनुहुन्छ",
      "items": [
       "w:garnu",
       "g:continuous"
@@ -7431,6 +8053,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -7450,6 +8073,7 @@
     {
      "np": "Buwa",
      "en": "Buwa (father-in-law)",
+     "dev": "बुवा",
      "items": [
       "w:buwa"
      ]
@@ -7457,11 +8081,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -7469,6 +8095,7 @@
     {
      "np": "kati",
      "en": "how much / how many",
+     "dev": "कति",
      "items": [
       "w:kati"
      ]
@@ -7476,6 +8103,7 @@
     {
      "np": "baje",
      "en": "at (o'clock)",
+     "dev": "बजे",
      "items": [
       "w:baje",
       "g:baje"
@@ -7484,6 +8112,7 @@
     {
      "np": "uthnu hunchha",
      "en": "wake up (respectful)",
+     "dev": "उठ्नु हुन्छ",
      "items": [
       "w:uthnu",
       "g:honorific-present"
@@ -7492,6 +8121,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -7511,6 +8141,7 @@
     {
      "np": "Aama",
      "en": "Aama (mother-in-law)",
+     "dev": "आमा",
      "items": [
       "w:aamaa"
      ]
@@ -7518,11 +8149,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "tapaailaai",
      "en": "you / to you (respectful, + laai)",
+     "dev": "तपाईंलाई",
      "items": [
       "w:tapaai"
      ]
@@ -7530,6 +8163,7 @@
     {
      "np": "bhok",
      "en": "hunger",
+     "dev": "भोक",
      "items": [
       "w:bhok"
      ]
@@ -7537,6 +8171,7 @@
     {
      "np": "laagyo",
      "en": "felt",
+     "dev": "लाग्यो",
      "items": [
       "w:laagnu",
       "g:feeling"
@@ -7545,6 +8180,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -7565,6 +8201,7 @@
     {
      "np": "Aama",
      "en": "Aama (mother-in-law)",
+     "dev": "आमा",
      "items": [
       "w:aamaa"
      ]
@@ -7572,11 +8209,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -7584,6 +8223,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -7591,6 +8231,7 @@
     {
      "np": "sikaaunus",
      "en": "please teach",
+     "dev": "सिकाउनुस्",
      "items": [
       "w:sikaaunu",
       "g:please"
@@ -7599,6 +8240,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -7618,6 +8260,7 @@
     {
      "np": "Buwa",
      "en": "Buwa (father-in-law)",
+     "dev": "बुवा",
      "items": [
       "w:buwa"
      ]
@@ -7625,11 +8268,13 @@
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "tapaai",
      "en": "you (respectful)",
+     "dev": "तपाईं",
      "items": [
       "w:tapaai"
      ]
@@ -7637,6 +8282,7 @@
     {
      "np": "haamro",
      "en": "our",
+     "dev": "हाम्रो",
      "items": [
       "w:haami"
      ]
@@ -7644,6 +8290,7 @@
     {
      "np": "ghar",
      "en": "house, home",
+     "dev": "घर",
      "items": [
       "w:ghar"
      ]
@@ -7651,6 +8298,7 @@
     {
      "np": "kahile",
      "en": "when (question)",
+     "dev": "कहिले",
      "items": [
       "w:kahile"
      ]
@@ -7658,6 +8306,7 @@
     {
      "np": "aaunu hunchha",
      "en": "come (respectful)",
+     "dev": "आउनु हुन्छ",
      "items": [
       "w:aaunu",
       "g:honorific-present"
@@ -7666,6 +8315,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -7683,6 +8333,7 @@
     {
      "np": "Malaai",
      "en": "I / to me (+ laai)",
+     "dev": "मलाई",
      "items": [
       "w:ma"
      ]
@@ -7690,6 +8341,7 @@
     {
      "np": "Nepali",
      "en": "Nepali",
+     "dev": "नेपाली",
      "items": [
       "w:nepali"
      ]
@@ -7697,6 +8349,7 @@
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -7704,6 +8357,7 @@
     {
      "np": "pakaauna aaudaina",
      "en": "don't know how to cook",
+     "dev": "पकाउन आउँदैन",
      "items": [
       "w:pakaaunu",
       "g:know-how-not"
@@ -7712,6 +8366,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -7723,22 +8378,28 @@
    "verified": false
   },
   {
-   "id": "seed:ryan-what-are-you-doing",
-   "en": "Ryan, what are you doing?",
+   "id": "seed:ryandada-what-are-you-doing",
+   "en": "Ryan-dada, what are you doing?",
+   "enAlts": [
+    "Ryan, what are you doing?"
+   ],
    "chunks": [
     {
-     "np": "Ryan",
-     "en": "Ryan",
+     "np": "Ryan-dada",
+     "en": "Ryan-dada",
+     "dev": "रायन दादा",
      "items": []
     },
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "timi",
      "en": "you (familiar)",
+     "dev": "तिमी",
      "items": [
       "w:timi"
      ]
@@ -7746,6 +8407,7 @@
     {
      "np": "ke",
      "en": "what",
+     "dev": "के",
      "items": [
       "w:ke"
      ]
@@ -7753,6 +8415,7 @@
     {
      "np": "gardai chhau",
      "en": "are doing (timi)",
+     "dev": "गर्दै छौ",
      "items": [
       "w:garnu",
       "g:continuous"
@@ -7761,6 +8424,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -7771,22 +8435,28 @@
    "verified": false
   },
   {
-   "id": "seed:aiden-do-you-like-chocolate",
-   "en": "Aiden, do you like chocolate?",
+   "id": "seed:aidendada-do-you-like-chocolate",
+   "en": "Aiden-dada, do you like chocolate?",
+   "enAlts": [
+    "Aiden, do you like chocolate?"
+   ],
    "chunks": [
     {
-     "np": "Aiden",
-     "en": "Aiden",
+     "np": "Aiden-dada",
+     "en": "Aiden-dada",
+     "dev": "एडेन दादा",
      "items": []
     },
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "timilaai",
      "en": "you / to you (familiar, + laai)",
+     "dev": "तिमीलाई",
      "items": [
       "w:timi"
      ]
@@ -7794,6 +8464,7 @@
     {
      "np": "chocolate",
      "en": "chocolate",
+     "dev": "चकलेट",
      "items": [
       "w:chocolate"
      ]
@@ -7801,6 +8472,7 @@
     {
      "np": "manparchha",
      "en": "like(s)",
+     "dev": "मनपर्छ",
      "items": [
       "w:manparnu",
       "g:like"
@@ -7809,6 +8481,7 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
@@ -7826,11 +8499,13 @@
     {
      "np": "Ryan",
      "en": "Ryan",
+     "dev": "रायन",
      "items": []
     },
     {
      "np": "ra",
      "en": "and",
+     "dev": "र",
      "items": [
       "w:ra"
      ]
@@ -7838,11 +8513,13 @@
     {
      "np": "Aiden",
      "en": "Aiden",
+     "dev": "एडेन",
      "items": []
     },
     {
      "np": "football",
      "en": "football",
+     "dev": "फुटबल",
      "items": [
       "w:football"
      ]
@@ -7850,6 +8527,7 @@
     {
      "np": "kheldai chhan",
      "en": "are playing (they)",
+     "dev": "खेल्दै छन्",
      "items": [
       "w:khelnu",
       "g:continuous"
@@ -7858,6 +8536,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -7877,11 +8556,13 @@
     {
      "np": "Siyonlaai",
      "en": "Siyon (laai)",
+     "dev": "सियोनलाई",
      "items": []
     },
     {
      "np": "piano",
      "en": "piano",
+     "dev": "पियानो",
      "items": [
       "w:piano"
      ]
@@ -7889,6 +8570,7 @@
     {
      "np": "bajaauna aauchha",
      "en": "knows how to play (music)",
+     "dev": "बजाउन आउँछ",
      "items": [
       "w:bajaaunu",
       "g:know-how"
@@ -7897,6 +8579,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -7913,11 +8596,13 @@
     {
      "np": "Ryan",
      "en": "Ryan",
+     "dev": "रायन",
      "items": []
     },
     {
      "np": "Aidenbhandaa",
      "en": "than Aiden",
+     "dev": "एडेनभन्दा",
      "items": [
       "g:than"
      ]
@@ -7925,6 +8610,7 @@
     {
      "np": "aglo",
      "en": "tall",
+     "dev": "अग्लो",
      "items": [
       "w:aglo"
      ]
@@ -7932,6 +8618,7 @@
     {
      "np": "chha",
      "en": "is",
+     "dev": "छ",
      "items": [
       "w:chha",
       "g:present-chha"
@@ -7940,6 +8627,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -7959,11 +8647,13 @@
     {
      "np": "Aiden",
      "en": "Aiden",
+     "dev": "एडेन",
      "items": []
     },
     {
      "np": "ra",
      "en": "and",
+     "dev": "र",
      "items": [
       "w:ra"
      ]
@@ -7971,11 +8661,13 @@
     {
      "np": "Siyon",
      "en": "Siyon",
+     "dev": "सियोन",
      "items": []
     },
     {
      "np": "khaana",
      "en": "food, meal",
+     "dev": "खाना",
      "items": [
       "w:khaana"
      ]
@@ -7983,6 +8675,7 @@
     {
      "np": "khaadai chhan",
      "en": "are eating (they)",
+     "dev": "खाँदै छन्",
      "items": [
       "w:khaanu",
       "g:continuous"
@@ -7991,6 +8684,7 @@
     {
      "np": ".",
      "en": "",
+     "dev": "।",
      "items": []
     }
    ],
@@ -8002,22 +8696,28 @@
    "verified": false
   },
   {
-   "id": "seed:siyon-how-old-are-you",
-   "en": "Siyon, how old are you?",
+   "id": "seed:siyondada-how-old-are-you",
+   "en": "Siyon-dada, how old are you?",
+   "enAlts": [
+    "Siyon, how old are you?"
+   ],
    "chunks": [
     {
-     "np": "Siyon",
-     "en": "Siyon",
+     "np": "Siyon-dada",
+     "en": "Siyon-dada",
+     "dev": "सियोन दादा",
      "items": []
     },
     {
      "np": ",",
      "en": "",
+     "dev": ",",
      "items": []
     },
     {
      "np": "timi",
      "en": "you (familiar)",
+     "dev": "तिमी",
      "items": [
       "w:timi"
      ]
@@ -8025,6 +8725,7 @@
     {
      "np": "kati",
      "en": "how much / how many",
+     "dev": "कति",
      "items": [
       "w:kati"
      ]
@@ -8032,6 +8733,7 @@
     {
      "np": "barsa",
      "en": "year(s)",
+     "dev": "वर्ष",
      "items": [
       "w:barsa"
      ]
@@ -8039,6 +8741,7 @@
     {
      "np": "bhayau",
      "en": "became, are (timi)",
+     "dev": "भयौ",
      "items": [
       "w:hunu",
       "g:past-timi"
@@ -8047,11 +8750,203 @@
     {
      "np": "?",
      "en": "",
+     "dev": "?",
      "items": []
     }
    ],
    "tags": [
     "nephews"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:ryan-aiden-and-siyon-are-my-nephews",
+   "en": "Ryan, Aiden and Siyon are my nephews.",
+   "enAlts": [
+    "Ryan, Aiden, and Siyon are my nephews."
+   ],
+   "chunks": [
+    {
+     "np": "Ryan",
+     "en": "Ryan",
+     "dev": "रायन",
+     "items": []
+    },
+    {
+     "np": ",",
+     "en": "",
+     "dev": ",",
+     "items": []
+    },
+    {
+     "np": "Aiden",
+     "en": "Aiden",
+     "dev": "एडेन",
+     "items": []
+    },
+    {
+     "np": "ra",
+     "en": "and",
+     "dev": "र",
+     "items": [
+      "w:ra"
+     ]
+    },
+    {
+     "np": "Siyon",
+     "en": "Siyon",
+     "dev": "सियोन",
+     "items": []
+    },
+    {
+     "np": "mera",
+     "en": "my (with plural)",
+     "dev": "मेरा",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "bhanjaharu",
+     "en": "nephews (sister's sons)",
+     "dev": "भान्जाहरू",
+     "items": [
+      "w:bhanja"
+     ]
+    },
+    {
+     "np": "hun",
+     "en": "are (identity, plural)",
+     "dev": "हुन्",
+     "items": [
+      "w:ho",
+      "g:ho"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "dev": "।",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews",
+    "family"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:siyondada-did-you-eat",
+   "en": "Siyon-dada, did you eat?",
+   "enAlts": [
+    "Siyon-dada, have you eaten?"
+   ],
+   "chunks": [
+    {
+     "np": "Siyon-dada",
+     "en": "Siyon-dada",
+     "dev": "सियोन दादा",
+     "items": []
+    },
+    {
+     "np": ",",
+     "en": "",
+     "dev": ",",
+     "items": []
+    },
+    {
+     "np": "timile",
+     "en": "you (familiar, + le)",
+     "dev": "तिमीले",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "dev": "खाना",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaayau",
+     "en": "ate (timi)",
+     "dev": "खायौ",
+     "items": [
+      "w:khaanu",
+      "g:past-timi",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "dev": "?",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews",
+    "mealtime"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:my-nephews-like-momo",
+   "en": "My nephews like momo.",
+   "enAlts": [
+    "My nephews like momos."
+   ],
+   "chunks": [
+    {
+     "np": "Mera",
+     "en": "my (with plural)",
+     "dev": "मेरा",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "bhanjaharulaai",
+     "en": "to my nephews",
+     "dev": "भान्जाहरूलाई",
+     "items": [
+      "w:bhanja"
+     ]
+    },
+    {
+     "np": "momo",
+     "en": "momo (dumplings)",
+     "dev": "मम",
+     "items": [
+      "w:momo"
+     ]
+    },
+    {
+     "np": "manparchha",
+     "en": "like(s)",
+     "dev": "मनपर्छ",
+     "items": [
+      "w:manparnu",
+      "g:like"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "dev": "।",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews",
+    "food"
    ],
    "source": "seed",
    "verified": false

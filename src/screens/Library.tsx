@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { isKnown } from '../core/schedule'
-import { sentenceNepali } from '../core/types'
+import { VoiceSettings } from '../components/VoiceSettings'
+import { sentenceDevanagari, sentenceNepali } from '../core/types'
+import { speak, unlockAudio } from '../voice/tts'
 import type { Deck } from '../hooks/useDeck'
 
 const LATER = [
@@ -39,7 +41,14 @@ export function Library({ deck }: { deck: Deck }) {
       {tab === 'sentences' ? (
         <section className="card list">
           {deck.sentences.map((s) => (
-            <div key={s.id} className="row">
+            <div
+              key={s.id}
+              className="row tappable"
+              onClick={() => {
+                unlockAudio()
+                speak(sentenceDevanagari(s)).catch(() => {})
+              }}
+            >
               <div>
                 <div className="row-np">{sentenceNepali(s)}</div>
                 <div className="muted small">{s.en}</div>
@@ -62,6 +71,8 @@ export function Library({ deck }: { deck: Deck }) {
         </section>
       )}
 
+      <VoiceSettings />
+
       {LATER.map((it) => (
         <section key={it.title} className="card lib-item">
           <span className="lib-bar" style={{ background: it.color }} />
@@ -72,7 +83,7 @@ export function Library({ deck }: { deck: Deck }) {
           <span className="chip">{it.stage}</span>
         </section>
       ))}
-      <p className="muted small center">Version 0.2 · Stage 1</p>
+      <p className="muted small center">Version 0.3 · Stage 2 · Tap a sentence to hear it</p>
     </>
   )
 }

@@ -159,10 +159,13 @@ Aama, please teach me Nepali. || Aama, malaai Nepali sikaaunus. || mother-in-law
 Buwa, when will you come to our house? || Buwa, tapaai haamro ghar kahile aaunu_hunchha? || father-in-law,plans || g:honorific-present || Buwa, when are you coming to our house?
 I don't know how to cook Nepali food. || Malaai Nepali khaana pakaauna_aaudaina. || mother-in-law,food || g:know-how-not ||
 ## The nephews
-Ryan, what are you doing? || Ryan, timi ke gardai_chhau? || nephews || g:continuous ||
-Aiden, do you like chocolate? || Aiden, timilaai chocolate manparchha? || nephews,food || g:like ||
+Ryan-dada, what are you doing? || Ryan-dada, timi ke gardai_chhau? || nephews || g:continuous || Ryan, what are you doing?
+Aiden-dada, do you like chocolate? || Aiden-dada, timilaai chocolate manparchha? || nephews,food || g:like || Aiden, do you like chocolate?
 Ryan and Aiden are playing football. || Ryan ra Aiden football kheldai_chhan. || nephews || g:continuous ||
 Siyon knows how to play piano. || Siyonlaai piano bajaauna_aauchha. || nephews || g:know-how || Siyon knows how to play the piano.
 Ryan is taller than Aiden. || Ryan Aidenbhandaa{g:than} aglo chha. || nephews || g:present-chha ||
 Aiden and Siyon are eating. || Aiden ra Siyon khaana khaadai_chhan. || nephews,mealtime || g:continuous || Aiden and Siyon are eating food.
-Siyon, how old are you? || Siyon, timi kati barsa bhayau? || nephews || g:past-timi ||
+Siyon-dada, how old are you? || Siyon-dada, timi kati barsa bhayau? || nephews || g:past-timi || Siyon, how old are you?
+Ryan, Aiden and Siyon are my nephews. || Ryan, Aiden ra Siyon mera bhanjaharu hun. || nephews,family || g:ho || Ryan, Aiden, and Siyon are my nephews.
+Siyon-dada, did you eat? || Siyon-dada, timile khaana khaayau? || nephews,mealtime || g:past-timi,g:le-past || Siyon-dada, have you eaten?
+My nephews like momo. || Mera bhanjaharulaai momo manparchha. || nephews,food || g:like || My nephews like momos.

@@ -736,3 +736,154 @@ button {
 .row .muted {
   margin-top: 2px;
 }
+
+/* Stage 2: voice */
+.ico {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.listen-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 4px 0 10px;
+}
+.listen-row.tight {
+  margin: 0;
+}
+.listen {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--card-border);
+  background: rgba(255, 200, 87, 0.12);
+  color: var(--sun);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 600;
+}
+.listen.slow {
+  background: rgba(61, 125, 216, 0.16);
+  color: #a9c8f5;
+}
+.listen.ghosty {
+  background: transparent;
+  color: var(--muted);
+}
+.listen.icon {
+  padding: 7px;
+}
+.listen:active {
+  transform: scale(0.96);
+}
+.np-words.masked .np-word strong {
+  filter: blur(9px);
+  opacity: 0.7;
+}
+.np-words.masked .np-word span {
+  visibility: hidden;
+}
+.answer button.mic {
+  background: rgba(255, 247, 234, 0.1);
+  color: var(--text);
+  padding: 0 14px;
+  border: 1px solid var(--card-border);
+}
+.answer button.mic .ico {
+  width: 22px;
+  height: 22px;
+}
+.answer button.mic.live {
+  background: var(--flag-red);
+  border-color: var(--flag-red);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 75, 75, 0.55); }
+  50% { box-shadow: 0 0 0 10px rgba(224, 75, 75, 0); }
+}
+.listening-note {
+  margin: 0;
+}
+.voice-error {
+  color: #ffb4a8;
+  margin: 8px 0 0;
+}
+.feedback-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.feedback-head .eyebrow {
+  margin: 0;
+}
+.ai-note {
+  border-left: 3px solid var(--sun);
+  padding-left: 10px;
+}
+.row.tappable {
+  cursor: pointer;
+}
+.row.tappable:active {
+  background: rgba(255, 247, 234, 0.05);
+}
+.settings .setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--card-border);
+}
+.settings .setting > span {
+  display: flex;
+  flex-direction: column;
+}
+.settings .setting small {
+  font-size: 13px;
+}
+.settings .setting.code {
+  flex-direction: column;
+  align-items: stretch;
+}
+.small-seg button {
+  padding: 7px 10px;
+  font-size: 13px;
+}
+.toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 50px;
+  height: 30px;
+  border-radius: 999px;
+  background: rgba(255, 247, 234, 0.16);
+  position: relative;
+  flex: none;
+  transition: background 0.2s;
+}
+.toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s;
+}
+.toggle:checked {
+  background: var(--flag-green);
+}
+.toggle:checked::after {
+  transform: translateX(20px);
+}
+.small-seg button {
+  white-space: nowrap;
+}

@@ -1,0 +1,264 @@
+# form (romanized, as in lexicon.tsv)	Devanagari
+# Used only for the Azure voice (TTS needs Devanagari) and for matching what speech recognition hears.
+# Never shown in the app. Written by Claude from the romanized tutor text; lines marked "check" need TJ's tutor.
+namaste	नमस्ते
+tj	टीजे
+chunu	चुनु
+ryan	रायन
+aiden	एडेन
+siyon	सियोन
+ryan-dada	रायन दादा
+aiden-dada	एडेन दादा
+siyon-dada	सियोन दादा
+siyonlaai	सियोनलाई
+aidenbhandaa	एडेनभन्दा
+kathmandu	काठमाडौं
+kathmandumaa	काठमाडौंमा
+tapaai	तपाईं
+tapaaiko	तपाईंको
+tapaaile	तपाईंले
+tapaailaai	तपाईंलाई
+timi	तिमी
+timile	तिमीले
+timilaai	तिमीलाई
+timro	तिम्रो
+timibhandaa	तिमीभन्दा
+ma	म
+maile	मैले
+malaai	मलाई
+mero	मेरो
+mera	मेरा
+mero laagi	मेरो लागि
+haami	हामी
+haamile	हामीले
+haamilaai	हामीलाई
+haamro	हाम्रो
+wahaa	उहाँ
+wu	ऊ
+wusle	उसले
+wuni	उनी
+wunle	उनले
+wunko	उनको
+wuniharu	उनीहरू
+wuniharule	उनीहरूले
+naam	नाम
+ke	के
+ho	हो
+hun	हुन्
+sanchai	सन्चै
+hunuhunchha	हुनुहुन्छ
+chhu	छु
+chha	छ
+chhan	छन्
+thiyo	थियो
+pani	पनि
+ani	अनि
+ra	र
+khaana	खाना
+khaanabhandaa	खानाभन्दा
+khaanu bhayo	खानु भयो
+khaaeko chhaina	खाएको छैन
+bharkhar	भर्खर
+khaae	खाएँ
+khaaena	खाइनँ	check
+khaayau	खायौ
+khaanchhu	खान्छु
+khaanchhau	खान्छौ
+khaanchhaun	खान्छौं
+khaadai chhu	खाँदै छु
+khaadai chhan	खाँदै छन्
+khaanu hunchha	खानु हुन्छ
+khaanus	खानुस्
+nakhaanus	नखानुस्
+khaaepachhi	खाएपछि
+bhetera	भेटेर
+bheteka chhaun	भेटेका छौं
+bheteka chhainaun	भेटेका छैनौं
+khusi	खुसी
+khushi	खुशी
+laagyo	लाग्यो
+laageko chhaina	लागेको छैन
+saag	साग
+manparchha	मनपर्छ
+manpardaina	मनपर्दैन
+falful	फलफूल
+chiyaa	चिया
+chiyaabhandaa	चियाभन्दा
+roti	रोटी
+khursaani	खुर्सानी
+chauchau	चाउचाउ
+piro	पिरो
+kaalo	कालो
+coffee	कफी
+kati	कति
+katijanaa	कतिजना
+barsa	वर्ष
+hunu bhayo	हुनु भयो
+bhayau	भयौ
+kahaa	कहाँ
+basnu hunchha	बस्नु हुन्छ
+baschhu	बस्छु
+basnus	बस्नुस्
+tarkaari	तरकारी
+kinchhu	किन्छु
+kindina	किन्दिनँ
+kinchhin	किन्छिन्
+kindai chhau	किन्दै छौ
+chiso	चिसो
+paani	पानी
+piuchhu	पिउँछु
+piudai chhu	पिउँदै छु
+piunus	पिउनुस्
+piune	पिउने
+syaau	स्याउ
+pizza	पिज्जा
+banaauchhaun	बनाउँछौं
+banaauchhu	बनाउँछु
+banaayo	बनायो
+banaaudai chhan	बनाउँदै छन्
+nepali	नेपाली
+bhaasaa	भाषा
+pakaaunu hunchha	पकाउनु हुन्छ
+pakaae	पकाएँ
+pakaaeka chhan	पकाएका छन्
+pakaaudaa	पकाउँदा
+pakaauchhu	पकाउँछु
+pakaauna laagyaun	पकाउन लाग्यौं
+pakaauna aaudaina	पकाउन आउँदैन
+pakaaune	पकाउने
+guliyo	गुलियो
+bolchha	बोल्छ
+boleko chhu	बोलेको छु
+boleko chhaina	बोलेको छैन
+boldai chhau	बोल्दै छौ
+bolna aauchha	बोल्न आउँछ
+bajaarbaata	बजारबाट
+bajaar	बजार
+dherai	धेरै
+saamaan	सामान
+din dinai	दिन दिनै
+harekdin	हरेकदिन
+football	फुटबल
+khelchhan	खेल्छन्
+kheldai chhan	खेल्दै छन्
+diusoko khaana	दिउँसोको खाना
+diusoko	दिउँसोको
+saathiko	साथीको
+ghar	घर
+gharmaa	घरमा
+gayaun	गयौं
+gae	गएँ
+jaanu parchha	जानु पर्छ
+jaanu pardaina	जानु पर्दैन
+jaanuaghi	जानुअघि
+jaana laage	जान लागें
+jaane	जाने
+jaanchhu	जान्छु
+jaanchhaun	जान्छौं
+bihaanako	बिहानको
+bihaana	बिहान
+chha baje	छ बजे
+baje	बजे
+uthnu bhayo	उठ्नु भयो
+uthnu parchha	उठ्नु पर्छ
+uthnu hunchha	उठ्नु हुन्छ
+uthchhau	उठ्छौ
+uthepachhi	उठेपछि
+uthne bittikai	उठ्ने बित्तिकै
+aaunu bhayo	आउनु भयो
+aaunu hunchha	आउनु हुन्छ
+aauchhau	आउँछौ
+aaepachhi	आएपछि
+aamaasanga	आमासँग
+aamaale	आमाले
+aama	आमा
+buwa	बुवा
+buwako	बुवाको
+phonemaa	फोनमा
+phone	फोन
+kuraa	कुरा
+garin	गरिन्
+garchhu	गर्छु
+garnu parchha	गर्नु पर्छ
+gardai chhau	गर्दै छौ
+gardai hunuhunchha	गर्दै हुनुहुन्छ
+saasusanga	सासूसँग
+batti	बत्ती
+nibhaaeko chhu	निभाएको छु
+baalnus	बाल्नुस्
+dui	दुई
+patak	पटक
+ahilesamma	अहिलेसम्म
+geet	गीत
+momo	मम
+siknu parchha	सिक्नु पर्छ
+sikepachhi	सिकेपछि
+sikaaunus	सिकाउनुस्
+aaja	आज
+kaammaa	काममा
+bholi	भोलि
+chaadai	चाँडै
+exercise	एक्सरसाइज
+hudaa	हुँदा
+safaa	सफा
+kahile	कहिले
+sutnuaghi	सुत्नुअघि
+sutchhu	सुत्छु
+sutne	सुत्ने
+mukh	मुख
+dhunchhu	धुन्छु
+dhunus	धुनुस्
+kehi	केही
+dinaghi	दिनअघि
+officemaa	अफिसमा
+office	अफिस
+aaraam	आराम
+baithak	बैठक
+sakine bittikai	सकिने बित्तिकै
+bidhyaalaya	विद्यालय
+parna laagyo	पर्न लाग्यो
+aglo	अग्लो
+taato	तातो
+yo	यो
+tyo	त्यो
+mitho	मीठो
+baar	बार
+shanibaar	शनिबार
+hijo	हिजो
+sukrabaar	शुक्रबार
+aaitabaar	आइतबार
+ahile	अहिले
+bajyo	बज्यो
+saadhe	साढे
+nau	नौ
+dash	दश
+gaadi	गाडी
+chalaauna aauchha	चलाउन आउँछ
+bhok	भोक
+tirkhaa	तिर्खा
+thakaai	थकाइ
+nindraa	निन्द्रा
+belaa bhayo	बेला भयो
+haat	हात
+kaagati	कागती
+amilo	अमिलो
+aap	आँप
+khallo	खल्लो
+kasto	कस्तो
+ekjanaa	एकजना
+eutaa	एउटा
+daai	दाइ
+pariwaarmaa	परिवारमा
+sadasya	सदस्य
+biraalo	बिरालो
+belukaa	बेलुका
+film	फिल्म
+herchhaun	हेर्छौं
+pugne bittikai	पुग्ने बित्तिकै
+phone garchhu	फोन गर्छु
+chocolate	चकलेट
+piano	पियानो
+bajaauna aauchha	बजाउन आउँछ
+bhanjaharu	भान्जाहरू
+bhanjaharulaai	भान्जाहरूलाई
+sundai hunuhunchha	सुन्दै हुनुहुन्छ
