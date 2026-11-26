@@ -57,6 +57,13 @@ export type DayRecord = {
   answers: number
   /** The daily goal in effect that day (saved so changing the goal later doesn't rewrite history). */
   goalMs?: number
+  /** Time spent on Listen episodes. Counts toward the daily goal and streak, not toward active minutes. */
+  listenMs?: number
+}
+
+/** Time that counts toward the daily goal: practice plus listening. */
+export function goalProgressMs(r: DayRecord | undefined): number {
+  return r ? r.activeMs + (r.listenMs ?? 0) : 0
 }
 
 /** You practiced at all that day (answered a card or studied a full minute). */
@@ -66,7 +73,7 @@ export function dayPracticed(r: DayRecord | undefined): boolean {
 
 /** A day counts toward the streak only if the daily goal was met. */
 export function goalMet(r: DayRecord | undefined, goalMs: number): boolean {
-  return !!r && r.activeMs >= (r.goalMs ?? goalMs)
+  return !!r && goalProgressMs(r) >= (r.goalMs ?? goalMs)
 }
 
 /**
@@ -76,7 +83,7 @@ export function goalMet(r: DayRecord | undefined, goalMs: number): boolean {
 export function currentStreak(days: Map<string, DayRecord>, today: Date, goalMs: number): number {
   const t = days.get(dayKey(today))
   // Today is judged against the current goal, even if it was changed during the day.
-  let d = t && t.activeMs >= goalMs ? today : addDays(today, -1)
+  let d = t && goalProgressMs(t) >= goalMs ? today : addDays(today, -1)
   let n = 0
   while (d === today || goalMet(days.get(dayKey(d)), goalMs)) {
     n++

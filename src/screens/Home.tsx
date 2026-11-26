@@ -1,7 +1,7 @@
 import { GoalRing } from '../components/GoalRing'
 import { InstallHint } from '../components/InstallHint'
 import { OnTrack } from '../components/OnTrack'
-import { currentStreak, dayKey } from '../core/activity'
+import { currentStreak, dayKey, goalProgressMs } from '../core/activity'
 import { usePrefs } from '../core/prefs'
 import { isDue } from '../core/schedule'
 import { useDays } from '../core/tracker'
@@ -22,7 +22,8 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
   const { goalMinutes: goal } = usePrefs()
   const today = days.get(dayKey(now))
   const streak = currentStreak(days, now, goal * 60_000)
-  const minutesToday = Math.floor((today?.activeMs ?? 0) / 60_000)
+  const minutesToday = Math.floor(goalProgressMs(today) / 60_000)
+  const listenToday = Math.floor((today?.listenMs ?? 0) / 60_000)
   const goalMet = minutesToday >= goal
   const left = goal - minutesToday
   const backedUp = lastBackup()
@@ -61,7 +62,7 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
               {minutesToday}
               <small>/{goal}</small>
             </div>
-            <div className="label">active min today</div>
+            <div className="label">{listenToday > 0 ? `min today · ${listenToday} listening` : 'active min today'}</div>
           </div>
         </div>
       </section>

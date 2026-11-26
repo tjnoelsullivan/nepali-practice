@@ -156,7 +156,7 @@ export function Listen({ deck }: { deck: Deck }) {
               )}
               <p className="muted small">
                 Keeps playing with the screen locked. Use your lock screen, car or AirPods to pause. Listening time counts
-                toward your daily goal.
+                toward your daily goal and streak.
               </p>
             </section>
           )}

@@ -1,6 +1,6 @@
 // The Listen player lives outside React so an episode keeps playing when you switch tabs.
-// Time spent listening counts toward the daily goal, measured from what the audio element
-// actually played, so it also counts while the screen is locked.
+// Time spent listening counts toward the daily goal and streak (not toward active-minute totals),
+// measured from what the audio element actually played, so it also counts while the screen is locked.
 import { useSyncExternalStore } from 'react'
 import { dayKey } from '../core/activity'
 import { getPrefs } from '../core/prefs'
@@ -47,14 +47,14 @@ function playedSeconds(a: HTMLAudioElement): number {
   return s
 }
 
-/** Add newly played time to today's active minutes. */
+/** Add newly played time to today's listening time. */
 async function credit() {
   if (!el) return
   const total = playedSeconds(el)
   const add = total - credited
   if (add < 1) return
   credited = total
-  await addToDay(db, dayKey(new Date()), { activeMs: Math.round(add * 1000) }, getPrefs().goalMinutes * 60_000)
+  await addToDay(db, dayKey(new Date()), { listenMs: Math.round(add * 1000) }, getPrefs().goalMinutes * 60_000)
   daysChanged()
 }
 
