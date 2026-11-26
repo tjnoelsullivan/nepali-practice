@@ -4,6 +4,7 @@ import './styles.css'
 import App from './App.tsx'
 import { db, upsertContent } from './db'
 import { STARTER_ITEMS, STARTER_SENTENCES } from './content/starter'
+import { startTracker } from './core/tracker'
 
 async function boot() {
   try {
@@ -11,6 +12,7 @@ async function boot() {
   } catch (e) {
     console.error('Could not load starter content', e)
   }
+  startTracker()
   createRoot(document.getElementById('root')!).render(
     <StrictMode>
       <App />

@@ -1,6 +1,9 @@
 import { GoalRing } from '../components/GoalRing'
 import { InstallHint } from '../components/InstallHint'
+import { currentStreak, dayCounts, dayKey } from '../core/activity'
+import { usePrefs } from '../core/prefs'
 import { isDue } from '../core/schedule'
+import { useDays } from '../core/tracker'
 import type { Deck } from '../hooks/useDeck'
 
 function greeting() {
@@ -13,9 +16,13 @@ function greeting() {
 export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
   const now = new Date()
   const due = [...deck.cards.values()].filter((c) => isDue(c, now)).length
-  const streak = 0
-  const minutesToday = 0
-  const goal = 15
+  const { days } = useDays()
+  const { goalMinutes: goal } = usePrefs()
+  const today = days.get(dayKey(now))
+  const streak = currentStreak(days, now)
+  const minutesToday = Math.floor((today?.activeMs ?? 0) / 60_000)
+  const goalMet = minutesToday >= goal
+  const practicedToday = dayCounts(today)
 
   return (
     <>
@@ -30,7 +37,7 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
       <InstallHint />
 
       <section className="stat-row">
-        <div className="card stat">
+        <div className={'card stat' + (practicedToday ? ' lit' : '')}>
           <div className="flame" aria-hidden="true">
             <svg viewBox="0 0 24 32">
               <path d="M12 1c1 6 9 9 9 18a9 9 0 0 1-18 0c0-5 3-7 4-11 1 3 2 4 3 4 0-4 1-8 2-11z" />
@@ -41,7 +48,7 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
             <div className="label">day streak</div>
           </div>
         </div>
-        <div className="card stat">
+        <div className={'card stat' + (goalMet ? ' goal-met' : '')}>
           <GoalRing value={minutesToday} goal={goal} />
           <div>
             <div className="big">
@@ -76,7 +83,15 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
             {deck.sentences.length} sentences in your deck
           </li>
         </ul>
-        <p className="muted small">Streak and active minutes start counting in Stage 3.</p>
+        <p className="muted small">
+          {goalMet
+            ? 'Daily goal met. Nice work!'
+            : practicedToday
+              ? `${goal - minutesToday} more active minutes to reach today's goal.`
+              : streak > 0
+                ? `Practice today to keep your ${streak}-day streak going.`
+                : 'Answer one card today to start a streak.'}
+        </p>
       </section>
     </>
   )

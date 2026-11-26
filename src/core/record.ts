@@ -1,10 +1,11 @@
-import type { SaathiDB } from '../db'
+import { addToDay, type SaathiDB } from '../db'
+import { dayKey } from './activity'
 import { rateAttempt, review, type Attempt } from './schedule'
 
 /** Save one attempt: update each item's FSRS card, log reviews, and bump sentence stats. */
 export async function recordAttempt(d: SaathiDB, a: Attempt, now = new Date()) {
   const ratings = rateAttempt(a)
-  await d.transaction('rw', d.cards, d.reviews, d.sentenceStats, async () => {
+  await d.transaction('rw', [d.cards, d.reviews, d.sentenceStats, d.days], async () => {
     for (const [itemId, grade] of ratings) {
       const prev = await d.cards.get(itemId)
       const card = review(prev?.card, grade, now)
@@ -24,6 +25,7 @@ export async function recordAttempt(d: SaathiDB, a: Attempt, now = new Date()) {
       seen: (st?.seen ?? 0) + 1,
       correct: (st?.correct ?? 0) + (a.correct ? 1 : 0),
     })
+    await addToDay(d, dayKey(now), { answers: 1 })
   })
   return ratings
 }

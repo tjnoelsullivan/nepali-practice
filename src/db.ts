@@ -1,5 +1,6 @@
 import Dexie, { type EntityTable } from 'dexie'
 import type { Card } from 'ts-fsrs'
+import { dayKey, type DayRecord } from './core/activity'
 import type { Flag, Item, ReviewRecord, Sentence, StoredCard } from './core/types'
 
 export type SentenceStat = { sentenceId: string; lastSeen: Date; seen: number; correct: number }
@@ -13,6 +14,7 @@ export class SaathiDB extends Dexie {
   flags!: EntityTable<Flag & { id?: number }, 'id'>
   sentenceStats!: EntityTable<SentenceStat, 'sentenceId'>
   meta!: EntityTable<Meta, 'key'>
+  days!: EntityTable<DayRecord, 'date'>
 
   constructor(name = 'saathi') {
     super(name)
@@ -25,6 +27,16 @@ export class SaathiDB extends Dexie {
       sentenceStats: 'sentenceId',
       meta: 'key',
     })
+    // Stage 3: per-day active time and answers, for streaks. Earlier answers are backfilled.
+    this.version(2)
+      .stores({ days: 'date' })
+      .upgrade(async (tx) => {
+        const counts = new Map<string, number>()
+        await tx
+          .table('reviews')
+          .each((r: ReviewRecord) => counts.set(dayKey(new Date(r.at)), (counts.get(dayKey(new Date(r.at))) ?? 0) + 1))
+        await tx.table('days').bulkPut([...counts].map(([date, answers]) => ({ date, activeMs: 0, answers })))
+      })
   }
 }
 
@@ -60,4 +72,16 @@ export async function upsertContent(
 export async function loadCards(d: SaathiDB): Promise<Map<string, Card>> {
   const all = await d.cards.toArray()
   return new Map(all.map((c) => [c.itemId, c.card]))
+}
+
+/** Add active time and/or answers to a day. */
+export async function addToDay(d: SaathiDB, date: string, add: { activeMs?: number; answers?: number }) {
+  await d.transaction('rw', d.days, async () => {
+    const cur = (await d.days.get(date)) ?? { date, activeMs: 0, answers: 0 }
+    await d.days.put({
+      date,
+      activeMs: cur.activeMs + (add.activeMs ?? 0),
+      answers: cur.answers + (add.answers ?? 0),
+    })
+  })
 }

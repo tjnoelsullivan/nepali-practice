@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { romanize } from '../core/devanagari'
+import { GOAL_CHOICES, setPrefs, usePrefs } from '../core/prefs'
 import { explainError, getAccessCode, setAccessCode } from '../voice/api'
 import { setVoiceSettings, useVoiceSettings } from '../voice/settings'
 import { checkMic, listenOnce } from '../voice/stt'
@@ -7,6 +8,8 @@ import { speak, unlockAudio } from '../voice/tts'
 
 export function VoiceSettings() {
   const v = useVoiceSettings()
+  const { goalMinutes } = usePrefs()
+  const gi = GOAL_CHOICES.indexOf(goalMinutes)
   const [code, setCode] = useState(getAccessCode())
   const [saved, setSaved] = useState(false)
   const [status, setStatus] = useState('')
@@ -36,7 +39,27 @@ export function VoiceSettings() {
 
   return (
     <section className="card settings">
-      <h2>Voice & settings</h2>
+      <h2>Settings</h2>
+
+      <div className="setting">
+        <span>
+          Daily goal
+          <small className="muted">Active minutes per day</small>
+        </span>
+        <div className="stepper">
+          <button aria-label="Lower goal" disabled={gi <= 0} onClick={() => setPrefs({ goalMinutes: GOAL_CHOICES[Math.max(0, gi - 1)] })}>
+            −
+          </button>
+          <strong>{goalMinutes} min</strong>
+          <button
+            aria-label="Raise goal"
+            disabled={gi >= GOAL_CHOICES.length - 1}
+            onClick={() => setPrefs({ goalMinutes: GOAL_CHOICES[Math.min(GOAL_CHOICES.length - 1, gi + 1)] })}
+          >
+            +
+          </button>
+        </div>
+      </div>
 
       <div className="setting">
         <span>Voice</span>

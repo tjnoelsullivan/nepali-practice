@@ -3,6 +3,7 @@
 // on the first tap and reused. Audio is cached on the phone so repeats work offline.
 import { api } from './api'
 import { getVoiceSettings } from './settings'
+import { markActive } from '../core/tracker'
 
 const CACHE = 'saathi-tts-v1'
 /** A tiny silent WAV, built in code, used only to unlock audio on iOS. */
@@ -81,6 +82,7 @@ export function prefetch(dev: string) {
 /** Speak Devanagari text. Resolves when playback ends (or is replaced by another call). */
 export async function speak(dev: string, opts: { slow?: boolean } = {}): Promise<void> {
   if (!dev) return
+  markActive()
   const url = ttsUrl(dev, !!opts.slow)
   currentUrl = url
   const src = await fetchAudio(url)
@@ -91,6 +93,7 @@ export async function speak(dev: string, opts: { slow?: boolean } = {}): Promise
   a.playbackRate = 1
   await new Promise<void>((resolve, reject) => {
     const done = () => {
+      markActive()
       a.removeEventListener('ended', done)
       a.removeEventListener('pause', done)
       resolve()

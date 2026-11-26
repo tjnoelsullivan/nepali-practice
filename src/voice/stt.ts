@@ -2,6 +2,7 @@
 // The SDK is large, so it loads only the first time the mic is used. The Azure key stays on the
 // server; the browser gets a 10-minute token from /api/speech-token.
 import { api } from './api'
+import { markActive } from '../core/tracker'
 
 type Token = { token: string; region: string; at: number }
 let tok: Token | null = null
@@ -22,6 +23,7 @@ export type Listening = {
 
 /** Start listening for one Nepali utterance. Ends by itself after a pause. */
 export function listenOnce(): Listening {
+  markActive()
   let cancelled = false
   let close: () => void = () => {}
   const result = (async () => {
@@ -36,6 +38,7 @@ export function listenOnce(): Listening {
     return await new Promise<string>((resolve, reject) => {
       rec.recognizeOnceAsync(
         (r) => {
+          markActive()
           rec.close()
           if (r.reason === sdk.ResultReason.RecognizedSpeech) resolve(r.text ?? '')
           else if (r.reason === sdk.ResultReason.Canceled) {

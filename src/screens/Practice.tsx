@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { db } from '../db'
 import { gradeEnglish, gradeNepali } from '../core/grade'
 import { recordAttempt } from '../core/record'
+import { formatDuration } from '../core/activity'
+import { daysChanged, sessionActiveMs, setStudying } from '../core/tracker'
 import { isDue, isKnown } from '../core/schedule'
 import { buildSession, type SessionItem } from '../core/session'
 import { gradeSpoken, romanize } from '../core/devanagari'
@@ -23,6 +25,11 @@ export function Practice({ deck }: { deck: Deck }) {
   const [pos, setPos] = useState(0)
   const [results, setResults] = useState<Result[]>([])
   const requeued = useRef(new Set<string>())
+
+  useEffect(() => {
+    setStudying(phase === 'drill')
+    return () => setStudying(false)
+  }, [phase])
 
   const byId = useMemo(() => new Map(deck.sentences.map((s) => [s.id, s])), [deck.sentences])
 
@@ -50,6 +57,7 @@ export function Practice({ deck }: { deck: Deck }) {
   }
 
   const onFinished = async (item: SessionItem, r: Result) => {
+    daysChanged()
     const nextResults = [...results, r]
     setResults(nextResults)
     let q = queue
@@ -125,6 +133,7 @@ export function Practice({ deck }: { deck: Deck }) {
                 <div className="label">hints used</div>
               </div>
             </div>
+            <p className="muted small center">Active time this session: {formatDuration(sessionActiveMs()) === '0m' ? 'under a minute' : formatDuration(sessionActiveMs())}</p>
           </section>
         ) : (
           <section className="card">
