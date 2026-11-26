@@ -34,7 +34,8 @@ export function rateAttempt(a: Attempt): Map<string, Grade> {
     let g: Grade
     if (a.hinted.has(i)) g = Rating.Again
     else if (a.direction === 'en-np' && a.chunkOk && a.chunkOk[i] === false && !a.correct) g = Rating.Again
-    else if (a.direction === 'np-en' && !a.correct) g = Rating.Hard
+    // Wrong without knowing which part (np-en, or marked wrong by the learner): Hard for every chunk.
+    else if (!a.correct && (a.direction === 'np-en' || !a.chunkOk?.includes(false))) g = Rating.Hard
     else g = Rating.Good
     for (const id of c.items) put(id, g)
   })

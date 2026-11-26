@@ -1,4 +1,7 @@
+import { bestStreak, currentStreak, dayPracticed, formatDuration, weekKeys } from '../core/activity'
+import { usePrefs } from '../core/prefs'
 import { isDue, isKnown, isMastered } from '../core/schedule'
+import { useDays } from '../core/tracker'
 import type { Deck } from '../hooks/useDeck'
 
 const DAYS = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
@@ -9,9 +12,22 @@ export function Progress({ deck }: { deck: Deck }) {
   const learning = cards.filter((c) => isKnown(c) && !isMastered(c)).length
   const due = cards.filter((c) => isDue(c, now)).length
   const mastered = cards.filter((c) => isMastered(c)).length
-  const week = [0, 0, 0, 0, 0, 0, 0]
-  const goal = 15
-  const todayIdx = (new Date().getDay() + 6) % 7
+
+  const { days } = useDays()
+  const { goalMinutes: goal } = usePrefs()
+  const thisWeek = weekKeys(now)
+  const lastWeek = weekKeys(now, 1)
+  const ms = (k: string) => days.get(k)?.activeMs ?? 0
+  const week = thisWeek.map((k) => ms(k) / 60_000)
+  const weekMs = thisWeek.reduce((n, k) => n + ms(k), 0)
+  const lastWeekMs = lastWeek.reduce((n, k) => n + ms(k), 0)
+  const daysPracticed = thisWeek.filter((k) => dayPracticed(days.get(k))).length
+  const goalDays = week.filter((m) => m >= goal).length
+  const scale = Math.max(goal, ...week) * 1.1
+  const todayIdx = (now.getDay() + 6) % 7
+  const streak = currentStreak(days, now, goal * 60_000)
+  const best = bestStreak(days, goal * 60_000)
+
   return (
     <>
       <header className="hero compact">
@@ -22,28 +38,33 @@ export function Progress({ deck }: { deck: Deck }) {
       <section className="card">
         <div className="week-head">
           <div>
-            <div className="big">0h 0m</div>
+            <div className="big">{formatDuration(weekMs)}</div>
             <div className="label">active this week</div>
           </div>
           <div className="right">
-            <div className="big">0</div>
-            <div className="label">day streak</div>
+            <div className="big">{streak}</div>
+            <div className="label">day streak{best > streak ? ` · best ${best}` : ''}</div>
           </div>
         </div>
-        <div className="bars">
+        <div className="bars" role="img" aria-label="Active minutes per day this week">
           {week.map((m, i) => (
             <div key={i} className={'bar-col' + (i === todayIdx ? ' today' : '')}>
+              <div className="mins">{m >= 1 ? Math.floor(m) : ''}</div>
               <div className="bar-track">
-                <div className="bar" style={{ height: `${Math.min(100, (m / goal) * 100)}%` }} />
-                <div className="goal-line" />
+                <div className={'bar' + (m >= goal ? ' met' : '')} style={{ height: `${(m / scale) * 100}%` }} />
+                <div className="goal-line" style={{ top: `${(1 - goal / scale) * 100}%` }} />
               </div>
               <span>{DAYS[i]}</span>
             </div>
           ))}
         </div>
         <p className="muted small">
-          Only active time counts. If you leave the app open and walk away, the clock stops after a
-          minute. Tracking starts in Stage 3.
+          {daysPracticed} of 7 days practiced · goal of {goal} min reached on {goalDays} {goalDays === 1 ? 'day' : 'days'}
+          {lastWeekMs > 0 ? ` · last week ${formatDuration(lastWeekMs)}` : ''}
+        </p>
+        <p className="muted small">
+          Only active time counts: the clock stops 30 seconds after your last tap, word or sound. Your streak grows on
+          days you reach your goal.
         </p>
       </section>
 

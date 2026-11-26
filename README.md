@@ -35,7 +35,7 @@ Secrets (set in Vercel → project Settings → Environments → Production and 
 - [x] 0. App shell: install to home screen, offline, visual style, navigation
 - [x] 1. Text drill, hints, FSRS scheduling
 - [x] 2. Azure voice in and out
-- [ ] 3. Streaks and active-time tracking
+- [x] 3. Streaks and active-time tracking
 - [ ] 4. Tutor slide import
 - [ ] 5. Wife's recorded sentences
 - [ ] 6. Backup and polish

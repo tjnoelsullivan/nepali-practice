@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { db } from '../db'
 import { gradeEnglish, gradeNepali } from '../core/grade'
 import { recordAttempt } from '../core/record'
+import { formatDuration } from '../core/activity'
+import { daysChanged, sessionActiveMs, setStudying } from '../core/tracker'
 import { isDue, isKnown } from '../core/schedule'
 import { buildSession, type SessionItem } from '../core/session'
 import { gradeSpoken, romanize } from '../core/devanagari'
@@ -23,6 +25,11 @@ export function Practice({ deck }: { deck: Deck }) {
   const [pos, setPos] = useState(0)
   const [results, setResults] = useState<Result[]>([])
   const requeued = useRef(new Set<string>())
+
+  useEffect(() => {
+    setStudying(phase === 'drill')
+    return () => setStudying(false)
+  }, [phase])
 
   const byId = useMemo(() => new Map(deck.sentences.map((s) => [s.id, s])), [deck.sentences])
 
@@ -50,6 +57,7 @@ export function Practice({ deck }: { deck: Deck }) {
   }
 
   const onFinished = async (item: SessionItem, r: Result) => {
+    daysChanged()
     const nextResults = [...results, r]
     setResults(nextResults)
     let q = queue
@@ -125,6 +133,7 @@ export function Practice({ deck }: { deck: Deck }) {
                 <div className="label">hints used</div>
               </div>
             </div>
+            <p className="muted small center">Active time this session: {formatDuration(sessionActiveMs()) === '0m' ? 'under a minute' : formatDuration(sessionActiveMs())}</p>
           </section>
         ) : (
           <section className="card">
@@ -154,6 +163,7 @@ export function Practice({ deck }: { deck: Deck }) {
         direction={item.direction}
         onDone={(r) => void onFinished(item, r)}
         nextDev={next ? sentenceDevanagari(next) : ''}
+        listenFirst={(deck.stats.get(sentence.id)?.npEnCorrect ?? 0) >= 2}
       />
     </>
   )
@@ -172,15 +182,18 @@ function DrillCard({
   direction,
   onDone,
   nextDev,
+  listenFirst,
 }: {
   sentence: Sentence
   direction: SessionItem['direction']
   onDone: (r: Result) => void
   nextDev: string
+  /** Translated correctly twice already: start with the text hidden. */
+  listenFirst: boolean
 }) {
   const voice = useVoiceSettings()
   const dev = sentenceDevanagari(sentence)
-  const [revealed, setRevealed] = useState(!voice.hideText || direction === 'en-np')
+  const [revealed, setRevealed] = useState(direction === 'en-np' || !(voice.hideText || (listenFirst && !!dev)))
   const [heard, setHeard] = useState('')
   const [listening, setListening] = useState<Listening | null>(null)
   const [voiceError, setVoiceError] = useState('')
@@ -303,12 +316,13 @@ function DrillCard({
     if (afterCheck(correct)) void secondOpinion(answer)
   }
 
-  const finish = async (override = false) => {
+  /** override: 'right' = learner says the grader was too strict; 'wrong' = too generous. */
+  const finish = async (override?: 'right' | 'wrong') => {
     if (!checked || saving || ai === 'checking') return
     setSaving(true)
     stopSpeaking()
-    const correct = checked.correct || override
-    if (override) {
+    const correct = override === 'wrong' ? false : checked.correct || override === 'right'
+    if (override === 'right') {
       await db.flags.add({
         sentenceId: sentence.id,
         answer,
@@ -396,7 +410,11 @@ function DrillCard({
         )}
         {!checked && (
           <p className="muted small">
-            {revealed ? 'Tap a word for a hint.' : 'Listening practice: the text is hidden. Tap it to show.'}
+            {revealed
+              ? 'Tap a word for a hint.'
+              : listenFirst && !voice.hideText
+                ? "You've translated this twice, so listen first. Tap the text to show it."
+                : 'Listening practice: the text is hidden. Tap it to show.'}
           </p>
         )}
         {voiceError && <p className="voice-error small">{voiceError}</p>}
@@ -494,11 +512,16 @@ function DrillCard({
           )}
           <div className="btn-row">
             {!checked.correct && !checked.gaveUp && ai !== 'checking' && (
-              <button className="ghost" onClick={() => void finish(true)} disabled={saving}>
+              <button className="ghost" onClick={() => void finish('right')} disabled={saving}>
                 I was right
               </button>
             )}
-            <button className="cta small-cta" onClick={() => void finish(false)} disabled={saving || ai === 'checking'}>
+            {checked.correct && (
+              <button className="ghost" onClick={() => void finish('wrong')} disabled={saving}>
+                I got it wrong
+              </button>
+            )}
+            <button className="cta small-cta" onClick={() => void finish()} disabled={saving || ai === 'checking'}>
               Continue <Arrow />
             </button>
           </div>

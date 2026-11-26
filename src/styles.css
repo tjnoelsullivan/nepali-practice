@@ -887,3 +887,52 @@ button {
 .small-seg button {
   white-space: nowrap;
 }
+
+/* Stage 3: streaks and active time */
+.stat:not(.lit) .flame svg {
+  animation: none;
+  filter: none;
+  opacity: 0.45;
+}
+.stat:not(.lit) .flame path {
+  fill: var(--muted);
+}
+.stat.goal-met {
+  border-color: rgba(59, 178, 115, 0.6);
+  box-shadow: 0 0 24px rgba(59, 178, 115, 0.25);
+}
+.stat.goal-met .ring-fill {
+  stroke: var(--flag-green);
+}
+.bar.met {
+  background: linear-gradient(180deg, #6fe0a3, var(--flag-green));
+}
+.bar-col .mins {
+  font-size: 10px;
+  color: var(--muted);
+  height: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.stepper button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  background: rgba(255, 247, 234, 0.08);
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1;
+}
+.stepper button:disabled {
+  opacity: 0.35;
+}
+.stepper strong {
+  min-width: 56px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
