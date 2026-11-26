@@ -1,0 +1,83 @@
+/* On track: daily time needed before the next lesson */
+.on-track {
+  border-left: 4px solid var(--flag-green);
+}
+.on-track.over {
+  border-left-color: var(--ember);
+}
+.on-track.clear {
+  border-left-color: var(--sun);
+}
+.ot-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.ot-head h2 {
+  margin: 0;
+}
+.ot-days {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.ot-big {
+  margin: 10px 0 8px;
+  font-size: 1.1rem;
+}
+.ot-big strong {
+  font-size: 1.6rem;
+  color: var(--sun);
+}
+.on-track.over .ot-big strong {
+  color: var(--ember);
+}
+.ot-parts {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  color: var(--muted);
+}
+.ot-parts b {
+  color: var(--text);
+}
+.ot-goal {
+  margin-top: 4px;
+  border: 1px solid var(--card-border);
+  background: rgba(240, 138, 75, 0.18);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font: inherit;
+}
+.ot-note {
+  margin: 10px 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  opacity: 0.8;
+}
+.lesson-days {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.lesson-days button {
+  min-width: 38px;
+  padding: 6px 4px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.8rem;
+}
+.lesson-days button.on {
+  background: var(--sun);
+  color: var(--bg);
+  border-color: var(--sun);
+  font-weight: 600;
+}

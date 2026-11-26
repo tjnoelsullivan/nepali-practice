@@ -1,6 +1,11 @@
 import { useSyncExternalStore } from 'react'
 
-export type Prefs = { goalMinutes: number }
+export type Prefs = {
+  goalMinutes: number
+  /** Weekdays with a tutor lesson, 0 = Sunday. */
+  lessonDays: number[]
+}
+const DEFAULTS: Prefs = { goalMinutes: 15, lessonDays: [2, 5] }
 export const GOAL_CHOICES = [5, 10, 15, 20, 30, 45, 60]
 
 const KEY = 'saathi.prefs'
@@ -9,9 +14,9 @@ const listeners = new Set<() => void>()
 
 function load(): Prefs {
   try {
-    return { goalMinutes: 15, ...JSON.parse(localStorage.getItem(KEY) ?? '{}') }
+    return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(KEY) ?? '{}') }
   } catch {
-    return { goalMinutes: 15 }
+    return { ...DEFAULTS }
   }
 }
 
