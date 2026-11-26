@@ -1,4 +1,4 @@
-import { bestStreak, currentStreak, dayCounts, formatDuration, weekKeys } from '../core/activity'
+import { bestStreak, currentStreak, dayPracticed, formatDuration, weekKeys } from '../core/activity'
 import { usePrefs } from '../core/prefs'
 import { isDue, isKnown, isMastered } from '../core/schedule'
 import { useDays } from '../core/tracker'
@@ -21,12 +21,12 @@ export function Progress({ deck }: { deck: Deck }) {
   const week = thisWeek.map((k) => ms(k) / 60_000)
   const weekMs = thisWeek.reduce((n, k) => n + ms(k), 0)
   const lastWeekMs = lastWeek.reduce((n, k) => n + ms(k), 0)
-  const daysPracticed = thisWeek.filter((k) => dayCounts(days.get(k))).length
+  const daysPracticed = thisWeek.filter((k) => dayPracticed(days.get(k))).length
   const goalDays = week.filter((m) => m >= goal).length
   const scale = Math.max(goal, ...week) * 1.1
   const todayIdx = (now.getDay() + 6) % 7
-  const streak = currentStreak(days, now)
-  const best = bestStreak(days)
+  const streak = currentStreak(days, now, goal * 60_000)
+  const best = bestStreak(days, goal * 60_000)
 
   return (
     <>
@@ -63,8 +63,8 @@ export function Progress({ deck }: { deck: Deck }) {
           {lastWeekMs > 0 ? ` · last week ${formatDuration(lastWeekMs)}` : ''}
         </p>
         <p className="muted small">
-          Only active time counts. If you leave the app open and walk away, the clock stops a minute after your last
-          tap.
+          Only active time counts: the clock stops 30 seconds after your last tap, word or sound. Your streak grows on
+          days you reach your goal.
         </p>
       </section>
 

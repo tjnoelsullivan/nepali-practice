@@ -1,6 +1,6 @@
 import 'fake-indexeddb/auto'
 import { describe, expect, it } from 'vitest'
-import { ActiveClock, bestStreak, currentStreak, dayKey, weekKeys, type DayRecord } from '../activity'
+import { ActiveClock, bestStreak, currentStreak, dayKey, dayPracticed, weekKeys, type DayRecord } from '../activity'
 import { SaathiDB } from '../../db'
 import { recordAttempt } from '../record'
 import type { Sentence } from '../types'
@@ -21,11 +21,11 @@ describe('active time', () => {
     expect(run(c, 10_000, 20_000)).toBe(10_000)
   })
 
-  it('stops a minute after the last action, even with the app open', () => {
+  it('stops 30 seconds after the last action, even with the app open', () => {
     const c = new ActiveClock()
     c.studying = true
     c.activity(0)
-    expect(run(c, 0, 10 * 60_000)).toBe(60_000)
+    expect(run(c, 0, 10 * 60_000)).toBe(30_000)
   })
 
   it('does not count time while the app was suspended', () => {
@@ -45,30 +45,37 @@ describe('active time', () => {
     c.activity(0)
     run(c, 0, 5 * 60_000)
     c.activity(5 * 60_000)
-    expect(run(c, 5 * 60_000 + 1000, 5 * 60_000 + 30_000)).toBe(30_000)
+    expect(run(c, 5 * 60_000 + 1000, 5 * 60_000 + 20_000)).toBe(20_000)
   })
 })
 
-const day = (date: string, answers = 1): [string, DayRecord] => [date, { date, activeMs: 0, answers }]
+const GOAL = 15 * 60_000
+const day = (date: string, mins = 20, goalMs?: number): [string, DayRecord] => [date, { date, activeMs: mins * 60_000, answers: 5, goalMs }]
 
 describe('streaks', () => {
   const today = new Date(2026, 10, 26, 9)
   it('counts consecutive days ending today', () => {
     const days = new Map([day('2026-11-24'), day('2026-11-25'), day('2026-11-26')])
-    expect(currentStreak(days, today)).toBe(3)
+    expect(currentStreak(days, today, GOAL)).toBe(3)
   })
   it('keeps yesterday’s streak until today is over', () => {
     const days = new Map([day('2026-11-24'), day('2026-11-25')])
-    expect(currentStreak(days, today)).toBe(2)
+    expect(currentStreak(days, today, GOAL)).toBe(2)
   })
   it('breaks after a missed day', () => {
     const days = new Map([day('2026-11-22'), day('2026-11-23'), day('2026-11-26')])
-    expect(currentStreak(days, today)).toBe(1)
-    expect(bestStreak(days)).toBe(2)
+    expect(currentStreak(days, today, GOAL)).toBe(1)
+    expect(bestStreak(days, GOAL)).toBe(2)
   })
-  it('a day with only a few idle seconds does not count', () => {
-    const days = new Map([['2026-11-26', { date: '2026-11-26', activeMs: 20_000, answers: 0 }]])
-    expect(currentStreak(days, today)).toBe(0)
+  it('a day below the goal breaks the streak, even with answers', () => {
+    const days = new Map([day('2026-11-24'), day('2026-11-25', 10), day('2026-11-26')])
+    expect(currentStreak(days, today, GOAL)).toBe(1)
+    expect(dayPracticed(days.get('2026-11-25'))).toBe(true)
+  })
+  it('past days keep the goal they had; today uses the current goal', () => {
+    const days = new Map([day('2026-11-25', 10, 10 * 60_000), day('2026-11-26', 12)])
+    expect(currentStreak(days, today, GOAL)).toBe(1) // today 12 < 15 doesn't count yet; yesterday met its 10-min goal
+    expect(currentStreak(days, today, 12 * 60_000)).toBe(2)
   })
   it('weeks start on Monday', () => {
     expect(weekKeys(today)[0]).toBe('2026-11-23')
@@ -109,6 +116,7 @@ describe('upgrade from Stage 2 data', () => {
     old.close()
     const d = new SaathiDB('t-upgrade')
     expect(await d.cards.count()).toBe(1)
-    expect(currentStreak(new Map((await d.days.toArray()).map((r) => [r.date, r])), new Date(2026, 10, 26, 9))).toBe(2)
+    const days = await d.days.toArray()
+    expect(days.map((r) => dayPracticed(r))).toEqual([true, true])
   })
 })

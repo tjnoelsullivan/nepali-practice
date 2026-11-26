@@ -75,13 +75,19 @@ export async function loadCards(d: SaathiDB): Promise<Map<string, Card>> {
 }
 
 /** Add active time and/or answers to a day. */
-export async function addToDay(d: SaathiDB, date: string, add: { activeMs?: number; answers?: number }) {
+export async function addToDay(
+  d: SaathiDB,
+  date: string,
+  add: { activeMs?: number; answers?: number },
+  goalMs?: number,
+) {
   await d.transaction('rw', d.days, async () => {
     const cur = (await d.days.get(date)) ?? { date, activeMs: 0, answers: 0 }
     await d.days.put({
       date,
       activeMs: cur.activeMs + (add.activeMs ?? 0),
       answers: cur.answers + (add.answers ?? 0),
+      goalMs: goalMs ?? cur.goalMs,
     })
   })
 }

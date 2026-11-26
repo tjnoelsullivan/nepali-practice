@@ -2,10 +2,10 @@
  * Active study time. Time counts only while all of these hold:
  * - a practice session is running ("studying"),
  * - the app is on screen,
- * - you touched, typed, played audio or spoke within the last minute.
- * Leave the app open and walk away, and the clock stops a minute after your last action.
+ * - you touched, typed, played audio or spoke within the last 30 seconds.
+ * Leave the app open and walk away, and the clock stops 30 seconds after your last action.
  */
-export const IDLE_MS = 60_000
+export const IDLE_MS = 30_000
 /** Longest gap between ticks we trust; longer gaps mean the phone suspended the app. */
 const MAX_TICK_MS = 10_000
 
@@ -51,29 +51,42 @@ export function addDays(d: Date, n: number): Date {
   return x
 }
 
-export type DayRecord = { date: string; activeMs: number; answers: number }
+export type DayRecord = {
+  date: string
+  activeMs: number
+  answers: number
+  /** The daily goal in effect that day (saved so changing the goal later doesn't rewrite history). */
+  goalMs?: number
+}
 
-/** A day counts toward the streak if you answered at least one card or studied a full minute. */
-export function dayCounts(r: DayRecord | undefined): boolean {
+/** You practiced at all that day (answered a card or studied a full minute). */
+export function dayPracticed(r: DayRecord | undefined): boolean {
   return !!r && (r.answers > 0 || r.activeMs >= 60_000)
+}
+
+/** A day counts toward the streak only if the daily goal was met. */
+export function goalMet(r: DayRecord | undefined, goalMs: number): boolean {
+  return !!r && r.activeMs >= (r.goalMs ?? goalMs)
 }
 
 /**
  * Days in a row ending today. If today hasn't been practiced yet, the streak from yesterday
  * still stands (it only breaks once a whole day is missed).
  */
-export function currentStreak(days: Map<string, DayRecord>, today: Date): number {
-  let d = dayCounts(days.get(dayKey(today))) ? today : addDays(today, -1)
+export function currentStreak(days: Map<string, DayRecord>, today: Date, goalMs: number): number {
+  const t = days.get(dayKey(today))
+  // Today is judged against the current goal, even if it was changed during the day.
+  let d = t && t.activeMs >= goalMs ? today : addDays(today, -1)
   let n = 0
-  while (dayCounts(days.get(dayKey(d)))) {
+  while (d === today || goalMet(days.get(dayKey(d)), goalMs)) {
     n++
     d = addDays(d, -1)
   }
   return n
 }
 
-export function bestStreak(days: Map<string, DayRecord>): number {
-  const keys = [...days.values()].filter(dayCounts).map((r) => r.date).sort()
+export function bestStreak(days: Map<string, DayRecord>, goalMs: number): number {
+  const keys = [...days.values()].filter((r) => goalMet(r, goalMs)).map((r) => r.date).sort()
   let best = 0
   let run = 0
   let prev: string | null = null

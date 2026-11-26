@@ -15,6 +15,10 @@ function load(): Prefs {
   }
 }
 
+export function getPrefs(): Prefs {
+  return current
+}
+
 export function setPrefs(patch: Partial<Prefs>) {
   current = { ...current, ...patch }
   try {

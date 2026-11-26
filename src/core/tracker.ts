@@ -2,6 +2,7 @@
 import { useEffect, useState, useSyncExternalStore } from 'react'
 import { addToDay, db } from '../db'
 import { ActiveClock, dayKey, type DayRecord } from './activity'
+import { getPrefs } from './prefs'
 
 const clock = new ActiveClock()
 let pending = 0
@@ -21,7 +22,7 @@ async function flush() {
   const ms = pending
   const day = pendingDay
   pending = 0
-  await addToDay(db, day, { activeMs: ms }).catch(() => {
+  await addToDay(db, day, { activeMs: ms }, getPrefs().goalMinutes * 60_000).catch(() => {
     pending += ms
   })
 }

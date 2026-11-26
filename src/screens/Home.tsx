@@ -1,6 +1,6 @@
 import { GoalRing } from '../components/GoalRing'
 import { InstallHint } from '../components/InstallHint'
-import { currentStreak, dayCounts, dayKey } from '../core/activity'
+import { currentStreak, dayKey } from '../core/activity'
 import { usePrefs } from '../core/prefs'
 import { isDue } from '../core/schedule'
 import { useDays } from '../core/tracker'
@@ -19,10 +19,10 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
   const { days } = useDays()
   const { goalMinutes: goal } = usePrefs()
   const today = days.get(dayKey(now))
-  const streak = currentStreak(days, now)
+  const streak = currentStreak(days, now, goal * 60_000)
   const minutesToday = Math.floor((today?.activeMs ?? 0) / 60_000)
   const goalMet = minutesToday >= goal
-  const practicedToday = dayCounts(today)
+  const left = goal - minutesToday
 
   return (
     <>
@@ -37,7 +37,7 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
       <InstallHint />
 
       <section className="stat-row">
-        <div className={'card stat' + (practicedToday ? ' lit' : '')}>
+        <div className={'card stat' + (goalMet ? ' lit' : '')}>
           <div className="flame" aria-hidden="true">
             <svg viewBox="0 0 24 32">
               <path d="M12 1c1 6 9 9 9 18a9 9 0 0 1-18 0c0-5 3-7 4-11 1 3 2 4 3 4 0-4 1-8 2-11z" />
@@ -86,11 +86,9 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
         <p className="muted small">
           {goalMet
             ? 'Daily goal met. Nice work!'
-            : practicedToday
-              ? `${goal - minutesToday} more active minutes to reach today's goal.`
-              : streak > 0
-                ? `Practice today to keep your ${streak}-day streak going.`
-                : 'Answer one card today to start a streak.'}
+            : streak > 0
+              ? `${left} more active ${left === 1 ? 'minute' : 'minutes'} today to keep your ${streak}-day streak.`
+              : `Reach your ${goal}-minute goal today to start a streak.`}
         </p>
       </section>
     </>
