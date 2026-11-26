@@ -605,3 +605,134 @@ button {
     transition: none !important;
   }
 }
+
+/* Stage 1 */
+.prompt-card.good {
+  border-color: rgba(59, 178, 115, 0.5);
+}
+.prompt-card.bad {
+  border-color: rgba(224, 75, 75, 0.45);
+}
+.np-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 16px 0 12px;
+  align-items: flex-end;
+}
+.np-word {
+  border: 0;
+  border-bottom: 2px dashed rgba(255, 200, 87, 0.5);
+  background: transparent;
+  padding: 2px 2px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.np-word strong {
+  font-size: 24px;
+  font-weight: 700;
+}
+.np-word span {
+  font-size: 12px;
+  color: var(--muted);
+  min-height: 15px;
+}
+.np-word.open {
+  border-bottom-color: var(--sun);
+}
+.np-word.open span {
+  color: var(--sun);
+}
+.np-word .punct {
+  font-style: normal;
+  color: var(--muted);
+}
+.feedback {
+  animation: rise 0.25s ease-out;
+}
+.feedback.good {
+  background: rgba(59, 178, 115, 0.14);
+  border-color: rgba(59, 178, 115, 0.45);
+}
+.feedback.good .eyebrow {
+  color: #6fe0a3;
+}
+.feedback.bad {
+  background: rgba(224, 75, 75, 0.12);
+  border-color: rgba(224, 75, 75, 0.4);
+}
+.feedback.bad .eyebrow {
+  color: #ff8a8a;
+}
+.nepali .ok {
+  color: #6fe0a3;
+}
+.nepali .miss {
+  color: #ff8a8a;
+  text-decoration: underline wavy;
+  text-underline-offset: 5px;
+}
+.btn-row {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 14px;
+}
+.btn-row .ghost {
+  margin-top: 0;
+}
+.small-cta {
+  padding: 12px 20px;
+  font-size: 16px;
+}
+.center-btn {
+  align-self: center;
+  margin-top: 0;
+}
+.answer button:disabled,
+.cta:disabled {
+  opacity: 0.5;
+}
+.segmented {
+  display: flex;
+  background: rgba(255, 247, 234, 0.07);
+  border-radius: 14px;
+  padding: 4px;
+}
+.segmented button {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 9px 6px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.segmented button.on {
+  background: rgba(255, 247, 234, 0.14);
+  color: var(--text);
+  font-weight: 600;
+}
+.list {
+  padding: 4px 16px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--card-border);
+}
+.row:last-child {
+  border-bottom: 0;
+}
+.row-np {
+  font-weight: 600;
+  font-size: 17px;
+}
+.row .muted {
+  margin-top: 2px;
+}

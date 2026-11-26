@@ -1,6 +1,14 @@
+import { isDue, isKnown, isMastered } from '../core/schedule'
+import type { Deck } from '../hooks/useDeck'
+
 const DAYS = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
 
-export function Progress() {
+export function Progress({ deck }: { deck: Deck }) {
+  const now = new Date()
+  const cards = [...deck.cards.values()]
+  const learning = cards.filter((c) => isKnown(c) && !isMastered(c)).length
+  const due = cards.filter((c) => isDue(c, now)).length
+  const mastered = cards.filter((c) => isMastered(c)).length
   const week = [0, 0, 0, 0, 0, 0, 0]
   const goal = 15
   const todayIdx = (new Date().getDay() + 6) % 7
@@ -43,18 +51,19 @@ export function Progress() {
         <h2>Words and grammar</h2>
         <div className="mastery">
           <div>
-            <div className="big">0</div>
+            <div className="big">{learning}</div>
             <div className="label">learning</div>
           </div>
           <div>
-            <div className="big">0</div>
-            <div className="label">due today</div>
+            <div className="big">{due}</div>
+            <div className="label">due now</div>
           </div>
           <div>
-            <div className="big">0</div>
+            <div className="big">{mastered}</div>
             <div className="label">mastered</div>
           </div>
         </div>
+        <p className="muted small">Mastered means you're expected to remember it for 3+ weeks.</p>
       </section>
     </>
   )

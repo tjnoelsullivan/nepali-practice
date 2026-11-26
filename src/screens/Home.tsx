@@ -1,5 +1,7 @@
 import { GoalRing } from '../components/GoalRing'
 import { InstallHint } from '../components/InstallHint'
+import { isDue } from '../core/schedule'
+import type { Deck } from '../hooks/useDeck'
 
 function greeting() {
   const h = new Date().getHours()
@@ -8,7 +10,9 @@ function greeting() {
   return 'Good evening'
 }
 
-export function Home({ onStart }: { onStart: () => void }) {
+export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
+  const now = new Date()
+  const due = [...deck.cards.values()].filter((c) => isDue(c, now)).length
   const streak = 0
   const minutesToday = 0
   const goal = 15
@@ -50,29 +54,29 @@ export function Home({ onStart }: { onStart: () => void }) {
       </section>
 
       <button className="cta" onClick={onStart}>
-        <span>Start practice</span>
+        <span>{due > 0 ? `Practice · ${due} due` : 'Start practice'}</span>
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M5 12h14M13 6l6 6-6 6" />
         </svg>
       </button>
 
       <section className="card">
-        <h2>Today's focus</h2>
+        <h2>Today</h2>
         <ul className="focus-list">
           <li>
             <span className="dot" style={{ background: 'var(--flag-red)' }} />
-            Mealtime with your in-laws
+            {due} words and patterns due for review
           </li>
           <li>
             <span className="dot" style={{ background: 'var(--flag-blue)' }} />
-            Asking how someone is
+            {deck.reviewsToday} reviews done today
           </li>
           <li>
             <span className="dot" style={{ background: 'var(--flag-green)' }} />
-            Making plans with your wife
+            {deck.sentences.length} sentences in your deck
           </li>
         </ul>
-        <p className="muted small">Sample topics. Real ones arrive in Stage 1.</p>
+        <p className="muted small">Streak and active minutes start counting in Stage 3.</p>
       </section>
     </>
   )

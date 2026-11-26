@@ -1,0 +1,256 @@
+# form	itemId (- = no item)	hint gloss	[item np]	[item en]
+namaste	w:namaste	hello
+tj	-	TJ
+chunu	-	Chunu
+ryan	-	Ryan
+aiden	-	Aiden
+siyon	-	Siyon
+siyonlaai	-	Siyon (laai)
+aidenbhandaa	-	than Aiden
+kathmandu	-	Kathmandu
+kathmandumaa	w:kathmandu	in Kathmandu	Kathmandu	Kathmandu
+tapaai	w:tapaai	you (respectful)	tapaai	you (respectful)
+tapaaiko	w:tapaai	your (respectful)
+tapaaile	w:tapaai	you (respectful, + le)
+tapaailaai	w:tapaai	you / to you (respectful, + laai)
+timi	w:timi	you (familiar)	timi	you (familiar)
+timile	w:timi	you (familiar, + le)
+timilaai	w:timi	you / to you (familiar, + laai)
+timro	w:timi	your (familiar)
+timibhandaa	w:timi	than you
+ma	w:ma	I	ma	I
+maile	w:ma	I (+ le)
+malaai	w:ma	I / to me (+ laai)
+mero	w:ma	my
+mero laagi	w:ma	for me
+haami	w:haami	we	haami	we
+haamile	w:haami	we (+ le)
+haamilaai	w:haami	we / to us (+ laai)
+haamro	w:haami	our
+wahaa	w:wahaa	he / she (respectful)	wahaa	he / she (respectful)
+wu	w:wu	he / she (familiar)	wu	he / she (familiar)
+wusle	w:wu	he (+ le)
+wuni	w:wuni	she	wuni	she
+wunle	w:wuni	she (+ le)
+wunko	w:wuni	her
+wuniharu	w:wuniharu	they	wuniharu	they
+wuniharule	w:wuniharu	they (+ le)
+naam	w:naam	name
+ke	w:ke	what
+ho	w:ho	is (identity)	ho	is (identity)
+sanchai	w:sanchai	well, fine
+hunuhunchha	w:hunu	are (respectful)	hunu	to be
+chhu	w:chha	am	chha	is / am / are
+chha	w:chha	is
+chhan	w:chha	are (plural)
+thiyo	w:thiyo	was
+pani	w:pani	too, also
+ani	w:ani	and (then)
+ra	w:ra	and
+khaana	w:khaana	food, meal
+khaanabhandaa	w:khaana	than (that) food
+khaanu bhayo	w:khaanu	ate (respectful)	khaanu	to eat
+khaaeko chhaina	w:khaanu	haven't eaten
+bharkhar	w:bharkhar	just (now)
+khaae	w:khaanu	ate (I)
+khaaena	w:khaanu	didn't eat (I)
+khaayau	w:khaanu	ate (timi)
+khaanchhu	w:khaanu	eat (I)
+khaanchhau	w:khaanu	eat (timi)
+khaanchhaun	w:khaanu	eat (we)
+khaadai chhu	w:khaanu	am eating
+khaadai chhan	w:khaanu	are eating (they)
+khaanu hunchha	w:khaanu	eats (respectful)
+khaanus	w:khaanu	please eat
+nakhaanus	w:khaanu	please don't eat
+khaaepachhi	w:khaanu	after eating
+bhetera	w:bhetnu	meeting, having met	bhetnu	to meet
+bheteka chhaun	w:bhetnu	have met (we)
+bheteka chhainaun	w:bhetnu	haven't met (we)
+khusi	w:khushi	happy	khushi	happy
+khushi	w:khushi	happy
+laagyo	w:laagnu	felt	laagnu	to feel
+laageko chhaina	w:laagnu	don't feel
+saag	w:saag	spinach
+manparchha	w:manparnu	like(s)	manparnu	to like
+manpardaina	w:manparnu	don't like
+falful	w:falful	fruit
+chiyaa	w:chiyaa	tea
+chiyaabhandaa	w:chiyaa	than tea
+roti	w:roti	bread
+khursaani	w:khursaani	chillies
+chauchau	w:chauchau	noodles
+piro	w:piro	spicy
+kaalo	w:kaalo	black
+coffee	w:coffee	coffee
+kati	w:kati	how much / how many
+katijanaa	w:kati	how many (people)
+barsa	w:barsa	year(s)
+hunu bhayo	w:hunu	became, are (respectful)
+bhayau	w:hunu	became, are (timi)
+kahaa	w:kahaa	where
+basnu hunchha	w:basnu	live (respectful)	basnu	to live / to sit
+baschhu	w:basnu	live (I)
+basnus	w:basnu	please sit
+tarkaari	w:tarkaari	vegetables
+kinchhu	w:kinnu	buy (I)	kinnu	to buy
+kindina	w:kinnu	don't buy (I)
+kinchhin	w:kinnu	buys (she)
+kindai chhau	w:kinnu	are buying (timi)
+chiso	w:chiso	cold
+paani	w:paani	water, rain
+piuchhu	w:piunu	drink (I)	piunu	to drink
+piudai chhu	w:piunu	am drinking
+piunus	w:piunu	please drink
+piune	w:piunu	to drink (time to)
+syaau	w:syaau	apple
+pizza	w:pizza	pizza
+banaauchhaun	w:banaaunu	make (we)	banaaunu	to make
+banaauchhu	w:banaaunu	make (I)
+banaayo	w:banaaunu	made (he)
+banaaudai chhan	w:banaaunu	are making (they)
+nepali	w:nepali	Nepali
+bhaasaa	w:bhaasaa	language
+pakaaunu hunchha	w:pakaaunu	cook (respectful)	pakaaunu	to cook
+pakaae	w:pakaaunu	cooked (I)
+pakaaeka chhan	w:pakaaunu	have cooked (they)
+pakaaudaa	w:pakaaunu	when (she) cooks
+pakaauchhu	w:pakaaunu	cook (I)
+pakaauna laagyaun	w:pakaaunu	are about to cook (we)
+pakaauna aaudaina	w:pakaaunu	don't know how to cook
+pakaaune	w:pakaaunu	to cook (time to)
+guliyo	w:guliyo	sweet
+bolchha	w:bolnu	speaks (he)	bolnu	to speak
+boleko chhu	w:bolnu	have spoken
+boleko chhaina	w:bolnu	haven't spoken
+boldai chhau	w:bolnu	are speaking (timi)
+bolna aauchha	w:bolnu	know how to speak
+bajaarbaata	w:bajaar	from the market	bajaar	market
+bajaar	w:bajaar	market
+dherai	w:dherai	a lot, very, many
+saamaan	w:saamaan	things
+din dinai	w:harekdin	every day	harekdin / din dinai	every day
+harekdin	w:harekdin	every day
+football	w:football	football
+khelchhan	w:khelnu	play (they)	khelnu	to play
+kheldai chhan	w:khelnu	are playing (they)
+diusoko khaana	w:diuso	lunch	diuso	afternoon
+diusoko	w:diuso	afternoon's (pm)
+haamro	w:haami	our
+saathiko	w:saathi	friend's	saathi	friend
+ghar	w:ghar	house, home
+gharmaa	w:ghar	at home
+gayaun	w:jaanu	went (we)	jaanu	to go
+gae	w:jaanu	went (I)
+jaanu parchha	w:jaanu	have to go
+jaanu pardaina	w:jaanu	don't have to go
+jaanuaghi	w:jaanu	before going
+jaana laage	w:jaanu	am about to go
+jaane	w:jaanu	to go (time to)
+jaanchhu	w:jaanu	go (I)
+jaanchhaun	w:jaanu	go (we)
+bihaanako	w:bihaana	morning's (am)	bihaana	morning
+bihaana	w:bihaana	morning
+chha baje	w:chha-number	at six	chha (6)	six
+baje	w:baje	at (o'clock)
+uthnu bhayo	w:uthnu	woke up (respectful)	uthnu	to wake up
+uthnu parchha	w:uthnu	have to wake up
+uthnu hunchha	w:uthnu	wake up (respectful)
+uthchhau	w:uthnu	wake up (timi)
+uthepachhi	w:uthnu	after waking up
+uthne bittikai	w:uthnu	as soon as (I) wake up
+aaunu bhayo	w:aaunu	came (respectful)	aaunu	to come
+aaunu hunchha	w:aaunu	come (respectful)
+aauchhau	w:aaunu	come (timi)
+aaepachhi	w:aaunu	after coming
+aamaasanga	w:aamaa	with (her) mom	aamaa	mother, Aama
+aamaale	w:aamaa	mom (+ le)
+aama	w:aamaa	Aama (mother-in-law)
+buwa	w:buwa	Buwa (father-in-law)	buwa	father, Buwa
+buwako	w:buwa	Buwa's
+phonemaa	w:phone	on the phone	phone	phone
+phone	w:phone	phone
+kuraa	w:kuraa	talk, things	kuraa garnu	to talk
+garin	w:garnu	did (she)	garnu	to do
+garchhu	w:garnu	do (I)
+garnu parchha	w:garnu	have to do
+gardai chhau	w:garnu	are doing (timi)
+gardai hunuhunchha	w:garnu	are doing (respectful)
+saasusanga	w:saasu	with mother-in-law	saasu	mother-in-law
+batti	w:batti	light
+nibhaaeko chhu	w:nibhaaunu	have turned off	nibhaaunu	to turn off
+baalnus	w:baalnu	please turn on	baalnu	to turn on
+dui	w:dui	two
+patak	w:patak	times
+ahilesamma	w:ahilesamma	yet, until now
+geet	w:geet	song(s)
+sundai hunuhunchha	w:sunnu	are listening (respectful)	sunnu	to listen
+momo	w:momo	momo (dumplings)
+siknu parchha	w:siknu	have to learn	siknu	to learn
+sikepachhi	w:siknu	after learning
+sikaaunus	w:sikaaunu	please teach	sikaaunu	to teach
+aaja	w:aaja	today
+kaammaa	w:kaam	to work	kaam	work
+bholi	w:bholi	tomorrow
+chaadai	w:chaadai	early
+exercise	w:exercise	exercise
+hudaa	w:hudaa	when (being)	hudaa	when (being)
+safaa	w:safaa	clean	safaa garnu	to clean
+kahile	w:kahile	when (question)
+sutnuaghi	w:sutnu	before sleeping	sutnu	to sleep
+sutchhu	w:sutnu	sleep (I)
+sutne	w:sutnu	to sleep (time to)
+mukh	w:mukh	face
+dhunchhu	w:dhunu	wash (I)	dhunu	to wash
+dhunus	w:dhunu	please wash
+kehi	w:kehi	some
+dinaghi	w:din	days ago	din	day
+officemaa	w:office	to the office	office	office
+office	w:office	office
+aaraam	w:aaraam	rest	aaraam garnu	to rest
+baithak	w:baithak	meeting
+sakine bittikai	w:sakinu	as soon as (it) is over	sakinu	to be over
+bidhyaalaya	w:bidhyaalaya	school
+parna laagyo	w:parnu	is about to fall (rain)	paani parnu	to rain
+aglo	w:aglo	tall
+taato	w:taato	hot
+yo	w:yo	this
+tyo	w:tyo	that
+mitho	w:mitho	tasty, delicious
+baar	w:baar	day (of the week)
+shanibaar	w:shanibaar	Saturday
+hijo	w:hijo	yesterday
+sukrabaar	w:sukrabaar	Friday
+aaitabaar	w:aaitabaar	Sunday
+ahile	w:ahile	now
+bajyo	w:bajyo	o'clock (it struck)	bajyo	o'clock
+saadhe	w:saadhe	half past
+nau	w:nau	nine
+dash	w:dash	ten
+gaadi	w:gaadi	car
+chalaauna aauchha	w:chalaaunu	know how to drive	chalaaunu	to drive
+bhok	w:bhok	hunger
+tirkhaa	w:tirkhaa	thirst
+thakaai	w:thakaai	tiredness
+nindraa	w:nindraa	sleepiness
+belaa bhayo	w:belaa	it's time	belaa	time (it's time to)
+haat	w:haat	hand(s)
+kaagati	w:kaagati	lemon
+amilo	w:amilo	sour
+aap	w:aap	mango
+khallo	w:khallo	bland
+kasto	w:kasto	how (what kind)
+ekjanaa	w:ek	one (person)	ek	one
+eutaa	w:ek	one (thing)
+daai	w:daai	elder brother
+pariwaarmaa	w:pariwaar	in (your) family	pariwaar	family
+sadasya	w:sadasya	members
+biraalo	w:biraalo	cat
+belukaa	w:belukaa	evening
+film	w:film	movie
+herchhaun	w:hernu	watch (we)	hernu	to watch
+pugne bittikai	w:pugnu	as soon as (I) reach	pugnu	to reach
+phone garchhu	w:phone	call (I)
+chocolate	w:chocolate	chocolate
+piano	w:piano	piano
+bajaauna aauchha	w:bajaaunu	knows how to play (music)	bajaaunu	to play (instrument)
