@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { romanize } from '../core/devanagari'
+import { WEEKDAYS } from '../core/plan'
 import { GOAL_CHOICES, setPrefs, usePrefs } from '../core/prefs'
 import { explainError, getAccessCode, setAccessCode } from '../voice/api'
 import { setVoiceSettings, useVoiceSettings } from '../voice/settings'
@@ -8,7 +9,7 @@ import { speak, unlockAudio } from '../voice/tts'
 
 export function VoiceSettings() {
   const v = useVoiceSettings()
-  const { goalMinutes } = usePrefs()
+  const { goalMinutes, lessonDays } = usePrefs()
   const gi = GOAL_CHOICES.indexOf(goalMinutes)
   const [code, setCode] = useState(getAccessCode())
   const [saved, setSaved] = useState(false)
@@ -58,6 +59,29 @@ export function VoiceSettings() {
           >
             +
           </button>
+        </div>
+      </div>
+
+      <div className="setting">
+        <span>
+          Lesson days
+          <small className="muted">For the on-track estimate</small>
+        </span>
+        <div className="lesson-days">
+          {WEEKDAYS.map((d, i) => (
+            <button
+              key={d}
+              className={lessonDays.includes(i) ? 'on' : ''}
+              aria-pressed={lessonDays.includes(i)}
+              onClick={() =>
+                setPrefs({
+                  lessonDays: lessonDays.includes(i) ? lessonDays.filter((x) => x !== i) : [...lessonDays, i].sort(),
+                })
+              }
+            >
+              {d}
+            </button>
+          ))}
         </div>
       </div>
 
