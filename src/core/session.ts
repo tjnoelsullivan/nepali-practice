@@ -59,7 +59,7 @@ export function buildSession(
       if (!relaxed && newIds.length > maxPer) continue
       if (!relaxed && introduced.size + newIds.length > maxNew && newIds.length > 0) continue
       const dueHits = items.filter((i) => isDue(cards.get(i), now) && !covered.has(i)).length
-      const family = s.tags.some((t) => FAMILY_TAGS.has(t)) ? 2 : 0
+      const family = (s.tags.some((t) => FAMILY_TAGS.has(t)) ? 2 : 0) + (s.audioId ? 1 : 0)
       const seen = lastSeen.get(s.id)
       const recent = seen && now.getTime() - seen.getTime() < 12 * 3600_000 ? 3 : 0
       const score =
@@ -72,7 +72,9 @@ export function buildSession(
     for (const i of itemsOf(best.s)) covered.add(i)
     for (const i of best.newIds) introduced.add(i)
     // New material is introduced as recognition (hear/read Nepali) first.
-    const direction: Direction = best.newIds.length > 0 ? 'np-en' : rand() < 0.7 ? 'en-np' : 'np-en'
+    // Recordings are for ear training, so they are always heard (Nepali -> English).
+    const direction: Direction =
+      best.s.audioId || best.newIds.length > 0 ? 'np-en' : rand() < 0.7 ? 'en-np' : 'np-en'
     chosen.push({ sentenceId: best.s.id, direction })
   }
   return chosen

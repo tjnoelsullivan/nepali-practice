@@ -12,7 +12,7 @@ import { aiGrade, type AiVerdict } from '../voice/aiGrade'
 import { ApiError, explainError } from '../voice/api'
 import { useVoiceSettings } from '../voice/settings'
 import { listenOnce, type Listening } from '../voice/stt'
-import { prefetch, speak, stopSpeaking, unlockAudio } from '../voice/tts'
+import { playRecording, prefetch, speak, stopSpeaking, unlockAudio } from '../voice/tts'
 import type { Deck } from '../hooks/useDeck'
 
 type Phase = 'start' | 'drill' | 'done'
@@ -193,7 +193,13 @@ function DrillCard({
 }) {
   const voice = useVoiceSettings()
   const dev = sentenceDevanagari(sentence)
-  const [revealed, setRevealed] = useState(direction === 'en-np' || !(voice.hideText || (listenFirst && !!dev)))
+  const hasAudio = !!sentence.audioId
+  const canPlay = hasAudio || !!dev
+  const recording = useRef<Blob | null>(null)
+  // Chunu's recordings are ear training: the text starts hidden.
+  const [revealed, setRevealed] = useState(
+    direction === 'en-np' || !(voice.hideText || hasAudio || (listenFirst && !!dev)),
+  )
   const [heard, setHeard] = useState('')
   const [listening, setListening] = useState<Listening | null>(null)
   const [voiceError, setVoiceError] = useState('')
@@ -216,12 +222,18 @@ function DrillCard({
 
   const play = (slow = false) => {
     setVoiceError('')
-    speak(dev, { slow }).catch((e) => setVoiceError(explainError(e)))
+    const p = recording.current ? playRecording(recording.current, { slow }) : speak(dev, { slow })
+    p.catch((e) => setVoiceError(explainError(e)))
   }
 
-  // Nepali -> English: read the sentence aloud as the card appears. Then warm up the next card.
+  // Nepali -> English: play the sentence as the card appears. Then warm up the next card.
   useEffect(() => {
-    if (!enToNp && voice.autoplay && dev) speak(dev).catch((e) => setVoiceError(explainError(e)))
+    if (hasAudio) {
+      void db.recordings.get(sentence.audioId!).then((r) => {
+        recording.current = r?.blob ?? null
+        if (r && !enToNp && voice.autoplay) playRecording(r.blob).catch(() => {})
+      })
+    } else if (!enToNp && voice.autoplay && dev) speak(dev).catch((e) => setVoiceError(explainError(e)))
     else prefetch(dev)
     prefetch(nextDev)
     return () => {
@@ -371,10 +383,10 @@ function DrillCard({
           </>
         ) : (
           <>
-          {dev && (
+          {canPlay && (
             <div className="listen-row">
               <button className="listen" onClick={() => play(false)} aria-label="Play the Nepali">
-                <SpeakerIcon /> Listen
+                <SpeakerIcon /> {hasAudio ? 'Chunu' : 'Listen'}
               </button>
               <button className="listen slow" onClick={() => play(true)} aria-label="Play slowly">
                 <TurtleIcon /> Slow
@@ -464,7 +476,7 @@ function DrillCard({
             <p className="eyebrow">
               {checked.correct ? (checked.byAi ? 'Correct (same meaning)' : 'Correct') : checked.gaveUp ? 'Here it is' : 'Not quite'}
             </p>
-            {dev && (
+            {canPlay && (
               <span className="listen-row tight">
                 <button className="listen icon" onClick={() => play(false)} aria-label="Play the Nepali">
                   <SpeakerIcon />

@@ -37,5 +37,5 @@ Secrets (set in Vercel → project Settings → Environments → Production and 
 - [x] 2. Azure voice in and out
 - [x] 3. Streaks and active-time tracking
 - [x] 4. Tutor slide import
-- [ ] 5. Wife's recorded sentences
+- [x] 5. Recorded sentences in Chunu's voice
 - [ ] 6. Backup and polish

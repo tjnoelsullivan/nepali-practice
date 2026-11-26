@@ -12,6 +12,14 @@ export type SentenceStat = {
   npEnCorrect?: number
 }
 export type Meta = { key: string; value: unknown }
+export type Recording = {
+  id: string
+  sentenceId: string
+  blob: Blob
+  mime: string
+  durationMs: number
+  createdAt: Date
+}
 export type Lesson = {
   id: string
   title: string
@@ -32,6 +40,7 @@ export class SaathiDB extends Dexie {
   meta!: EntityTable<Meta, 'key'>
   days!: EntityTable<DayRecord, 'date'>
   lessons!: EntityTable<Lesson, 'id'>
+  recordings!: EntityTable<Recording, 'id'>
 
   constructor(name = 'saathi') {
     super(name)
@@ -56,6 +65,8 @@ export class SaathiDB extends Dexie {
       })
     // Stage 4: imported tutor lessons.
     this.version(3).stores({ lessons: 'id, importedAt' })
+    // Stage 5: recordings in Chunu's voice.
+    this.version(4).stores({ recordings: 'id, sentenceId, createdAt' })
   }
 }
 

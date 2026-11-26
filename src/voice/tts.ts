@@ -109,6 +109,40 @@ export async function speak(dev: string, opts: { slow?: boolean } = {}): Promise
   })
 }
 
+const blobUrls = new Map<Blob, string>()
+
+/** Play a human recording (e.g. Chunu's voice). Slow plays at 75% speed. */
+export async function playRecording(blob: Blob, opts: { slow?: boolean } = {}): Promise<void> {
+  markActive()
+  let src = blobUrls.get(blob)
+  if (!src) {
+    src = URL.createObjectURL(blob)
+    blobUrls.set(blob, src)
+  }
+  currentUrl = src
+  const a = audio()
+  a.pause()
+  a.src = src
+  a.playbackRate = opts.slow ? 0.75 : 1
+  ;(a as HTMLAudioElement & { preservesPitch?: boolean }).preservesPitch = true
+  await new Promise<void>((resolve, reject) => {
+    const done = () => {
+      markActive()
+      a.removeEventListener('ended', done)
+      a.removeEventListener('pause', done)
+      resolve()
+    }
+    a.addEventListener('ended', done)
+    a.addEventListener('pause', done)
+    a.play().then(() => {
+      unlocked = true
+    }, (e) => {
+      done()
+      reject(e)
+    })
+  })
+}
+
 export function stopSpeaking() {
   currentUrl = ''
   el?.pause()

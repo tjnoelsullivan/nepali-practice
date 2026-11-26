@@ -77,11 +77,7 @@ export function buildDraft(
     if (id && !existing.items.has(id))
       items.set(id, { id, kind: 'grammar', np: g.pattern, en: g.meaning, source: 'lesson', verified: true })
   }
-  for (const w of res.newItems ?? []) {
-    const id = cleanId('w:', w.id)
-    if (id && !existing.items.has(id))
-      items.set(id, { id, kind: 'word', np: w.np.toLowerCase(), en: w.en, source: 'lesson', verified: true })
-  }
+  for (const w of newWordItems(res.newItems ?? [], existing.items, 'lesson')) items.set(w.id, w)
   const known = (id: string) => existing.items.has(id) || items.has(id)
 
   const have = new Map(existing.sentences.map((s) => [normalize(sentenceNepali(s)), s.id]))
@@ -89,38 +85,14 @@ export function buildDraft(
   const duplicates = new Set<string>()
   const ids = new Set<string>()
   for (const s of res.sentences ?? []) {
-    const chunks: Chunk[] = []
-    let ok = s.chunks.length > 0
-    for (const c of s.chunks) {
-      const np = c.np.trim()
-      if (!np) continue
-      if (PUNCT.test(np)) {
-        chunks.push({ np: np.replace('।', '.'), en: '', dev: np === '.' ? '।' : np, items: [] })
-        continue
-      }
-      if (!DEV.test(c.dev ?? '')) ok = false
-      const itemId = c.itemId ? cleanId('w:', c.itemId) : ''
-      chunks.push({ np, en: c.en.trim() || '?', dev: c.dev.trim(), items: itemId && known(itemId) ? [itemId] : [] })
-    }
-    if (!ok) {
+    let id = `lesson:${lessonSlug}:${slug(s.en)}`
+    while (ids.has(id)) id += '-2'
+    const sentence = toSentence(s, id, 'lesson', known)
+    if (!sentence) {
       problems.push(`Skipped "${s.en}": the voice text was missing.`)
       continue
     }
-    const grammar = (s.grammar ?? []).map((g) => cleanId('g:', g)).filter((g) => g && known(g))
-    const last = [...chunks].reverse().find((c) => c.en)
-    if (last) last.items.push(...grammar.filter((g) => !last.items.includes(g)))
-    let id = `lesson:${lessonSlug}:${slug(s.en)}`
-    while (ids.has(id)) id += '-2'
     ids.add(id)
-    const sentence: Sentence = {
-      id,
-      en: s.en.trim(),
-      enAlts: s.enAlts?.length ? s.enAlts : undefined,
-      chunks,
-      tags: s.tags ?? [],
-      source: 'lesson',
-      verified: !!s.fromSlides,
-    }
     if (have.has(normalize(sentenceNepali(sentence)))) duplicates.add(id)
     sentences.push(sentence)
   }
@@ -133,6 +105,48 @@ export function buildDraft(
     questions: res.questions ?? [],
     problems,
   }
+}
+
+/** One Claude-prepared sentence -> deck sentence. Null if a word chunk lacks Devanagari. */
+export function toSentence(
+  s: IngestSentence,
+  id: string,
+  source: Sentence['source'],
+  known: (id: string) => boolean,
+): Sentence | null {
+  const chunks: Chunk[] = []
+  for (const c of s.chunks) {
+    const np = c.np.trim()
+    if (!np) continue
+    if (PUNCT.test(np)) {
+      chunks.push({ np: np.replace('।', '.'), en: '', dev: np === '.' ? '।' : np, items: [] })
+      continue
+    }
+    if (!DEV.test(c.dev ?? '')) return null
+    const itemId = c.itemId ? cleanId('w:', c.itemId) : ''
+    chunks.push({ np, en: c.en.trim() || '?', dev: c.dev.trim(), items: itemId && known(itemId) ? [itemId] : [] })
+  }
+  if (!chunks.some((c) => c.en)) return null
+  const grammar = (s.grammar ?? []).map((g) => cleanId('g:', g)).filter((g) => g && known(g))
+  const last = [...chunks].reverse().find((c) => c.en)
+  if (last) last.items.push(...grammar.filter((g) => !last.items.includes(g)))
+  return {
+    id,
+    en: s.en.trim(),
+    enAlts: s.enAlts?.length ? s.enAlts : undefined,
+    chunks,
+    tags: s.tags ?? [],
+    source,
+    verified: !!s.fromSlides,
+  }
+}
+
+/** New word items from Claude that aren't already in the deck. */
+export function newWordItems(list: { id: string; np: string; en: string }[], existing: Map<string, Item>, source: Item['source']): Item[] {
+  return list
+    .map((w) => ({ ...w, id: cleanId('w:', w.id) }))
+    .filter((w) => w.id && !existing.has(w.id))
+    .map((w) => ({ id: w.id, kind: 'word' as const, np: w.np.toLowerCase(), en: w.en, source, verified: true }))
 }
 
 /** Save the approved sentences. Learning history is never touched. */

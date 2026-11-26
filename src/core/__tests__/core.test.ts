@@ -119,3 +119,11 @@ describe('buildSession', () => {
     expect(s[0].sentenceId).toBe('b')
   })
 })
+
+describe('recordings in sessions', async () => {
+  const { buildSession } = await import('../session')
+  it('a recorded sentence is always practiced as listening (Nepali -> English)', () => {
+    const s = { id: 'wife:1', en: 'x', chunks: [{ np: 'a', en: 'a', items: [] }], tags: ['wife'], source: 'wife' as const, verified: true, audioId: 'rec:1' }
+    for (let i = 0; i < 20; i++) expect(buildSession([s], new Map(), new Date(), { random: Math.random })[0].direction).toBe('np-en')
+  })
+})

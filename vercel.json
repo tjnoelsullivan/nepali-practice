@@ -22,6 +22,9 @@
     },
     "api/ingest.ts": {
       "maxDuration": 300
+    },
+    "api/chunk.ts": {
+      "maxDuration": 60
     }
   }
 }
