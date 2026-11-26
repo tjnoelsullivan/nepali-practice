@@ -24,6 +24,7 @@ export async function recordAttempt(d: SaathiDB, a: Attempt, now = new Date()) {
       lastSeen: now,
       seen: (st?.seen ?? 0) + 1,
       correct: (st?.correct ?? 0) + (a.correct ? 1 : 0),
+      npEnCorrect: (st?.npEnCorrect ?? 0) + (a.correct && a.direction === 'np-en' ? 1 : 0),
     })
     await addToDay(d, dayKey(now), { answers: 1 })
   })

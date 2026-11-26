@@ -3,7 +3,14 @@ import type { Card } from 'ts-fsrs'
 import { dayKey, type DayRecord } from './core/activity'
 import type { Flag, Item, ReviewRecord, Sentence, StoredCard } from './core/types'
 
-export type SentenceStat = { sentenceId: string; lastSeen: Date; seen: number; correct: number }
+export type SentenceStat = {
+  sentenceId: string
+  lastSeen: Date
+  seen: number
+  correct: number
+  /** Correct Nepali -> English answers; after 2 the Nepali text starts hidden (listen first). */
+  npEnCorrect?: number
+}
 export type Meta = { key: string; value: unknown }
 
 export class SaathiDB extends Dexie {

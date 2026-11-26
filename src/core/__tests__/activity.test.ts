@@ -120,3 +120,18 @@ describe('upgrade from Stage 2 data', () => {
     expect(days.map((r) => dayPracticed(r))).toEqual([true, true])
   })
 })
+
+describe('learner marks an accepted answer wrong', async () => {
+  const { rateAttempt } = await import('../schedule')
+  const { Rating } = await import('ts-fsrs')
+  const s: Sentence = { id: 's', en: 'x', chunks: [{ np: 'a', en: 'a', items: ['w:a'] }, { np: 'b', en: 'b', items: ['w:b'] }], tags: [], source: 'seed', verified: true }
+  it('every part gets Hard when no part was marked missing', () => {
+    const r = rateAttempt({ sentence: s, direction: 'en-np', hinted: new Set(), chunkOk: [true, true], correct: false })
+    expect([...r.values()]).toEqual([Rating.Hard, Rating.Hard])
+  })
+  it('counts correct Nepali -> English answers per sentence', async () => {
+    const d = new SaathiDB('t-npen')
+    for (const direction of ['np-en', 'np-en', 'en-np'] as const) await recordAttempt(d, { sentence: s, direction, hinted: new Set(), correct: true })
+    expect((await d.sentenceStats.get('s'))?.npEnCorrect).toBe(2)
+  })
+})
