@@ -170,11 +170,11 @@ export function Practice({ deck }: { deck: Deck }) {
 }
 
 const REGISTER: Record<string, string> = {
-  wife: 'his wife Chunu (timi)',
-  'mother-in-law': 'his mother-in-law Aama (tapaai)',
-  'father-in-law': 'his father-in-law Buwa (tapaai)',
-  'in-laws': 'his in-laws (tapaai)',
-  nephews: 'his young nephews (timi)',
+  wife: 'their wife Chunu (timi)',
+  'mother-in-law': 'their mother-in-law Aama (tapaai)',
+  'father-in-law': 'their father-in-law Buwa (tapaai)',
+  'in-laws': 'their in-laws (tapaai)',
+  nephews: 'their young nephews (timi)',
 }
 
 function DrillCard({

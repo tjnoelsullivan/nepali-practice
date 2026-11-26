@@ -936,3 +936,83 @@ button {
   text-align: center;
   font-variant-numeric: tabular-nums;
 }
+
+/* Stage 4: lesson import */
+.lesson-import {
+  border-top: 3px solid var(--flag-blue);
+}
+.file-btn {
+  position: relative;
+  display: inline-flex;
+  margin-top: 12px;
+  cursor: pointer;
+}
+.file-btn input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  cursor: pointer;
+}
+.ok-note {
+  color: #8fe3b4;
+  margin: 8px 0 0;
+}
+.working {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.spinner {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 247, 234, 0.15);
+  border-top-color: var(--sun);
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.preview .list {
+  padding: 0;
+  max-height: 55vh;
+  overflow-y: auto;
+  margin: 10px 0;
+}
+.row.pick {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+.row.pick input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--flag-green);
+}
+.row.pick.dup {
+  opacity: 0.5;
+}
+.lesson-list {
+  margin-top: 16px;
+}
+.questions {
+  margin-top: 12px;
+  font-size: 14px;
+}
+.questions summary {
+  cursor: pointer;
+  color: var(--sun);
+  font-weight: 600;
+}
+.questions ul {
+  padding-left: 18px;
+  margin: 8px 0 0;
+}
+.questions li {
+  margin-bottom: 6px;
+}

@@ -24,7 +24,7 @@ const SCHEMA = {
   additionalProperties: false,
 }
 
-const SYSTEM = `You grade answers in a Nepali practice app for an English-speaking learner (beginner: present tense and basic questions) who talks with his Nepali wife (timi) and in-laws (tapaai).
+const SYSTEM = `You grade answers in a Nepali practice app for an English-speaking learner, TJ (beginner: present tense and basic questions), who talks with their Nepali wife (timi) and in-laws (tapaai).
 Decide if the learner's answer means the same as the reference answers, in the same politeness level.
 - "correct": same meaning and acceptable Nepali/English. Ignore romanization spelling differences (aa/a, chh/ch, ii/i, w/v), capitalization, punctuation and small typos.
 - "close": meaning is right but there is one real mistake worth fixing (wrong honorific level, wrong tense, a missing postposition, a wrong word ending).

@@ -12,6 +12,15 @@ export type SentenceStat = {
   npEnCorrect?: number
 }
 export type Meta = { key: string; value: unknown }
+export type Lesson = {
+  id: string
+  title: string
+  fileName: string
+  importedAt: Date
+  sentenceIds: string[]
+  /** Things Claude was unsure about, for TJ to ask the tutor. */
+  questions: string[]
+}
 
 export class SaathiDB extends Dexie {
   items!: EntityTable<Item, 'id'>
@@ -22,6 +31,7 @@ export class SaathiDB extends Dexie {
   sentenceStats!: EntityTable<SentenceStat, 'sentenceId'>
   meta!: EntityTable<Meta, 'key'>
   days!: EntityTable<DayRecord, 'date'>
+  lessons!: EntityTable<Lesson, 'id'>
 
   constructor(name = 'saathi') {
     super(name)
@@ -44,6 +54,8 @@ export class SaathiDB extends Dexie {
           .each((r: ReviewRecord) => counts.set(dayKey(new Date(r.at)), (counts.get(dayKey(new Date(r.at))) ?? 0) + 1))
         await tx.table('days').bulkPut([...counts].map(([date, answers]) => ({ date, activeMs: 0, answers })))
       })
+    // Stage 4: imported tutor lessons.
+    this.version(3).stores({ lessons: 'id, importedAt' })
   }
 }
 
@@ -97,4 +109,8 @@ export async function addToDay(
       goalMs: goalMs ?? cur.goalMs,
     })
   })
+}
+
+export async function addLesson(d: SaathiDB, lesson: Lesson) {
+  await d.lessons.put(lesson)
 }

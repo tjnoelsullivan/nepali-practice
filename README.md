@@ -36,6 +36,6 @@ Secrets (set in Vercel → project Settings → Environments → Production and 
 - [x] 1. Text drill, hints, FSRS scheduling
 - [x] 2. Azure voice in and out
 - [x] 3. Streaks and active-time tracking
-- [ ] 4. Tutor slide import
+- [x] 4. Tutor slide import
 - [ ] 5. Wife's recorded sentences
 - [ ] 6. Backup and polish

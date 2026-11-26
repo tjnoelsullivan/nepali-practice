@@ -34,7 +34,7 @@ export type Sentence = {
   verified: boolean
 }
 
-export type Source = 'seed' | 'tutor' | 'wife' | 'user'
+export type Source = 'seed' | 'tutor' | 'lesson' | 'wife' | 'user'
 
 export type Direction = 'en-np' | 'np-en'
 
