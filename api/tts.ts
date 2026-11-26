@@ -1,9 +1,13 @@
 // Speaks a Nepali sentence with an Azure neural voice and returns MP3.
 // GET /api/tts?text=<Devanagari>&voice=female|male&rate=normal|slow
+// GET /api/tts?lang=en&text=<English>  (the narrator in Listen episodes)
 // The same text always gives the same audio, so the CDN and the app cache it for a long time.
 import { DEVANAGARI_TEXT, azure, denied, json } from './_shared.js'
 
 const VOICES: Record<string, string> = { female: 'ne-NP-HemkalaNeural', male: 'ne-NP-SagarNeural' }
+const NARRATOR = 'en-US-GuyNeural'
+/** Plain English for the narrator: letters, digits, common punctuation. */
+const ENGLISH_TEXT = /^[A-Za-z0-9\s?!,.'"’:;()-]{1,400}$/
 const RATES: Record<string, string> = { normal: '-5%', slow: '-35%' }
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -15,12 +19,14 @@ export async function GET(request: Request): Promise<Response> {
   if (!az) return json({ error: 'azure-not-configured' }, 503)
   const url = new URL(request.url)
   const text = (url.searchParams.get('text') ?? '').trim()
-  const voice = VOICES[url.searchParams.get('voice') ?? 'female'] ?? VOICES.female
-  const rate = RATES[url.searchParams.get('rate') ?? 'normal'] ?? RATES.normal
-  if (!DEVANAGARI_TEXT.test(text)) return json({ error: 'bad-text' }, 400)
+  const english = url.searchParams.get('lang') === 'en'
+  const voice = english ? NARRATOR : (VOICES[url.searchParams.get('voice') ?? 'female'] ?? VOICES.female)
+  const rate = english ? '0%' : (RATES[url.searchParams.get('rate') ?? 'normal'] ?? RATES.normal)
+  if (!(english ? ENGLISH_TEXT : DEVANAGARI_TEXT).test(text)) return json({ error: 'bad-text' }, 400)
 
+  const lang = english ? 'en-US' : 'ne-NP'
   const ssml =
-    `<speak version="1.0" xml:lang="ne-NP"><voice name="${voice}">` +
+    `<speak version="1.0" xml:lang="${lang}"><voice name="${voice}">` +
     `<prosody rate="${rate}">${esc(text)}</prosody></voice></speak>`
   const r = await fetch(`https://${az.region}.tts.speech.microsoft.com/cognitiveservices/v1`, {
     method: 'POST',

@@ -1,4 +1,4 @@
-export type Tab = 'home' | 'practice' | 'progress' | 'library'
+export type Tab = 'home' | 'practice' | 'listen' | 'progress' | 'library'
 
 const TABS: { id: Tab; label: string; icon: React.ReactNode }[] = [
   {
@@ -15,6 +15,17 @@ const TABS: { id: Tab; label: string; icon: React.ReactNode }[] = [
       <>
         <rect x="9" y="3" width="6" height="11" rx="3" />
         <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" />
+      </>
+    ),
+  },
+  {
+    id: 'listen',
+    label: 'Listen',
+    icon: (
+      <>
+        <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+        <rect x="3.5" y="14" width="4.5" height="7" rx="1.8" />
+        <rect x="16" y="14" width="4.5" height="7" rx="1.8" />
       </>
     ),
   },

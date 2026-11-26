@@ -78,6 +78,8 @@ export async function buildBackup(d: SaathiDB = db): Promise<BackupFile> {
         }),
       )
     }
+    // The current Listen episode is a large audio file that's quick to make again.
+    if (t.name === 'meta') rows = rows.filter((r: { key?: string }) => r.key !== 'listenEpisode')
     tables[t.name] = rows.map(encode)
   }
   const settings: Record<string, string> = {}
