@@ -10,7 +10,14 @@ npm install
 npm run dev      # local dev server
 npm run build    # production build into dist/
 npm run preview  # serve the build (service worker active)
+npm test         # unit tests
 ```
+
+## Content
+
+The built-in deck lives in `content/` (sentences, word lexicon, grammar list) and is compiled with
+`node scripts/build-deck.mjs` into `src/content/deck.json`. Tutor sentences are marked verified;
+new sentences are unverified until the tutor checks them. Adding content never resets learning history.
 
 ## Deploy
 
@@ -23,7 +30,7 @@ Secrets (set in Vercel → Settings → Environment Variables, never committed):
 ## Stages
 
 - [x] 0. App shell: install to home screen, offline, visual style, navigation
-- [ ] 1. Text drill, hints, FSRS scheduling
+- [x] 1. Text drill, hints, FSRS scheduling
 - [ ] 2. Azure voice in and out
 - [ ] 3. Streaks and active-time tracking
 - [ ] 4. Tutor slide import

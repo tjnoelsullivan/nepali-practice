@@ -5,6 +5,7 @@ import { Home } from './screens/Home'
 import { Practice } from './screens/Practice'
 import { Progress } from './screens/Progress'
 import { Library } from './screens/Library'
+import { useDeck } from './hooks/useDeck'
 
 const TAB_KEY = 'saathi.tab'
 
@@ -21,6 +22,7 @@ function readTab(): Tab {
 export default function App() {
   const [tab, setTab] = useState<Tab>(readTab)
   const [online, setOnline] = useState(navigator.onLine)
+  const deck = useDeck()
 
   useEffect(() => {
     try {
@@ -48,10 +50,10 @@ export default function App() {
       <PrayerFlags />
       {!online && <div className="offline-pill">Offline. Practice still works.</div>}
       <main className="screen" key={tab}>
-        {tab === 'home' && <Home onStart={() => setTab('practice')} />}
-        {tab === 'practice' && <Practice />}
-        {tab === 'progress' && <Progress />}
-        {tab === 'library' && <Library />}
+        {tab === 'home' && <Home deck={deck} onStart={() => setTab('practice')} />}
+        {tab === 'practice' && <Practice deck={deck} />}
+        {tab === 'progress' && <Progress deck={deck} />}
+        {tab === 'library' && <Library deck={deck} />}
       </main>
       <TabBar tab={tab} onChange={setTab} />
     </div>

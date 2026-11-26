@@ -1,0 +1,168 @@
+# Deck source. One sentence per line:
+#   English || Nepali || tags || grammar || other English answers (; separated)
+# Nepali: words separated by spaces; join words that form one chunk with _ ;
+# attach grammar to a specific chunk with {g:id}. Line grammar goes on the last chunk.
+# Lines under "@verified" are from TJ's tutor slides; "@unverified" are new and need a tutor check.
+
+@verified source=tutor
+## First class
+Hello. || Namaste. || greeting || g:greeting ||
+What is your name? || Tapaaiko naam ke ho? || greeting || g:ho ||
+My name is TJ. || Mero naam TJ ho. || greeting || g:ho ||
+How are you? || Tapaai sanchai hunuhunchha? || greeting,in-laws || g:honorific-present || Are you well?; Are you fine?
+I am fine. || Ma sanchai chhu. || greeting || g:present-chha || I'm well.; I'm fine.
+I am fine too. || Ma pani sanchai chhu. || greeting || g:present-chha || I'm also fine.; I am also fine.
+And you? || Ani tapaai? || greeting || ||
+Did you eat? || Tapaaile khaana khaanu_bhayo? || mother-in-law,mealtime || g:honorific-past,g:le-past || Have you eaten?; Did you eat food?; Have you had food?
+I have not eaten yet. || Maile khaana khaaeko_chhaina. || mealtime || g:perfect,g:le-past || I haven't eaten yet.; I have not eaten.
+I just ate. || Maile bharkhar khaana khaae. || mealtime || g:past,g:le-past || I just ate food.; I have just eaten.
+Nice to meet you. || Tapaailaai bhetera khusi laagyo. || greeting,in-laws || g:feeling || I am happy to meet you.; Happy to meet you.
+Me too. || Malaai pani. || greeting || g:feeling ||
+I like spinach. || Malaai saag manparchha. || food || g:like ||
+I like fruit. || Malaai falful manparchha. || food || g:like || I like fruits.
+I like tea. || Malaai chiyaa manparchha. || food || g:like ||
+I like bread. || Malaai roti manparchha. || food || g:like ||
+I don't like chillies. || Malaai khursaani manpardaina. || food || g:like-not || I do not like chillies.; I don't like chilies.
+I don't like noodles. || Malaai chauchau manpardaina. || food || g:like-not || I do not like noodles.
+I don't like spicy food. || Malaai piro khaana manpardaina. || food || g:like-not || I do not like spicy food.
+I don't like black coffee. || Malaai kaalo coffee manpardaina. || food || g:like-not || I do not like black coffee.
+How old are you? || Tapaai kati barsa hunu_bhayo? || greeting,in-laws || g:honorific-past ||
+Where do you live? || Tapaai kahaa basnu_hunchha? || greeting,in-laws || g:honorific-present ||
+I live in Kathmandu. || Ma Kathmandumaa{g:maa} baschhu. || greeting || g:present ||
+## Simple present
+I buy vegetables. || Ma tarkaari kinchhu. || food,plans || g:present ||
+I don't buy vegetables. || Ma tarkaari kindina. || food || g:present-neg || I do not buy vegetables.
+I drink cold water. || Ma chiso paani piuchhu. || food || g:present ||
+You eat an apple. || Timi syaau khaanchhau. || wife,food || g:present-timi || You eat apples.
+We make pizza. || Haami pizza banaauchhaun. || food,family || g:present-haami ||
+You cook Nepali food. || Tapaai Nepali khaana pakaaunu_hunchha. || mother-in-law,food || g:honorific-present ||
+He eats sweet food. || Wahaa guliyo khaana khaanu_hunchha. || in-laws,food || g:honorific-present || She eats sweet food.
+He speaks Nepali. || Wu Nepali bhaasaa bolchha. || nephews || g:present-wu || He speaks the Nepali language.
+She buys a lot of things from the market. || Wuni bajaarbaata{g:baata} dherai saamaan kinchhin. || plans || g:present-wuni || She buys many things from the market.
+Every day they play football. || Din_dinai wuniharu football khelchhan. || nephews || g:present-wuniharu || They play football every day.
+## Simple past
+I cooked lunch. || Maile diusoko_khaana pakaae. || food || g:past,g:le-past ||
+I didn't eat my lunch. || Maile mero diusoko_khaana khaaena. || food || g:past-neg,g:le-past || I did not eat my lunch.
+We went to our friend's house. || Haami haamro saathiko ghar gayaun. || plans || g:past ||
+You woke up at 6 am. || Tapaai bihaanako chha_baje{g:baje} uthnu_bhayo. || in-laws || g:honorific-past || You woke up at 6 in the morning.
+He just came home. || Wahaa bharkhar ghar aaunu_bhayo. || in-laws || g:honorific-past || She just came home.
+He made coffee for me. || Wusle mero_laagi{g:ko-laagi} coffee banaayo. || food || g:past,g:le-past ||
+She talked with her mom on the phone. || Wunle wunko aamaasanga{g:sanga} phonemaa{g:maa} kuraa garin. || family || g:past,g:le-past || She talked to her mom on the phone.
+## Present perfect
+I have spoken Nepali with my mother-in-law. || Maile mero saasusanga{g:sanga} Nepali boleko_chhu. || mother-in-law || g:perfect,g:le-past || I have spoken Nepali with my mother in law.
+I have not spoken Nepali with my mother-in-law. || Maile mero saasusanga{g:sanga} Nepali boleko_chhaina. || mother-in-law || g:perfect-neg,g:le-past || I haven't spoken Nepali with my mother-in-law.
+I have turned off the light. || Maile batti nibhaaeko_chhu. || family || g:perfect,g:le-past ||
+We have met twice. || Haami dui patak bheteka_chhaun. || greeting || g:perfect ||
+We have not met yet. || Haami ahilesamma bheteka_chhainaun. || greeting || g:perfect-neg || We haven't met yet.
+They have cooked food for me. || Wuniharule mero_laagi{g:ko-laagi} khaana pakaaeka_chhan. || family,food || g:perfect,g:le-past ||
+## Present continuous
+I am eating food. || Ma khaana khaadai_chhu. || food || g:continuous || I am eating.; I'm eating.
+I am drinking water. || Ma paani piudai_chhu. || food || g:continuous || I'm drinking water.
+You are speaking Nepali. || Timi Nepali bhaasaa boldai_chhau. || wife || g:continuous || You are speaking the Nepali language.
+You are buying vegetables. || Timi tarkaari kindai_chhau. || wife,food || g:continuous ||
+You are listening to Nepali songs. || Tapaai Nepali geet sundai_hunuhunchha. || in-laws || g:continuous || You're listening to Nepali songs.
+They are making momo. || Wuniharu momo banaaudai_chhan. || food,family || g:continuous || They are making momos.
+## Must / have to
+I have to study Nepali. || Maile Nepali bhaasaa siknu_parchha. || plans || g:must,g:le-past || I have to learn Nepali.; I need to learn Nepali.; I have to study the Nepali language.
+I have to go to work today. || Aaja ma kaammaa{g:maa} jaanu_parchha. || plans || g:must || Today I have to go to work.
+I don't have to go to work today. || Aaja ma kaammaa{g:maa} jaanu_pardaina. || plans || g:must-not || Today I don't have to go to work.
+I have to wake up early tomorrow. || Bholi ma bihaana chaadai uthnu_parchha. || plans || g:must || Tomorrow I have to wake up early.
+We have to exercise every day. || Haamile harekdin exercise garnu_parchha. || plans || g:must,g:le-past || We have to do exercise every day.
+## When
+When I am at home, I clean the house. || Gharmaa{g:maa} hudaa{g:when} ma ghar safaa garchhu. || family || g:present ||
+When we are in Kathmandu, we eat a lot of momo. || Kathmandumaa{g:maa} hudaa{g:when} haami dherai momo khaanchhaun. || food,family || g:present-haami || When we are in Kathmandu we eat lots of momos.
+When my mom cooks food, I eat a lot. || Mero aamaale khaana pakaaudaa{g:when} ma dherai khaanchhu. || food,family || g:present || When my mother cooks, I eat a lot.
+When will you come to my house? || Tapaai mero ghar kahile aaunu_hunchha? || in-laws,plans || g:honorific-present ||
+## Before / after / as soon as
+Before sleeping, I wash my face. || Ma sutnuaghi{g:before} mero mukh dhunchhu. || family || g:present || I wash my face before sleeping.; Before I sleep I wash my face.
+Before I go to my friend's house, I buy some fruit. || Ma mero saathiko ghar jaanuaghi{g:before} kehi falful kinchhu. || plans || g:present || Before going to my friend's house, I buy some fruit.
+Two days ago, I went to my office. || Dui dinaghi{g:before} ma mero officemaa{g:maa} gae. || plans || g:past || 2 days ago I went to my office.
+After coming home, I rest. || Mero ghar aaepachhi{g:after} ma aaraam garchhu. || family || g:present || After I come home, I rest.; After coming home I take rest.
+After learning Nepali, I sleep. || Nepali sikepachhi{g:after} ma sutchhu. || plans || g:present || After learning Nepali, I will sleep.
+After I wake up, I make coffee for myself. || Ma uthepachhi{g:after} mero_laagi{g:ko-laagi} coffee banaauchhu. || food || g:present ||
+I drink water as soon as I wake up. || Ma uthne_bittikai{g:as-soon-as} paani piuchhu. || family || g:present || As soon as I wake up I drink water.
+I cook food as soon as my meeting is over. || Mero baithak sakine_bittikai{g:as-soon-as} ma khaana pakaauchhu. || food,plans || g:present || As soon as my meeting is over, I cook food.
+## About to
+I am about to go to school. || Ma bidhyaalaya jaana_laage. || plans || g:about-to ||
+We are about to cook food. || Haami khaana pakaauna_laagyaun. || food,family || g:about-to ||
+It's about to rain. || Paani parna_laagyo. || plans || g:about-to || It is about to rain.
+## Comparison
+I am taller than you. || Ma timibhandaa{g:than} aglo chhu. || wife || g:present-chha ||
+Coffee is hotter than tea. || Coffee chiyaabhandaa{g:than} taato chha. || food || g:present-chha ||
+This food is tastier than that food. || Yo khaana tyo khaanabhandaa{g:than} mitho chha. || food || g:present-chha || This food is more delicious than that food.
+## Days and time
+What day is today? || Aaja ke baar ho? || plans || g:ho || What day is it today?
+Today is Saturday. || Aaja Shanibaar ho. || plans || g:ho ||
+Yesterday was Friday. || Hijo Sukrabaar thiyo. || plans || g:thiyo ||
+Tomorrow is Sunday. || Bholi Aaitabaar ho. || plans || g:ho ||
+What time is it now? || Ahile kati bajyo? || plans || g:telling-time || What time is it?
+It's 2 pm. || Ahile diusoko dui bajyo. || plans || g:telling-time || It is 2 PM.; It's 2 in the afternoon.
+It's 9:30 am. || Ahile bihaanako saadhe nau bajyo. || plans || g:telling-time || It is 9:30 AM.; It's half past nine in the morning.
+What time do you wake up? || Timi kati baje{g:baje} uthchhau? || wife || g:present-timi || At what time do you wake up?
+I go to the office at 10. || Ma dash baje{g:baje} office jaanchhu. || plans || g:present || I go to the office at 10 o'clock.
+## Know how to
+I know how to drive a car. || Malaai gaadi chalaauna_aauchha. || plans || g:know-how ||
+I don't know how to cook food. || Malaai khaana pakaauna_aaudaina. || food || g:know-how-not || I don't know how to cook.
+We know how to speak Nepali. || Haamilaai Nepali bolna_aauchha. || family || g:know-how ||
+## Feelings
+I feel hungry. || Malaai bhok laagyo. || food || g:feeling || I'm hungry.; I am hungry.
+I feel thirsty. || Malaai tirkhaa laagyo. || food || g:feeling || I'm thirsty.; I am thirsty.
+I feel tired. || Malaai thakaai laagyo. || family || g:feeling || I'm tired.; I am tired.
+I don't feel sleepy. || Malaai nindraa laageko_chhaina. || family || g:feeling-not || I am not sleepy.; I'm not sleepy.
+I feel happy. || Malaai khushi laagyo. || family || g:feeling || I'm happy.; I am happy.
+## It's time to
+It's time to sleep. || Sutne belaa_bhayo. || family || g:time-to || It is time to sleep.
+It's time to cook food. || Khaana pakaaune belaa_bhayo. || food || g:time-to || It's time to cook.
+It's time to go to the office. || Office jaane belaa_bhayo. || plans || g:time-to || It is time to go to the office.
+## Please
+Please eat. || Khaana khaanus. || in-laws,mealtime || g:please || Please eat food.; Please eat the food.
+Please drink water. || Paani piunus. || in-laws || g:please ||
+Please wash your hands. || Haat dhunus. || family || g:please || Please wash hands.
+Please don't eat the food. || Khaana nakhaanus. || food || g:please-not || Please don't eat food.
+Please turn on the light. || Batti baalnus. || family || g:please ||
+## Tastes
+Lemon is sour. || Kaagati amilo chha. || food || g:present-chha || The lemon is sour.
+Mango is sweet. || Aap guliyo chha. || food || g:present-chha || The mango is sweet.
+This food is bland. || Yo khaana khallo chha. || food,mealtime || g:present-chha ||
+How is it? || Kasto chha? || food,mealtime || g:present-chha || How is it?
+## Counting
+I have one elder brother. || Mero ekjanaa{g:janaa} daai chha. || family || g:present-chha ||
+How many members are in your family? || Tapaaiko pariwaarmaa{g:maa} katijanaa{g:janaa} sadasya chhan? || in-laws,family || g:present-chha || How many family members do you have?
+I have one cat. || Mero eutaa{g:wataa} biraalo chha. || family || g:present-chha ||
+
+@unverified source=seed
+## Chunu (timi)
+Chunu, what are you doing? || Chunu, timi ke gardai_chhau? || wife || g:continuous || Chunu what are you doing?
+Chunu, are you hungry? || Chunu, timilaai bhok laagyo? || wife,mealtime || g:feeling || Chunu, do you feel hungry?
+Are you tired? || Timilaai thakaai laagyo? || wife || g:feeling || Do you feel tired?
+Do you like momo? || Timilaai momo manparchha? || wife,food || g:like || Do you like momos?
+I really like your food. || Malaai timro khaana dherai manparchha. || wife,food || g:like || I like your food a lot.; I like your food very much.
+What time will you come home? || Timi kati baje{g:baje} ghar aauchhau? || wife,plans || g:present-timi || What time do you come home?; When do you come home?
+Tonight I'll cook. || Aaja belukaa ma khaana pakaauchhu. || wife,food,plans || g:present || I will cook food this evening.; I'll cook tonight.; This evening I will cook food.
+Tomorrow we're going to Aama and Buwa's house. || Bholi haami Aama Buwako ghar jaanchhaun. || wife,in-laws,plans || g:present-haami || Tomorrow we go to Aama and Buwa's house.; Tomorrow we will go to Mom and Dad's house.
+We have to go to the market. || Haami bajaar jaanu_parchha. || wife,plans || g:must || We need to go to the market.
+Chunu, it's time to drink tea. || Chunu, chiyaa piune belaa_bhayo. || wife,food || g:time-to || Chunu it's time for tea.
+After eating, we'll watch a movie. || Khaana khaaepachhi{g:after} haami film herchhaun. || wife,plans || g:present-haami || After eating food, we watch a movie.; After we eat, we will watch a movie.
+As soon as I reach the office, I'll call you. || Ma office pugne_bittikai{g:as-soon-as} timilaai phone garchhu. || wife,plans || g:present || I'll call you as soon as I get to the office.; I call you as soon as I reach the office.
+Did you eat? || Timile khaana khaayau? || wife,mealtime || g:past-timi,g:le-past || Have you eaten?
+## Aama and Buwa (tapaai)
+Aama, did you eat? || Aama, tapaaile khaana khaanu_bhayo? || mother-in-law,mealtime || g:honorific-past,g:le-past || Aama, have you eaten?
+Buwa, how are you? || Buwa, tapaai sanchai hunuhunchha? || father-in-law || g:honorific-present || Buwa, are you well?
+Aama, do you like tea? || Aama, tapaailaai chiyaa manparchha? || mother-in-law,food || g:like ||
+Aama, the food is very tasty. || Aama, khaana dherai mitho chha. || mother-in-law,mealtime || g:present-chha || Aama, the food is really delicious.; Aama, the food is very delicious.
+Buwa, please drink tea. || Buwa, chiyaa piunus. || father-in-law,food || g:please || Buwa, please have tea.
+Aama, please sit. || Aama, basnus. || mother-in-law || g:please || Aama, please have a seat.
+Aama, what are you doing? || Aama, tapaai ke gardai_hunuhunchha? || mother-in-law || g:continuous ||
+Buwa, what time do you wake up? || Buwa, tapaai kati baje{g:baje} uthnu_hunchha? || father-in-law || g:honorific-present || Buwa, at what time do you wake up?
+Aama, are you hungry? || Aama, tapaailaai bhok laagyo? || mother-in-law,mealtime || g:feeling || Aama, do you feel hungry?
+Aama, please teach me Nepali. || Aama, malaai Nepali sikaaunus. || mother-in-law || g:please || Aama, please teach me Nepali.
+Buwa, when will you come to our house? || Buwa, tapaai haamro ghar kahile aaunu_hunchha? || father-in-law,plans || g:honorific-present || Buwa, when are you coming to our house?
+I don't know how to cook Nepali food. || Malaai Nepali khaana pakaauna_aaudaina. || mother-in-law,food || g:know-how-not ||
+## The nephews
+Ryan, what are you doing? || Ryan, timi ke gardai_chhau? || nephews || g:continuous ||
+Aiden, do you like chocolate? || Aiden, timilaai chocolate manparchha? || nephews,food || g:like ||
+Ryan and Aiden are playing football. || Ryan ra Aiden football kheldai_chhan. || nephews || g:continuous ||
+Siyon knows how to play piano. || Siyonlaai piano bajaauna_aauchha. || nephews || g:know-how || Siyon knows how to play the piano.
+Ryan is taller than Aiden. || Ryan Aidenbhandaa{g:than} aglo chha. || nephews || g:present-chha ||
+Aiden and Siyon are eating. || Aiden ra Siyon khaana khaadai_chhan. || nephews,mealtime || g:continuous || Aiden and Siyon are eating food.
+Siyon, how old are you? || Siyon, timi kati barsa bhayau? || nephews || g:past-timi ||

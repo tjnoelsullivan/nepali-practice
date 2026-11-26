@@ -1,0 +1,8060 @@
+{
+ "items": [
+  {
+   "id": "w:namaste",
+   "kind": "word",
+   "np": "namaste",
+   "en": "hello",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kathmandu",
+   "kind": "word",
+   "np": "Kathmandu",
+   "en": "Kathmandu",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:tapaai",
+   "kind": "word",
+   "np": "tapaai",
+   "en": "you (respectful)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:timi",
+   "kind": "word",
+   "np": "timi",
+   "en": "you (familiar)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:ma",
+   "kind": "word",
+   "np": "ma",
+   "en": "I",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:haami",
+   "kind": "word",
+   "np": "haami",
+   "en": "we",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:wahaa",
+   "kind": "word",
+   "np": "wahaa",
+   "en": "he / she (respectful)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:wu",
+   "kind": "word",
+   "np": "wu",
+   "en": "he / she (familiar)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:wuni",
+   "kind": "word",
+   "np": "wuni",
+   "en": "she",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:wuniharu",
+   "kind": "word",
+   "np": "wuniharu",
+   "en": "they",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:naam",
+   "kind": "word",
+   "np": "naam",
+   "en": "name",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:ke",
+   "kind": "word",
+   "np": "ke",
+   "en": "what",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:ho",
+   "kind": "word",
+   "np": "ho",
+   "en": "is (identity)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:sanchai",
+   "kind": "word",
+   "np": "sanchai",
+   "en": "well, fine",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:hunu",
+   "kind": "word",
+   "np": "hunu",
+   "en": "to be",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:chha",
+   "kind": "word",
+   "np": "chha",
+   "en": "is / am / are",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:thiyo",
+   "kind": "word",
+   "np": "thiyo",
+   "en": "was",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:pani",
+   "kind": "word",
+   "np": "pani",
+   "en": "too, also",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:ani",
+   "kind": "word",
+   "np": "ani",
+   "en": "and (then)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:ra",
+   "kind": "word",
+   "np": "ra",
+   "en": "and",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:khaana",
+   "kind": "word",
+   "np": "khaana",
+   "en": "food, meal",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:khaanu",
+   "kind": "word",
+   "np": "khaanu",
+   "en": "to eat",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bharkhar",
+   "kind": "word",
+   "np": "bharkhar",
+   "en": "just (now)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bhetnu",
+   "kind": "word",
+   "np": "bhetnu",
+   "en": "to meet",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:khushi",
+   "kind": "word",
+   "np": "khushi",
+   "en": "happy",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:laagnu",
+   "kind": "word",
+   "np": "laagnu",
+   "en": "to feel",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:saag",
+   "kind": "word",
+   "np": "saag",
+   "en": "spinach",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:manparnu",
+   "kind": "word",
+   "np": "manparnu",
+   "en": "to like",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:falful",
+   "kind": "word",
+   "np": "falful",
+   "en": "fruit",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:chiyaa",
+   "kind": "word",
+   "np": "chiyaa",
+   "en": "tea",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:roti",
+   "kind": "word",
+   "np": "roti",
+   "en": "bread",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:khursaani",
+   "kind": "word",
+   "np": "khursaani",
+   "en": "chillies",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:chauchau",
+   "kind": "word",
+   "np": "chauchau",
+   "en": "noodles",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:piro",
+   "kind": "word",
+   "np": "piro",
+   "en": "spicy",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kaalo",
+   "kind": "word",
+   "np": "kaalo",
+   "en": "black",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:coffee",
+   "kind": "word",
+   "np": "coffee",
+   "en": "coffee",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kati",
+   "kind": "word",
+   "np": "kati",
+   "en": "how much / how many",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:barsa",
+   "kind": "word",
+   "np": "barsa",
+   "en": "year(s)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kahaa",
+   "kind": "word",
+   "np": "kahaa",
+   "en": "where",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:basnu",
+   "kind": "word",
+   "np": "basnu",
+   "en": "to live / to sit",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:tarkaari",
+   "kind": "word",
+   "np": "tarkaari",
+   "en": "vegetables",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kinnu",
+   "kind": "word",
+   "np": "kinnu",
+   "en": "to buy",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:chiso",
+   "kind": "word",
+   "np": "chiso",
+   "en": "cold",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:paani",
+   "kind": "word",
+   "np": "paani",
+   "en": "water, rain",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:piunu",
+   "kind": "word",
+   "np": "piunu",
+   "en": "to drink",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:syaau",
+   "kind": "word",
+   "np": "syaau",
+   "en": "apple",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:pizza",
+   "kind": "word",
+   "np": "pizza",
+   "en": "pizza",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:banaaunu",
+   "kind": "word",
+   "np": "banaaunu",
+   "en": "to make",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:nepali",
+   "kind": "word",
+   "np": "nepali",
+   "en": "Nepali",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bhaasaa",
+   "kind": "word",
+   "np": "bhaasaa",
+   "en": "language",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:pakaaunu",
+   "kind": "word",
+   "np": "pakaaunu",
+   "en": "to cook",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:guliyo",
+   "kind": "word",
+   "np": "guliyo",
+   "en": "sweet",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bolnu",
+   "kind": "word",
+   "np": "bolnu",
+   "en": "to speak",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bajaar",
+   "kind": "word",
+   "np": "bajaar",
+   "en": "market",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:dherai",
+   "kind": "word",
+   "np": "dherai",
+   "en": "a lot, very, many",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:saamaan",
+   "kind": "word",
+   "np": "saamaan",
+   "en": "things",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:harekdin",
+   "kind": "word",
+   "np": "harekdin / din dinai",
+   "en": "every day",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:football",
+   "kind": "word",
+   "np": "football",
+   "en": "football",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:khelnu",
+   "kind": "word",
+   "np": "khelnu",
+   "en": "to play",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:diuso",
+   "kind": "word",
+   "np": "diuso",
+   "en": "afternoon",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:saathi",
+   "kind": "word",
+   "np": "saathi",
+   "en": "friend",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:ghar",
+   "kind": "word",
+   "np": "ghar",
+   "en": "house, home",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:jaanu",
+   "kind": "word",
+   "np": "jaanu",
+   "en": "to go",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bihaana",
+   "kind": "word",
+   "np": "bihaana",
+   "en": "morning",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:chha-number",
+   "kind": "word",
+   "np": "chha (6)",
+   "en": "six",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:baje",
+   "kind": "word",
+   "np": "baje",
+   "en": "at (o'clock)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:uthnu",
+   "kind": "word",
+   "np": "uthnu",
+   "en": "to wake up",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:aaunu",
+   "kind": "word",
+   "np": "aaunu",
+   "en": "to come",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:aamaa",
+   "kind": "word",
+   "np": "aamaa",
+   "en": "mother, Aama",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:buwa",
+   "kind": "word",
+   "np": "buwa",
+   "en": "father, Buwa",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:phone",
+   "kind": "word",
+   "np": "phone",
+   "en": "phone",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kuraa",
+   "kind": "word",
+   "np": "kuraa garnu",
+   "en": "to talk",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:garnu",
+   "kind": "word",
+   "np": "garnu",
+   "en": "to do",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:saasu",
+   "kind": "word",
+   "np": "saasu",
+   "en": "mother-in-law",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:batti",
+   "kind": "word",
+   "np": "batti",
+   "en": "light",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:nibhaaunu",
+   "kind": "word",
+   "np": "nibhaaunu",
+   "en": "to turn off",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:baalnu",
+   "kind": "word",
+   "np": "baalnu",
+   "en": "to turn on",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:dui",
+   "kind": "word",
+   "np": "dui",
+   "en": "two",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:patak",
+   "kind": "word",
+   "np": "patak",
+   "en": "times",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:ahilesamma",
+   "kind": "word",
+   "np": "ahilesamma",
+   "en": "yet, until now",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:geet",
+   "kind": "word",
+   "np": "geet",
+   "en": "song(s)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:sunnu",
+   "kind": "word",
+   "np": "sunnu",
+   "en": "to listen",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:momo",
+   "kind": "word",
+   "np": "momo",
+   "en": "momo (dumplings)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:siknu",
+   "kind": "word",
+   "np": "siknu",
+   "en": "to learn",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:sikaaunu",
+   "kind": "word",
+   "np": "sikaaunu",
+   "en": "to teach",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:aaja",
+   "kind": "word",
+   "np": "aaja",
+   "en": "today",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kaam",
+   "kind": "word",
+   "np": "kaam",
+   "en": "work",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bholi",
+   "kind": "word",
+   "np": "bholi",
+   "en": "tomorrow",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:chaadai",
+   "kind": "word",
+   "np": "chaadai",
+   "en": "early",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:exercise",
+   "kind": "word",
+   "np": "exercise",
+   "en": "exercise",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:hudaa",
+   "kind": "word",
+   "np": "hudaa",
+   "en": "when (being)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:safaa",
+   "kind": "word",
+   "np": "safaa garnu",
+   "en": "to clean",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kahile",
+   "kind": "word",
+   "np": "kahile",
+   "en": "when (question)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:sutnu",
+   "kind": "word",
+   "np": "sutnu",
+   "en": "to sleep",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:mukh",
+   "kind": "word",
+   "np": "mukh",
+   "en": "face",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:dhunu",
+   "kind": "word",
+   "np": "dhunu",
+   "en": "to wash",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kehi",
+   "kind": "word",
+   "np": "kehi",
+   "en": "some",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:din",
+   "kind": "word",
+   "np": "din",
+   "en": "day",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:office",
+   "kind": "word",
+   "np": "office",
+   "en": "office",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:aaraam",
+   "kind": "word",
+   "np": "aaraam garnu",
+   "en": "to rest",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:baithak",
+   "kind": "word",
+   "np": "baithak",
+   "en": "meeting",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:sakinu",
+   "kind": "word",
+   "np": "sakinu",
+   "en": "to be over",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bidhyaalaya",
+   "kind": "word",
+   "np": "bidhyaalaya",
+   "en": "school",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:parnu",
+   "kind": "word",
+   "np": "paani parnu",
+   "en": "to rain",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:aglo",
+   "kind": "word",
+   "np": "aglo",
+   "en": "tall",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:taato",
+   "kind": "word",
+   "np": "taato",
+   "en": "hot",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:yo",
+   "kind": "word",
+   "np": "yo",
+   "en": "this",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:tyo",
+   "kind": "word",
+   "np": "tyo",
+   "en": "that",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:mitho",
+   "kind": "word",
+   "np": "mitho",
+   "en": "tasty, delicious",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:baar",
+   "kind": "word",
+   "np": "baar",
+   "en": "day (of the week)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:shanibaar",
+   "kind": "word",
+   "np": "shanibaar",
+   "en": "Saturday",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:hijo",
+   "kind": "word",
+   "np": "hijo",
+   "en": "yesterday",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:sukrabaar",
+   "kind": "word",
+   "np": "sukrabaar",
+   "en": "Friday",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:aaitabaar",
+   "kind": "word",
+   "np": "aaitabaar",
+   "en": "Sunday",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:ahile",
+   "kind": "word",
+   "np": "ahile",
+   "en": "now",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bajyo",
+   "kind": "word",
+   "np": "bajyo",
+   "en": "o'clock",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:saadhe",
+   "kind": "word",
+   "np": "saadhe",
+   "en": "half past",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:nau",
+   "kind": "word",
+   "np": "nau",
+   "en": "nine",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:dash",
+   "kind": "word",
+   "np": "dash",
+   "en": "ten",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:gaadi",
+   "kind": "word",
+   "np": "gaadi",
+   "en": "car",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:chalaaunu",
+   "kind": "word",
+   "np": "chalaaunu",
+   "en": "to drive",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bhok",
+   "kind": "word",
+   "np": "bhok",
+   "en": "hunger",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:tirkhaa",
+   "kind": "word",
+   "np": "tirkhaa",
+   "en": "thirst",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:thakaai",
+   "kind": "word",
+   "np": "thakaai",
+   "en": "tiredness",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:nindraa",
+   "kind": "word",
+   "np": "nindraa",
+   "en": "sleepiness",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:belaa",
+   "kind": "word",
+   "np": "belaa",
+   "en": "time (it's time to)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:haat",
+   "kind": "word",
+   "np": "haat",
+   "en": "hand(s)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kaagati",
+   "kind": "word",
+   "np": "kaagati",
+   "en": "lemon",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:amilo",
+   "kind": "word",
+   "np": "amilo",
+   "en": "sour",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:aap",
+   "kind": "word",
+   "np": "aap",
+   "en": "mango",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:khallo",
+   "kind": "word",
+   "np": "khallo",
+   "en": "bland",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:kasto",
+   "kind": "word",
+   "np": "kasto",
+   "en": "how (what kind)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:ek",
+   "kind": "word",
+   "np": "ek",
+   "en": "one",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:daai",
+   "kind": "word",
+   "np": "daai",
+   "en": "elder brother",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:pariwaar",
+   "kind": "word",
+   "np": "pariwaar",
+   "en": "family",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:sadasya",
+   "kind": "word",
+   "np": "sadasya",
+   "en": "members",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:biraalo",
+   "kind": "word",
+   "np": "biraalo",
+   "en": "cat",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:belukaa",
+   "kind": "word",
+   "np": "belukaa",
+   "en": "evening",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:film",
+   "kind": "word",
+   "np": "film",
+   "en": "movie",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:hernu",
+   "kind": "word",
+   "np": "hernu",
+   "en": "to watch",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:pugnu",
+   "kind": "word",
+   "np": "pugnu",
+   "en": "to reach",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:chocolate",
+   "kind": "word",
+   "np": "chocolate",
+   "en": "chocolate",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:piano",
+   "kind": "word",
+   "np": "piano",
+   "en": "piano",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "w:bajaaunu",
+   "kind": "word",
+   "np": "bajaaunu",
+   "en": "to play (instrument)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:greeting",
+   "kind": "grammar",
+   "np": "namaste",
+   "en": "greeting",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:ho",
+   "kind": "grammar",
+   "np": "X ho",
+   "en": "is (identity: name, day, \"what is\")",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:present-chha",
+   "kind": "grammar",
+   "np": "chhu / chha / chhan",
+   "en": "am / is / are (description, location)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:thiyo",
+   "kind": "grammar",
+   "np": "thiyo",
+   "en": "was",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:present",
+   "kind": "grammar",
+   "np": "ma: verb + chhu / dina",
+   "en": "I do (simple present)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:present-neg",
+   "kind": "grammar",
+   "np": "ma: verb + dina",
+   "en": "I don't (simple present negative)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:present-timi",
+   "kind": "grammar",
+   "np": "timi: verb + chhau",
+   "en": "you do (timi, simple present)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:present-haami",
+   "kind": "grammar",
+   "np": "haami: verb + chhaun",
+   "en": "we do (simple present)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:present-wu",
+   "kind": "grammar",
+   "np": "wu: verb + chha",
+   "en": "he does (younger, simple present)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:present-wuni",
+   "kind": "grammar",
+   "np": "wuni: verb + chhin",
+   "en": "she does (younger, simple present)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:present-wuniharu",
+   "kind": "grammar",
+   "np": "wuniharu: verb + chhan",
+   "en": "they do (simple present)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:honorific-present",
+   "kind": "grammar",
+   "np": "tapaai/wahaa: verb-nu hunchha",
+   "en": "you / he / she do (respectful present)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:honorific-past",
+   "kind": "grammar",
+   "np": "tapaai/wahaa: verb-nu bhayo",
+   "en": "you / he / she did (respectful past)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:le-past",
+   "kind": "grammar",
+   "np": "subject + le",
+   "en": "subject marker with transitive verbs (past, perfect, have to)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:past",
+   "kind": "grammar",
+   "np": "ma: verb + e",
+   "en": "I did (simple past)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:past-neg",
+   "kind": "grammar",
+   "np": "ma: verb + ena",
+   "en": "I didn't (simple past negative)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:past-timi",
+   "kind": "grammar",
+   "np": "timi: verb + yau",
+   "en": "you did (timi, simple past)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:perfect",
+   "kind": "grammar",
+   "np": "verb + eko chhu / eka chhaun",
+   "en": "have done (present perfect)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:perfect-neg",
+   "kind": "grammar",
+   "np": "verb + eko chhaina",
+   "en": "haven't done (present perfect negative)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:continuous",
+   "kind": "grammar",
+   "np": "verb + dai chhu / chhau / hunuhunchha",
+   "en": "am doing (present continuous)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:must",
+   "kind": "grammar",
+   "np": "verb-nu parchha",
+   "en": "have to",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:must-not",
+   "kind": "grammar",
+   "np": "verb-nu pardaina",
+   "en": "don't have to",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:when",
+   "kind": "grammar",
+   "np": "verb + daa / hudaa",
+   "en": "when (doing / being)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:before",
+   "kind": "grammar",
+   "np": "verb-nu aghi / noun + aghi",
+   "en": "before / ago",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:after",
+   "kind": "grammar",
+   "np": "verb + e pachhi",
+   "en": "after",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:as-soon-as",
+   "kind": "grammar",
+   "np": "verb + ne bittikai / naa saath",
+   "en": "as soon as",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:about-to",
+   "kind": "grammar",
+   "np": "verb + na laagnu",
+   "en": "about to",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:than",
+   "kind": "grammar",
+   "np": "X + bhandaa",
+   "en": "than (comparison)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:telling-time",
+   "kind": "grammar",
+   "np": "kati bajyo / X bajyo",
+   "en": "telling the time",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:baje",
+   "kind": "grammar",
+   "np": "X baje",
+   "en": "at X o'clock",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:know-how",
+   "kind": "grammar",
+   "np": "subject-laai verb-na aauchha",
+   "en": "know how to",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:know-how-not",
+   "kind": "grammar",
+   "np": "subject-laai verb-na aaudaina",
+   "en": "don't know how to",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:feeling",
+   "kind": "grammar",
+   "np": "subject-laai X laagyo",
+   "en": "feel X (hungry, happy ...)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:feeling-not",
+   "kind": "grammar",
+   "np": "subject-laai X laageko chhaina",
+   "en": "don't feel X",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:like",
+   "kind": "grammar",
+   "np": "subject-laai X manparchha",
+   "en": "like",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:like-not",
+   "kind": "grammar",
+   "np": "subject-laai X manpardaina",
+   "en": "don't like",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:time-to",
+   "kind": "grammar",
+   "np": "verb + ne belaa bhayo",
+   "en": "it's time to",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:please",
+   "kind": "grammar",
+   "np": "verb + nus",
+   "en": "please do (polite request)",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:please-not",
+   "kind": "grammar",
+   "np": "na + verb + nus",
+   "en": "please don't",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:maa",
+   "kind": "grammar",
+   "np": "X + maa",
+   "en": "in / at / on",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:baata",
+   "kind": "grammar",
+   "np": "X + baata",
+   "en": "from",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:sanga",
+   "kind": "grammar",
+   "np": "X + sanga",
+   "en": "with",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:ko-laagi",
+   "kind": "grammar",
+   "np": "X + ko laagi",
+   "en": "for",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:janaa",
+   "kind": "grammar",
+   "np": "number + janaa",
+   "en": "counting people",
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "g:wataa",
+   "kind": "grammar",
+   "np": "number + wataa",
+   "en": "counting things / animals",
+   "source": "tutor",
+   "verified": true
+  }
+ ],
+ "sentences": [
+  {
+   "id": "tutor:hello",
+   "en": "Hello.",
+   "chunks": [
+    {
+     "np": "Namaste",
+     "en": "hello",
+     "items": [
+      "w:namaste",
+      "g:greeting"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:what-is-your-name",
+   "en": "What is your name?",
+   "chunks": [
+    {
+     "np": "Tapaaiko",
+     "en": "your (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "naam",
+     "en": "name",
+     "items": [
+      "w:naam"
+     ]
+    },
+    {
+     "np": "ke",
+     "en": "what",
+     "items": [
+      "w:ke"
+     ]
+    },
+    {
+     "np": "ho",
+     "en": "is (identity)",
+     "items": [
+      "w:ho",
+      "g:ho"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:my-name-is-tj",
+   "en": "My name is TJ.",
+   "chunks": [
+    {
+     "np": "Mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "naam",
+     "en": "name",
+     "items": [
+      "w:naam"
+     ]
+    },
+    {
+     "np": "TJ",
+     "en": "TJ",
+     "items": []
+    },
+    {
+     "np": "ho",
+     "en": "is (identity)",
+     "items": [
+      "w:ho",
+      "g:ho"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:how-are-you",
+   "en": "How are you?",
+   "enAlts": [
+    "Are you well?",
+    "Are you fine?"
+   ],
+   "chunks": [
+    {
+     "np": "Tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "sanchai",
+     "en": "well, fine",
+     "items": [
+      "w:sanchai"
+     ]
+    },
+    {
+     "np": "hunuhunchha",
+     "en": "are (respectful)",
+     "items": [
+      "w:hunu",
+      "g:honorific-present"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting",
+    "in-laws"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-am-fine",
+   "en": "I am fine.",
+   "enAlts": [
+    "I'm well.",
+    "I'm fine."
+   ],
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "sanchai",
+     "en": "well, fine",
+     "items": [
+      "w:sanchai"
+     ]
+    },
+    {
+     "np": "chhu",
+     "en": "am",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-am-fine-too",
+   "en": "I am fine too.",
+   "enAlts": [
+    "I'm also fine.",
+    "I am also fine."
+   ],
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "pani",
+     "en": "too, also",
+     "items": [
+      "w:pani"
+     ]
+    },
+    {
+     "np": "sanchai",
+     "en": "well, fine",
+     "items": [
+      "w:sanchai"
+     ]
+    },
+    {
+     "np": "chhu",
+     "en": "am",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:and-you",
+   "en": "And you?",
+   "chunks": [
+    {
+     "np": "Ani",
+     "en": "and (then)",
+     "items": [
+      "w:ani"
+     ]
+    },
+    {
+     "np": "tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:did-you-eat",
+   "en": "Did you eat?",
+   "enAlts": [
+    "Have you eaten?",
+    "Did you eat food?",
+    "Have you had food?"
+   ],
+   "chunks": [
+    {
+     "np": "Tapaaile",
+     "en": "you (respectful, + le)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaanu bhayo",
+     "en": "ate (respectful)",
+     "items": [
+      "w:khaanu",
+      "g:honorific-past",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law",
+    "mealtime"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-have-not-eaten-yet",
+   "en": "I have not eaten yet.",
+   "enAlts": [
+    "I haven't eaten yet.",
+    "I have not eaten."
+   ],
+   "chunks": [
+    {
+     "np": "Maile",
+     "en": "I (+ le)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaaeko chhaina",
+     "en": "haven't eaten",
+     "items": [
+      "w:khaanu",
+      "g:perfect",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mealtime"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-just-ate",
+   "en": "I just ate.",
+   "enAlts": [
+    "I just ate food.",
+    "I have just eaten."
+   ],
+   "chunks": [
+    {
+     "np": "Maile",
+     "en": "I (+ le)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "bharkhar",
+     "en": "just (now)",
+     "items": [
+      "w:bharkhar"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaae",
+     "en": "ate (I)",
+     "items": [
+      "w:khaanu",
+      "g:past",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mealtime"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:nice-to-meet-you",
+   "en": "Nice to meet you.",
+   "enAlts": [
+    "I am happy to meet you.",
+    "Happy to meet you."
+   ],
+   "chunks": [
+    {
+     "np": "Tapaailaai",
+     "en": "you / to you (respectful, + laai)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "bhetera",
+     "en": "meeting, having met",
+     "items": [
+      "w:bhetnu"
+     ]
+    },
+    {
+     "np": "khusi",
+     "en": "happy",
+     "items": [
+      "w:khushi"
+     ]
+    },
+    {
+     "np": "laagyo",
+     "en": "felt",
+     "items": [
+      "w:laagnu",
+      "g:feeling"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting",
+    "in-laws"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:me-too",
+   "en": "Me too.",
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "pani",
+     "en": "too, also",
+     "items": [
+      "w:pani",
+      "g:feeling"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-like-spinach",
+   "en": "I like spinach.",
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "saag",
+     "en": "spinach",
+     "items": [
+      "w:saag"
+     ]
+    },
+    {
+     "np": "manparchha",
+     "en": "like(s)",
+     "items": [
+      "w:manparnu",
+      "g:like"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-like-fruit",
+   "en": "I like fruit.",
+   "enAlts": [
+    "I like fruits."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "falful",
+     "en": "fruit",
+     "items": [
+      "w:falful"
+     ]
+    },
+    {
+     "np": "manparchha",
+     "en": "like(s)",
+     "items": [
+      "w:manparnu",
+      "g:like"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-like-tea",
+   "en": "I like tea.",
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "chiyaa",
+     "en": "tea",
+     "items": [
+      "w:chiyaa"
+     ]
+    },
+    {
+     "np": "manparchha",
+     "en": "like(s)",
+     "items": [
+      "w:manparnu",
+      "g:like"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-like-bread",
+   "en": "I like bread.",
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "roti",
+     "en": "bread",
+     "items": [
+      "w:roti"
+     ]
+    },
+    {
+     "np": "manparchha",
+     "en": "like(s)",
+     "items": [
+      "w:manparnu",
+      "g:like"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-dont-like-chillies",
+   "en": "I don't like chillies.",
+   "enAlts": [
+    "I do not like chillies.",
+    "I don't like chilies."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "khursaani",
+     "en": "chillies",
+     "items": [
+      "w:khursaani"
+     ]
+    },
+    {
+     "np": "manpardaina",
+     "en": "don't like",
+     "items": [
+      "w:manparnu",
+      "g:like-not"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-dont-like-noodles",
+   "en": "I don't like noodles.",
+   "enAlts": [
+    "I do not like noodles."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "chauchau",
+     "en": "noodles",
+     "items": [
+      "w:chauchau"
+     ]
+    },
+    {
+     "np": "manpardaina",
+     "en": "don't like",
+     "items": [
+      "w:manparnu",
+      "g:like-not"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-dont-like-spicy-food",
+   "en": "I don't like spicy food.",
+   "enAlts": [
+    "I do not like spicy food."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "piro",
+     "en": "spicy",
+     "items": [
+      "w:piro"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "manpardaina",
+     "en": "don't like",
+     "items": [
+      "w:manparnu",
+      "g:like-not"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-dont-like-black-coffee",
+   "en": "I don't like black coffee.",
+   "enAlts": [
+    "I do not like black coffee."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "kaalo",
+     "en": "black",
+     "items": [
+      "w:kaalo"
+     ]
+    },
+    {
+     "np": "coffee",
+     "en": "coffee",
+     "items": [
+      "w:coffee"
+     ]
+    },
+    {
+     "np": "manpardaina",
+     "en": "don't like",
+     "items": [
+      "w:manparnu",
+      "g:like-not"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:how-old-are-you",
+   "en": "How old are you?",
+   "chunks": [
+    {
+     "np": "Tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "kati",
+     "en": "how much / how many",
+     "items": [
+      "w:kati"
+     ]
+    },
+    {
+     "np": "barsa",
+     "en": "year(s)",
+     "items": [
+      "w:barsa"
+     ]
+    },
+    {
+     "np": "hunu bhayo",
+     "en": "became, are (respectful)",
+     "items": [
+      "w:hunu",
+      "g:honorific-past"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting",
+    "in-laws"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:where-do-you-live",
+   "en": "Where do you live?",
+   "chunks": [
+    {
+     "np": "Tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "kahaa",
+     "en": "where",
+     "items": [
+      "w:kahaa"
+     ]
+    },
+    {
+     "np": "basnu hunchha",
+     "en": "live (respectful)",
+     "items": [
+      "w:basnu",
+      "g:honorific-present"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting",
+    "in-laws"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-live-in-kathmandu",
+   "en": "I live in Kathmandu.",
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "Kathmandumaa",
+     "en": "in Kathmandu",
+     "items": [
+      "w:kathmandu",
+      "g:maa"
+     ]
+    },
+    {
+     "np": "baschhu",
+     "en": "live (I)",
+     "items": [
+      "w:basnu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-buy-vegetables",
+   "en": "I buy vegetables.",
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "tarkaari",
+     "en": "vegetables",
+     "items": [
+      "w:tarkaari"
+     ]
+    },
+    {
+     "np": "kinchhu",
+     "en": "buy (I)",
+     "items": [
+      "w:kinnu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food",
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-dont-buy-vegetables",
+   "en": "I don't buy vegetables.",
+   "enAlts": [
+    "I do not buy vegetables."
+   ],
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "tarkaari",
+     "en": "vegetables",
+     "items": [
+      "w:tarkaari"
+     ]
+    },
+    {
+     "np": "kindina",
+     "en": "don't buy (I)",
+     "items": [
+      "w:kinnu",
+      "g:present-neg"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-drink-cold-water",
+   "en": "I drink cold water.",
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "chiso",
+     "en": "cold",
+     "items": [
+      "w:chiso"
+     ]
+    },
+    {
+     "np": "paani",
+     "en": "water, rain",
+     "items": [
+      "w:paani"
+     ]
+    },
+    {
+     "np": "piuchhu",
+     "en": "drink (I)",
+     "items": [
+      "w:piunu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:you-eat-an-apple",
+   "en": "You eat an apple.",
+   "enAlts": [
+    "You eat apples."
+   ],
+   "chunks": [
+    {
+     "np": "Timi",
+     "en": "you (familiar)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "syaau",
+     "en": "apple",
+     "items": [
+      "w:syaau"
+     ]
+    },
+    {
+     "np": "khaanchhau",
+     "en": "eat (timi)",
+     "items": [
+      "w:khaanu",
+      "g:present-timi"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:we-make-pizza",
+   "en": "We make pizza.",
+   "chunks": [
+    {
+     "np": "Haami",
+     "en": "we",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "pizza",
+     "en": "pizza",
+     "items": [
+      "w:pizza"
+     ]
+    },
+    {
+     "np": "banaauchhaun",
+     "en": "make (we)",
+     "items": [
+      "w:banaaunu",
+      "g:present-haami"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food",
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:you-cook-nepali-food",
+   "en": "You cook Nepali food.",
+   "chunks": [
+    {
+     "np": "Tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "pakaaunu hunchha",
+     "en": "cook (respectful)",
+     "items": [
+      "w:pakaaunu",
+      "g:honorific-present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law",
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:he-eats-sweet-food",
+   "en": "He eats sweet food.",
+   "enAlts": [
+    "She eats sweet food."
+   ],
+   "chunks": [
+    {
+     "np": "Wahaa",
+     "en": "he / she (respectful)",
+     "items": [
+      "w:wahaa"
+     ]
+    },
+    {
+     "np": "guliyo",
+     "en": "sweet",
+     "items": [
+      "w:guliyo"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaanu hunchha",
+     "en": "eats (respectful)",
+     "items": [
+      "w:khaanu",
+      "g:honorific-present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "in-laws",
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:he-speaks-nepali",
+   "en": "He speaks Nepali.",
+   "enAlts": [
+    "He speaks the Nepali language."
+   ],
+   "chunks": [
+    {
+     "np": "Wu",
+     "en": "he / she (familiar)",
+     "items": [
+      "w:wu"
+     ]
+    },
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "bhaasaa",
+     "en": "language",
+     "items": [
+      "w:bhaasaa"
+     ]
+    },
+    {
+     "np": "bolchha",
+     "en": "speaks (he)",
+     "items": [
+      "w:bolnu",
+      "g:present-wu"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:she-buys-a-lot-of-things-from-the-market",
+   "en": "She buys a lot of things from the market.",
+   "enAlts": [
+    "She buys many things from the market."
+   ],
+   "chunks": [
+    {
+     "np": "Wuni",
+     "en": "she",
+     "items": [
+      "w:wuni"
+     ]
+    },
+    {
+     "np": "bajaarbaata",
+     "en": "from the market",
+     "items": [
+      "w:bajaar",
+      "g:baata"
+     ]
+    },
+    {
+     "np": "dherai",
+     "en": "a lot, very, many",
+     "items": [
+      "w:dherai"
+     ]
+    },
+    {
+     "np": "saamaan",
+     "en": "things",
+     "items": [
+      "w:saamaan"
+     ]
+    },
+    {
+     "np": "kinchhin",
+     "en": "buys (she)",
+     "items": [
+      "w:kinnu",
+      "g:present-wuni"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:every-day-they-play-football",
+   "en": "Every day they play football.",
+   "enAlts": [
+    "They play football every day."
+   ],
+   "chunks": [
+    {
+     "np": "Din dinai",
+     "en": "every day",
+     "items": [
+      "w:harekdin"
+     ]
+    },
+    {
+     "np": "wuniharu",
+     "en": "they",
+     "items": [
+      "w:wuniharu"
+     ]
+    },
+    {
+     "np": "football",
+     "en": "football",
+     "items": [
+      "w:football"
+     ]
+    },
+    {
+     "np": "khelchhan",
+     "en": "play (they)",
+     "items": [
+      "w:khelnu",
+      "g:present-wuniharu"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-cooked-lunch",
+   "en": "I cooked lunch.",
+   "chunks": [
+    {
+     "np": "Maile",
+     "en": "I (+ le)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "diusoko khaana",
+     "en": "lunch",
+     "items": [
+      "w:diuso"
+     ]
+    },
+    {
+     "np": "pakaae",
+     "en": "cooked (I)",
+     "items": [
+      "w:pakaaunu",
+      "g:past",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-didnt-eat-my-lunch",
+   "en": "I didn't eat my lunch.",
+   "enAlts": [
+    "I did not eat my lunch."
+   ],
+   "chunks": [
+    {
+     "np": "Maile",
+     "en": "I (+ le)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "diusoko khaana",
+     "en": "lunch",
+     "items": [
+      "w:diuso"
+     ]
+    },
+    {
+     "np": "khaaena",
+     "en": "didn't eat (I)",
+     "items": [
+      "w:khaanu",
+      "g:past-neg",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:we-went-to-our-friends-house",
+   "en": "We went to our friend's house.",
+   "chunks": [
+    {
+     "np": "Haami",
+     "en": "we",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "haamro",
+     "en": "our",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "saathiko",
+     "en": "friend's",
+     "items": [
+      "w:saathi"
+     ]
+    },
+    {
+     "np": "ghar",
+     "en": "house, home",
+     "items": [
+      "w:ghar"
+     ]
+    },
+    {
+     "np": "gayaun",
+     "en": "went (we)",
+     "items": [
+      "w:jaanu",
+      "g:past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:you-woke-up-at-6-am",
+   "en": "You woke up at 6 am.",
+   "enAlts": [
+    "You woke up at 6 in the morning."
+   ],
+   "chunks": [
+    {
+     "np": "Tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "bihaanako",
+     "en": "morning's (am)",
+     "items": [
+      "w:bihaana"
+     ]
+    },
+    {
+     "np": "chha baje",
+     "en": "at six",
+     "items": [
+      "w:chha-number",
+      "g:baje"
+     ]
+    },
+    {
+     "np": "uthnu bhayo",
+     "en": "woke up (respectful)",
+     "items": [
+      "w:uthnu",
+      "g:honorific-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "in-laws"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:he-just-came-home",
+   "en": "He just came home.",
+   "enAlts": [
+    "She just came home."
+   ],
+   "chunks": [
+    {
+     "np": "Wahaa",
+     "en": "he / she (respectful)",
+     "items": [
+      "w:wahaa"
+     ]
+    },
+    {
+     "np": "bharkhar",
+     "en": "just (now)",
+     "items": [
+      "w:bharkhar"
+     ]
+    },
+    {
+     "np": "ghar",
+     "en": "house, home",
+     "items": [
+      "w:ghar"
+     ]
+    },
+    {
+     "np": "aaunu bhayo",
+     "en": "came (respectful)",
+     "items": [
+      "w:aaunu",
+      "g:honorific-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "in-laws"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:he-made-coffee-for-me",
+   "en": "He made coffee for me.",
+   "chunks": [
+    {
+     "np": "Wusle",
+     "en": "he (+ le)",
+     "items": [
+      "w:wu"
+     ]
+    },
+    {
+     "np": "mero laagi",
+     "en": "for me",
+     "items": [
+      "w:ma",
+      "g:ko-laagi"
+     ]
+    },
+    {
+     "np": "coffee",
+     "en": "coffee",
+     "items": [
+      "w:coffee"
+     ]
+    },
+    {
+     "np": "banaayo",
+     "en": "made (he)",
+     "items": [
+      "w:banaaunu",
+      "g:past",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:she-talked-with-her-mom-on-the-phone",
+   "en": "She talked with her mom on the phone.",
+   "enAlts": [
+    "She talked to her mom on the phone."
+   ],
+   "chunks": [
+    {
+     "np": "Wunle",
+     "en": "she (+ le)",
+     "items": [
+      "w:wuni"
+     ]
+    },
+    {
+     "np": "wunko",
+     "en": "her",
+     "items": [
+      "w:wuni"
+     ]
+    },
+    {
+     "np": "aamaasanga",
+     "en": "with (her) mom",
+     "items": [
+      "w:aamaa",
+      "g:sanga"
+     ]
+    },
+    {
+     "np": "phonemaa",
+     "en": "on the phone",
+     "items": [
+      "w:phone",
+      "g:maa"
+     ]
+    },
+    {
+     "np": "kuraa",
+     "en": "talk, things",
+     "items": [
+      "w:kuraa"
+     ]
+    },
+    {
+     "np": "garin",
+     "en": "did (she)",
+     "items": [
+      "w:garnu",
+      "g:past",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-have-spoken-nepali-with-my-motherinlaw",
+   "en": "I have spoken Nepali with my mother-in-law.",
+   "enAlts": [
+    "I have spoken Nepali with my mother in law."
+   ],
+   "chunks": [
+    {
+     "np": "Maile",
+     "en": "I (+ le)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "saasusanga",
+     "en": "with mother-in-law",
+     "items": [
+      "w:saasu",
+      "g:sanga"
+     ]
+    },
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "boleko chhu",
+     "en": "have spoken",
+     "items": [
+      "w:bolnu",
+      "g:perfect",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-have-not-spoken-nepali-with-my-motherinlaw",
+   "en": "I have not spoken Nepali with my mother-in-law.",
+   "enAlts": [
+    "I haven't spoken Nepali with my mother-in-law."
+   ],
+   "chunks": [
+    {
+     "np": "Maile",
+     "en": "I (+ le)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "saasusanga",
+     "en": "with mother-in-law",
+     "items": [
+      "w:saasu",
+      "g:sanga"
+     ]
+    },
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "boleko chhaina",
+     "en": "haven't spoken",
+     "items": [
+      "w:bolnu",
+      "g:perfect-neg",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-have-turned-off-the-light",
+   "en": "I have turned off the light.",
+   "chunks": [
+    {
+     "np": "Maile",
+     "en": "I (+ le)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "batti",
+     "en": "light",
+     "items": [
+      "w:batti"
+     ]
+    },
+    {
+     "np": "nibhaaeko chhu",
+     "en": "have turned off",
+     "items": [
+      "w:nibhaaunu",
+      "g:perfect",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:we-have-met-twice",
+   "en": "We have met twice.",
+   "chunks": [
+    {
+     "np": "Haami",
+     "en": "we",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "dui",
+     "en": "two",
+     "items": [
+      "w:dui"
+     ]
+    },
+    {
+     "np": "patak",
+     "en": "times",
+     "items": [
+      "w:patak"
+     ]
+    },
+    {
+     "np": "bheteka chhaun",
+     "en": "have met (we)",
+     "items": [
+      "w:bhetnu",
+      "g:perfect"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:we-have-not-met-yet",
+   "en": "We have not met yet.",
+   "enAlts": [
+    "We haven't met yet."
+   ],
+   "chunks": [
+    {
+     "np": "Haami",
+     "en": "we",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "ahilesamma",
+     "en": "yet, until now",
+     "items": [
+      "w:ahilesamma"
+     ]
+    },
+    {
+     "np": "bheteka chhainaun",
+     "en": "haven't met (we)",
+     "items": [
+      "w:bhetnu",
+      "g:perfect-neg"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "greeting"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:they-have-cooked-food-for-me",
+   "en": "They have cooked food for me.",
+   "chunks": [
+    {
+     "np": "Wuniharule",
+     "en": "they (+ le)",
+     "items": [
+      "w:wuniharu"
+     ]
+    },
+    {
+     "np": "mero laagi",
+     "en": "for me",
+     "items": [
+      "w:ma",
+      "g:ko-laagi"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "pakaaeka chhan",
+     "en": "have cooked (they)",
+     "items": [
+      "w:pakaaunu",
+      "g:perfect",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family",
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-am-eating-food",
+   "en": "I am eating food.",
+   "enAlts": [
+    "I am eating.",
+    "I'm eating."
+   ],
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaadai chhu",
+     "en": "am eating",
+     "items": [
+      "w:khaanu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-am-drinking-water",
+   "en": "I am drinking water.",
+   "enAlts": [
+    "I'm drinking water."
+   ],
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "paani",
+     "en": "water, rain",
+     "items": [
+      "w:paani"
+     ]
+    },
+    {
+     "np": "piudai chhu",
+     "en": "am drinking",
+     "items": [
+      "w:piunu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:you-are-speaking-nepali",
+   "en": "You are speaking Nepali.",
+   "enAlts": [
+    "You are speaking the Nepali language."
+   ],
+   "chunks": [
+    {
+     "np": "Timi",
+     "en": "you (familiar)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "bhaasaa",
+     "en": "language",
+     "items": [
+      "w:bhaasaa"
+     ]
+    },
+    {
+     "np": "boldai chhau",
+     "en": "are speaking (timi)",
+     "items": [
+      "w:bolnu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:you-are-buying-vegetables",
+   "en": "You are buying vegetables.",
+   "chunks": [
+    {
+     "np": "Timi",
+     "en": "you (familiar)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "tarkaari",
+     "en": "vegetables",
+     "items": [
+      "w:tarkaari"
+     ]
+    },
+    {
+     "np": "kindai chhau",
+     "en": "are buying (timi)",
+     "items": [
+      "w:kinnu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:you-are-listening-to-nepali-songs",
+   "en": "You are listening to Nepali songs.",
+   "enAlts": [
+    "You're listening to Nepali songs."
+   ],
+   "chunks": [
+    {
+     "np": "Tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "geet",
+     "en": "song(s)",
+     "items": [
+      "w:geet"
+     ]
+    },
+    {
+     "np": "sundai hunuhunchha",
+     "en": "are listening (respectful)",
+     "items": [
+      "w:sunnu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "in-laws"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:they-are-making-momo",
+   "en": "They are making momo.",
+   "enAlts": [
+    "They are making momos."
+   ],
+   "chunks": [
+    {
+     "np": "Wuniharu",
+     "en": "they",
+     "items": [
+      "w:wuniharu"
+     ]
+    },
+    {
+     "np": "momo",
+     "en": "momo (dumplings)",
+     "items": [
+      "w:momo"
+     ]
+    },
+    {
+     "np": "banaaudai chhan",
+     "en": "are making (they)",
+     "items": [
+      "w:banaaunu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food",
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-have-to-study-nepali",
+   "en": "I have to study Nepali.",
+   "enAlts": [
+    "I have to learn Nepali.",
+    "I need to learn Nepali.",
+    "I have to study the Nepali language."
+   ],
+   "chunks": [
+    {
+     "np": "Maile",
+     "en": "I (+ le)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "bhaasaa",
+     "en": "language",
+     "items": [
+      "w:bhaasaa"
+     ]
+    },
+    {
+     "np": "siknu parchha",
+     "en": "have to learn",
+     "items": [
+      "w:siknu",
+      "g:must",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-have-to-go-to-work-today",
+   "en": "I have to go to work today.",
+   "enAlts": [
+    "Today I have to go to work."
+   ],
+   "chunks": [
+    {
+     "np": "Aaja",
+     "en": "today",
+     "items": [
+      "w:aaja"
+     ]
+    },
+    {
+     "np": "ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "kaammaa",
+     "en": "to work",
+     "items": [
+      "w:kaam",
+      "g:maa"
+     ]
+    },
+    {
+     "np": "jaanu parchha",
+     "en": "have to go",
+     "items": [
+      "w:jaanu",
+      "g:must"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-dont-have-to-go-to-work-today",
+   "en": "I don't have to go to work today.",
+   "enAlts": [
+    "Today I don't have to go to work."
+   ],
+   "chunks": [
+    {
+     "np": "Aaja",
+     "en": "today",
+     "items": [
+      "w:aaja"
+     ]
+    },
+    {
+     "np": "ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "kaammaa",
+     "en": "to work",
+     "items": [
+      "w:kaam",
+      "g:maa"
+     ]
+    },
+    {
+     "np": "jaanu pardaina",
+     "en": "don't have to go",
+     "items": [
+      "w:jaanu",
+      "g:must-not"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-have-to-wake-up-early-tomorrow",
+   "en": "I have to wake up early tomorrow.",
+   "enAlts": [
+    "Tomorrow I have to wake up early."
+   ],
+   "chunks": [
+    {
+     "np": "Bholi",
+     "en": "tomorrow",
+     "items": [
+      "w:bholi"
+     ]
+    },
+    {
+     "np": "ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "bihaana",
+     "en": "morning",
+     "items": [
+      "w:bihaana"
+     ]
+    },
+    {
+     "np": "chaadai",
+     "en": "early",
+     "items": [
+      "w:chaadai"
+     ]
+    },
+    {
+     "np": "uthnu parchha",
+     "en": "have to wake up",
+     "items": [
+      "w:uthnu",
+      "g:must"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:we-have-to-exercise-every-day",
+   "en": "We have to exercise every day.",
+   "enAlts": [
+    "We have to do exercise every day."
+   ],
+   "chunks": [
+    {
+     "np": "Haamile",
+     "en": "we (+ le)",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "harekdin",
+     "en": "every day",
+     "items": [
+      "w:harekdin"
+     ]
+    },
+    {
+     "np": "exercise",
+     "en": "exercise",
+     "items": [
+      "w:exercise"
+     ]
+    },
+    {
+     "np": "garnu parchha",
+     "en": "have to do",
+     "items": [
+      "w:garnu",
+      "g:must",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:when-i-am-at-home-i-clean-the-house",
+   "en": "When I am at home, I clean the house.",
+   "chunks": [
+    {
+     "np": "Gharmaa",
+     "en": "at home",
+     "items": [
+      "w:ghar",
+      "g:maa"
+     ]
+    },
+    {
+     "np": "hudaa",
+     "en": "when (being)",
+     "items": [
+      "w:hudaa",
+      "g:when"
+     ]
+    },
+    {
+     "np": "ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "ghar",
+     "en": "house, home",
+     "items": [
+      "w:ghar"
+     ]
+    },
+    {
+     "np": "safaa",
+     "en": "clean",
+     "items": [
+      "w:safaa"
+     ]
+    },
+    {
+     "np": "garchhu",
+     "en": "do (I)",
+     "items": [
+      "w:garnu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:when-we-are-in-kathmandu-we-eat-a-lot-of-momo",
+   "en": "When we are in Kathmandu, we eat a lot of momo.",
+   "enAlts": [
+    "When we are in Kathmandu we eat lots of momos."
+   ],
+   "chunks": [
+    {
+     "np": "Kathmandumaa",
+     "en": "in Kathmandu",
+     "items": [
+      "w:kathmandu",
+      "g:maa"
+     ]
+    },
+    {
+     "np": "hudaa",
+     "en": "when (being)",
+     "items": [
+      "w:hudaa",
+      "g:when"
+     ]
+    },
+    {
+     "np": "haami",
+     "en": "we",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "dherai",
+     "en": "a lot, very, many",
+     "items": [
+      "w:dherai"
+     ]
+    },
+    {
+     "np": "momo",
+     "en": "momo (dumplings)",
+     "items": [
+      "w:momo"
+     ]
+    },
+    {
+     "np": "khaanchhaun",
+     "en": "eat (we)",
+     "items": [
+      "w:khaanu",
+      "g:present-haami"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food",
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:when-my-mom-cooks-food-i-eat-a-lot",
+   "en": "When my mom cooks food, I eat a lot.",
+   "enAlts": [
+    "When my mother cooks, I eat a lot."
+   ],
+   "chunks": [
+    {
+     "np": "Mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "aamaale",
+     "en": "mom (+ le)",
+     "items": [
+      "w:aamaa"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "pakaaudaa",
+     "en": "when (she) cooks",
+     "items": [
+      "w:pakaaunu",
+      "g:when"
+     ]
+    },
+    {
+     "np": "ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "dherai",
+     "en": "a lot, very, many",
+     "items": [
+      "w:dherai"
+     ]
+    },
+    {
+     "np": "khaanchhu",
+     "en": "eat (I)",
+     "items": [
+      "w:khaanu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food",
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:when-will-you-come-to-my-house",
+   "en": "When will you come to my house?",
+   "chunks": [
+    {
+     "np": "Tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "ghar",
+     "en": "house, home",
+     "items": [
+      "w:ghar"
+     ]
+    },
+    {
+     "np": "kahile",
+     "en": "when (question)",
+     "items": [
+      "w:kahile"
+     ]
+    },
+    {
+     "np": "aaunu hunchha",
+     "en": "come (respectful)",
+     "items": [
+      "w:aaunu",
+      "g:honorific-present"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "in-laws",
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:before-sleeping-i-wash-my-face",
+   "en": "Before sleeping, I wash my face.",
+   "enAlts": [
+    "I wash my face before sleeping.",
+    "Before I sleep I wash my face."
+   ],
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "sutnuaghi",
+     "en": "before sleeping",
+     "items": [
+      "w:sutnu",
+      "g:before"
+     ]
+    },
+    {
+     "np": "mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "mukh",
+     "en": "face",
+     "items": [
+      "w:mukh"
+     ]
+    },
+    {
+     "np": "dhunchhu",
+     "en": "wash (I)",
+     "items": [
+      "w:dhunu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:before-i-go-to-my-friends-house-i-buy-some-fruit",
+   "en": "Before I go to my friend's house, I buy some fruit.",
+   "enAlts": [
+    "Before going to my friend's house, I buy some fruit."
+   ],
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "saathiko",
+     "en": "friend's",
+     "items": [
+      "w:saathi"
+     ]
+    },
+    {
+     "np": "ghar",
+     "en": "house, home",
+     "items": [
+      "w:ghar"
+     ]
+    },
+    {
+     "np": "jaanuaghi",
+     "en": "before going",
+     "items": [
+      "w:jaanu",
+      "g:before"
+     ]
+    },
+    {
+     "np": "kehi",
+     "en": "some",
+     "items": [
+      "w:kehi"
+     ]
+    },
+    {
+     "np": "falful",
+     "en": "fruit",
+     "items": [
+      "w:falful"
+     ]
+    },
+    {
+     "np": "kinchhu",
+     "en": "buy (I)",
+     "items": [
+      "w:kinnu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:two-days-ago-i-went-to-my-office",
+   "en": "Two days ago, I went to my office.",
+   "enAlts": [
+    "2 days ago I went to my office."
+   ],
+   "chunks": [
+    {
+     "np": "Dui",
+     "en": "two",
+     "items": [
+      "w:dui"
+     ]
+    },
+    {
+     "np": "dinaghi",
+     "en": "days ago",
+     "items": [
+      "w:din",
+      "g:before"
+     ]
+    },
+    {
+     "np": "ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "officemaa",
+     "en": "to the office",
+     "items": [
+      "w:office",
+      "g:maa"
+     ]
+    },
+    {
+     "np": "gae",
+     "en": "went (I)",
+     "items": [
+      "w:jaanu",
+      "g:past"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:after-coming-home-i-rest",
+   "en": "After coming home, I rest.",
+   "enAlts": [
+    "After I come home, I rest.",
+    "After coming home I take rest."
+   ],
+   "chunks": [
+    {
+     "np": "Mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "ghar",
+     "en": "house, home",
+     "items": [
+      "w:ghar"
+     ]
+    },
+    {
+     "np": "aaepachhi",
+     "en": "after coming",
+     "items": [
+      "w:aaunu",
+      "g:after"
+     ]
+    },
+    {
+     "np": "ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "aaraam",
+     "en": "rest",
+     "items": [
+      "w:aaraam"
+     ]
+    },
+    {
+     "np": "garchhu",
+     "en": "do (I)",
+     "items": [
+      "w:garnu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:after-learning-nepali-i-sleep",
+   "en": "After learning Nepali, I sleep.",
+   "enAlts": [
+    "After learning Nepali, I will sleep."
+   ],
+   "chunks": [
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "sikepachhi",
+     "en": "after learning",
+     "items": [
+      "w:siknu",
+      "g:after"
+     ]
+    },
+    {
+     "np": "ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "sutchhu",
+     "en": "sleep (I)",
+     "items": [
+      "w:sutnu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:after-i-wake-up-i-make-coffee-for-myself",
+   "en": "After I wake up, I make coffee for myself.",
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "uthepachhi",
+     "en": "after waking up",
+     "items": [
+      "w:uthnu",
+      "g:after"
+     ]
+    },
+    {
+     "np": "mero laagi",
+     "en": "for me",
+     "items": [
+      "w:ma",
+      "g:ko-laagi"
+     ]
+    },
+    {
+     "np": "coffee",
+     "en": "coffee",
+     "items": [
+      "w:coffee"
+     ]
+    },
+    {
+     "np": "banaauchhu",
+     "en": "make (I)",
+     "items": [
+      "w:banaaunu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-drink-water-as-soon-as-i-wake-up",
+   "en": "I drink water as soon as I wake up.",
+   "enAlts": [
+    "As soon as I wake up I drink water."
+   ],
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "uthne bittikai",
+     "en": "as soon as (I) wake up",
+     "items": [
+      "w:uthnu",
+      "g:as-soon-as"
+     ]
+    },
+    {
+     "np": "paani",
+     "en": "water, rain",
+     "items": [
+      "w:paani"
+     ]
+    },
+    {
+     "np": "piuchhu",
+     "en": "drink (I)",
+     "items": [
+      "w:piunu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-cook-food-as-soon-as-my-meeting-is-over",
+   "en": "I cook food as soon as my meeting is over.",
+   "enAlts": [
+    "As soon as my meeting is over, I cook food."
+   ],
+   "chunks": [
+    {
+     "np": "Mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "baithak",
+     "en": "meeting",
+     "items": [
+      "w:baithak"
+     ]
+    },
+    {
+     "np": "sakine bittikai",
+     "en": "as soon as (it) is over",
+     "items": [
+      "w:sakinu",
+      "g:as-soon-as"
+     ]
+    },
+    {
+     "np": "ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "pakaauchhu",
+     "en": "cook (I)",
+     "items": [
+      "w:pakaaunu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food",
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-am-about-to-go-to-school",
+   "en": "I am about to go to school.",
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "bidhyaalaya",
+     "en": "school",
+     "items": [
+      "w:bidhyaalaya"
+     ]
+    },
+    {
+     "np": "jaana laage",
+     "en": "am about to go",
+     "items": [
+      "w:jaanu",
+      "g:about-to"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:we-are-about-to-cook-food",
+   "en": "We are about to cook food.",
+   "chunks": [
+    {
+     "np": "Haami",
+     "en": "we",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "pakaauna laagyaun",
+     "en": "are about to cook (we)",
+     "items": [
+      "w:pakaaunu",
+      "g:about-to"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food",
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:its-about-to-rain",
+   "en": "It's about to rain.",
+   "enAlts": [
+    "It is about to rain."
+   ],
+   "chunks": [
+    {
+     "np": "Paani",
+     "en": "water, rain",
+     "items": [
+      "w:paani"
+     ]
+    },
+    {
+     "np": "parna laagyo",
+     "en": "is about to fall (rain)",
+     "items": [
+      "w:parnu",
+      "g:about-to"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-am-taller-than-you",
+   "en": "I am taller than you.",
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "timibhandaa",
+     "en": "than you",
+     "items": [
+      "w:timi",
+      "g:than"
+     ]
+    },
+    {
+     "np": "aglo",
+     "en": "tall",
+     "items": [
+      "w:aglo"
+     ]
+    },
+    {
+     "np": "chhu",
+     "en": "am",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:coffee-is-hotter-than-tea",
+   "en": "Coffee is hotter than tea.",
+   "chunks": [
+    {
+     "np": "Coffee",
+     "en": "coffee",
+     "items": [
+      "w:coffee"
+     ]
+    },
+    {
+     "np": "chiyaabhandaa",
+     "en": "than tea",
+     "items": [
+      "w:chiyaa",
+      "g:than"
+     ]
+    },
+    {
+     "np": "taato",
+     "en": "hot",
+     "items": [
+      "w:taato"
+     ]
+    },
+    {
+     "np": "chha",
+     "en": "is",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:this-food-is-tastier-than-that-food",
+   "en": "This food is tastier than that food.",
+   "enAlts": [
+    "This food is more delicious than that food."
+   ],
+   "chunks": [
+    {
+     "np": "Yo",
+     "en": "this",
+     "items": [
+      "w:yo"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "tyo",
+     "en": "that",
+     "items": [
+      "w:tyo"
+     ]
+    },
+    {
+     "np": "khaanabhandaa",
+     "en": "than (that) food",
+     "items": [
+      "w:khaana",
+      "g:than"
+     ]
+    },
+    {
+     "np": "mitho",
+     "en": "tasty, delicious",
+     "items": [
+      "w:mitho"
+     ]
+    },
+    {
+     "np": "chha",
+     "en": "is",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:what-day-is-today",
+   "en": "What day is today?",
+   "enAlts": [
+    "What day is it today?"
+   ],
+   "chunks": [
+    {
+     "np": "Aaja",
+     "en": "today",
+     "items": [
+      "w:aaja"
+     ]
+    },
+    {
+     "np": "ke",
+     "en": "what",
+     "items": [
+      "w:ke"
+     ]
+    },
+    {
+     "np": "baar",
+     "en": "day (of the week)",
+     "items": [
+      "w:baar"
+     ]
+    },
+    {
+     "np": "ho",
+     "en": "is (identity)",
+     "items": [
+      "w:ho",
+      "g:ho"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:today-is-saturday",
+   "en": "Today is Saturday.",
+   "chunks": [
+    {
+     "np": "Aaja",
+     "en": "today",
+     "items": [
+      "w:aaja"
+     ]
+    },
+    {
+     "np": "Shanibaar",
+     "en": "Saturday",
+     "items": [
+      "w:shanibaar"
+     ]
+    },
+    {
+     "np": "ho",
+     "en": "is (identity)",
+     "items": [
+      "w:ho",
+      "g:ho"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:yesterday-was-friday",
+   "en": "Yesterday was Friday.",
+   "chunks": [
+    {
+     "np": "Hijo",
+     "en": "yesterday",
+     "items": [
+      "w:hijo"
+     ]
+    },
+    {
+     "np": "Sukrabaar",
+     "en": "Friday",
+     "items": [
+      "w:sukrabaar"
+     ]
+    },
+    {
+     "np": "thiyo",
+     "en": "was",
+     "items": [
+      "w:thiyo",
+      "g:thiyo"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:tomorrow-is-sunday",
+   "en": "Tomorrow is Sunday.",
+   "chunks": [
+    {
+     "np": "Bholi",
+     "en": "tomorrow",
+     "items": [
+      "w:bholi"
+     ]
+    },
+    {
+     "np": "Aaitabaar",
+     "en": "Sunday",
+     "items": [
+      "w:aaitabaar"
+     ]
+    },
+    {
+     "np": "ho",
+     "en": "is (identity)",
+     "items": [
+      "w:ho",
+      "g:ho"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:what-time-is-it-now",
+   "en": "What time is it now?",
+   "enAlts": [
+    "What time is it?"
+   ],
+   "chunks": [
+    {
+     "np": "Ahile",
+     "en": "now",
+     "items": [
+      "w:ahile"
+     ]
+    },
+    {
+     "np": "kati",
+     "en": "how much / how many",
+     "items": [
+      "w:kati"
+     ]
+    },
+    {
+     "np": "bajyo",
+     "en": "o'clock (it struck)",
+     "items": [
+      "w:bajyo",
+      "g:telling-time"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:its-2-pm",
+   "en": "It's 2 pm.",
+   "enAlts": [
+    "It is 2 PM.",
+    "It's 2 in the afternoon."
+   ],
+   "chunks": [
+    {
+     "np": "Ahile",
+     "en": "now",
+     "items": [
+      "w:ahile"
+     ]
+    },
+    {
+     "np": "diusoko",
+     "en": "afternoon's (pm)",
+     "items": [
+      "w:diuso"
+     ]
+    },
+    {
+     "np": "dui",
+     "en": "two",
+     "items": [
+      "w:dui"
+     ]
+    },
+    {
+     "np": "bajyo",
+     "en": "o'clock (it struck)",
+     "items": [
+      "w:bajyo",
+      "g:telling-time"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:its-930-am",
+   "en": "It's 9:30 am.",
+   "enAlts": [
+    "It is 9:30 AM.",
+    "It's half past nine in the morning."
+   ],
+   "chunks": [
+    {
+     "np": "Ahile",
+     "en": "now",
+     "items": [
+      "w:ahile"
+     ]
+    },
+    {
+     "np": "bihaanako",
+     "en": "morning's (am)",
+     "items": [
+      "w:bihaana"
+     ]
+    },
+    {
+     "np": "saadhe",
+     "en": "half past",
+     "items": [
+      "w:saadhe"
+     ]
+    },
+    {
+     "np": "nau",
+     "en": "nine",
+     "items": [
+      "w:nau"
+     ]
+    },
+    {
+     "np": "bajyo",
+     "en": "o'clock (it struck)",
+     "items": [
+      "w:bajyo",
+      "g:telling-time"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:what-time-do-you-wake-up",
+   "en": "What time do you wake up?",
+   "enAlts": [
+    "At what time do you wake up?"
+   ],
+   "chunks": [
+    {
+     "np": "Timi",
+     "en": "you (familiar)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "kati",
+     "en": "how much / how many",
+     "items": [
+      "w:kati"
+     ]
+    },
+    {
+     "np": "baje",
+     "en": "at (o'clock)",
+     "items": [
+      "w:baje",
+      "g:baje"
+     ]
+    },
+    {
+     "np": "uthchhau",
+     "en": "wake up (timi)",
+     "items": [
+      "w:uthnu",
+      "g:present-timi"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-go-to-the-office-at-10",
+   "en": "I go to the office at 10.",
+   "enAlts": [
+    "I go to the office at 10 o'clock."
+   ],
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "dash",
+     "en": "ten",
+     "items": [
+      "w:dash"
+     ]
+    },
+    {
+     "np": "baje",
+     "en": "at (o'clock)",
+     "items": [
+      "w:baje",
+      "g:baje"
+     ]
+    },
+    {
+     "np": "office",
+     "en": "office",
+     "items": [
+      "w:office"
+     ]
+    },
+    {
+     "np": "jaanchhu",
+     "en": "go (I)",
+     "items": [
+      "w:jaanu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-know-how-to-drive-a-car",
+   "en": "I know how to drive a car.",
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "gaadi",
+     "en": "car",
+     "items": [
+      "w:gaadi"
+     ]
+    },
+    {
+     "np": "chalaauna aauchha",
+     "en": "know how to drive",
+     "items": [
+      "w:chalaaunu",
+      "g:know-how"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-dont-know-how-to-cook-food",
+   "en": "I don't know how to cook food.",
+   "enAlts": [
+    "I don't know how to cook."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "pakaauna aaudaina",
+     "en": "don't know how to cook",
+     "items": [
+      "w:pakaaunu",
+      "g:know-how-not"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:we-know-how-to-speak-nepali",
+   "en": "We know how to speak Nepali.",
+   "chunks": [
+    {
+     "np": "Haamilaai",
+     "en": "we / to us (+ laai)",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "bolna aauchha",
+     "en": "know how to speak",
+     "items": [
+      "w:bolnu",
+      "g:know-how"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-feel-hungry",
+   "en": "I feel hungry.",
+   "enAlts": [
+    "I'm hungry.",
+    "I am hungry."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "bhok",
+     "en": "hunger",
+     "items": [
+      "w:bhok"
+     ]
+    },
+    {
+     "np": "laagyo",
+     "en": "felt",
+     "items": [
+      "w:laagnu",
+      "g:feeling"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-feel-thirsty",
+   "en": "I feel thirsty.",
+   "enAlts": [
+    "I'm thirsty.",
+    "I am thirsty."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "tirkhaa",
+     "en": "thirst",
+     "items": [
+      "w:tirkhaa"
+     ]
+    },
+    {
+     "np": "laagyo",
+     "en": "felt",
+     "items": [
+      "w:laagnu",
+      "g:feeling"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-feel-tired",
+   "en": "I feel tired.",
+   "enAlts": [
+    "I'm tired.",
+    "I am tired."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "thakaai",
+     "en": "tiredness",
+     "items": [
+      "w:thakaai"
+     ]
+    },
+    {
+     "np": "laagyo",
+     "en": "felt",
+     "items": [
+      "w:laagnu",
+      "g:feeling"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-dont-feel-sleepy",
+   "en": "I don't feel sleepy.",
+   "enAlts": [
+    "I am not sleepy.",
+    "I'm not sleepy."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "nindraa",
+     "en": "sleepiness",
+     "items": [
+      "w:nindraa"
+     ]
+    },
+    {
+     "np": "laageko chhaina",
+     "en": "don't feel",
+     "items": [
+      "w:laagnu",
+      "g:feeling-not"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-feel-happy",
+   "en": "I feel happy.",
+   "enAlts": [
+    "I'm happy.",
+    "I am happy."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "khushi",
+     "en": "happy",
+     "items": [
+      "w:khushi"
+     ]
+    },
+    {
+     "np": "laagyo",
+     "en": "felt",
+     "items": [
+      "w:laagnu",
+      "g:feeling"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:its-time-to-sleep",
+   "en": "It's time to sleep.",
+   "enAlts": [
+    "It is time to sleep."
+   ],
+   "chunks": [
+    {
+     "np": "Sutne",
+     "en": "to sleep (time to)",
+     "items": [
+      "w:sutnu"
+     ]
+    },
+    {
+     "np": "belaa bhayo",
+     "en": "it's time",
+     "items": [
+      "w:belaa",
+      "g:time-to"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:its-time-to-cook-food",
+   "en": "It's time to cook food.",
+   "enAlts": [
+    "It's time to cook."
+   ],
+   "chunks": [
+    {
+     "np": "Khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "pakaaune",
+     "en": "to cook (time to)",
+     "items": [
+      "w:pakaaunu"
+     ]
+    },
+    {
+     "np": "belaa bhayo",
+     "en": "it's time",
+     "items": [
+      "w:belaa",
+      "g:time-to"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:its-time-to-go-to-the-office",
+   "en": "It's time to go to the office.",
+   "enAlts": [
+    "It is time to go to the office."
+   ],
+   "chunks": [
+    {
+     "np": "Office",
+     "en": "office",
+     "items": [
+      "w:office"
+     ]
+    },
+    {
+     "np": "jaane",
+     "en": "to go (time to)",
+     "items": [
+      "w:jaanu"
+     ]
+    },
+    {
+     "np": "belaa bhayo",
+     "en": "it's time",
+     "items": [
+      "w:belaa",
+      "g:time-to"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "plans"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:please-eat",
+   "en": "Please eat.",
+   "enAlts": [
+    "Please eat food.",
+    "Please eat the food."
+   ],
+   "chunks": [
+    {
+     "np": "Khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaanus",
+     "en": "please eat",
+     "items": [
+      "w:khaanu",
+      "g:please"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "in-laws",
+    "mealtime"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:please-drink-water",
+   "en": "Please drink water.",
+   "chunks": [
+    {
+     "np": "Paani",
+     "en": "water, rain",
+     "items": [
+      "w:paani"
+     ]
+    },
+    {
+     "np": "piunus",
+     "en": "please drink",
+     "items": [
+      "w:piunu",
+      "g:please"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "in-laws"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:please-wash-your-hands",
+   "en": "Please wash your hands.",
+   "enAlts": [
+    "Please wash hands."
+   ],
+   "chunks": [
+    {
+     "np": "Haat",
+     "en": "hand(s)",
+     "items": [
+      "w:haat"
+     ]
+    },
+    {
+     "np": "dhunus",
+     "en": "please wash",
+     "items": [
+      "w:dhunu",
+      "g:please"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:please-dont-eat-the-food",
+   "en": "Please don't eat the food.",
+   "enAlts": [
+    "Please don't eat food."
+   ],
+   "chunks": [
+    {
+     "np": "Khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "nakhaanus",
+     "en": "please don't eat",
+     "items": [
+      "w:khaanu",
+      "g:please-not"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:please-turn-on-the-light",
+   "en": "Please turn on the light.",
+   "chunks": [
+    {
+     "np": "Batti",
+     "en": "light",
+     "items": [
+      "w:batti"
+     ]
+    },
+    {
+     "np": "baalnus",
+     "en": "please turn on",
+     "items": [
+      "w:baalnu",
+      "g:please"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:lemon-is-sour",
+   "en": "Lemon is sour.",
+   "enAlts": [
+    "The lemon is sour."
+   ],
+   "chunks": [
+    {
+     "np": "Kaagati",
+     "en": "lemon",
+     "items": [
+      "w:kaagati"
+     ]
+    },
+    {
+     "np": "amilo",
+     "en": "sour",
+     "items": [
+      "w:amilo"
+     ]
+    },
+    {
+     "np": "chha",
+     "en": "is",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:mango-is-sweet",
+   "en": "Mango is sweet.",
+   "enAlts": [
+    "The mango is sweet."
+   ],
+   "chunks": [
+    {
+     "np": "Aap",
+     "en": "mango",
+     "items": [
+      "w:aap"
+     ]
+    },
+    {
+     "np": "guliyo",
+     "en": "sweet",
+     "items": [
+      "w:guliyo"
+     ]
+    },
+    {
+     "np": "chha",
+     "en": "is",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:this-food-is-bland",
+   "en": "This food is bland.",
+   "chunks": [
+    {
+     "np": "Yo",
+     "en": "this",
+     "items": [
+      "w:yo"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khallo",
+     "en": "bland",
+     "items": [
+      "w:khallo"
+     ]
+    },
+    {
+     "np": "chha",
+     "en": "is",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food",
+    "mealtime"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:how-is-it",
+   "en": "How is it?",
+   "enAlts": [
+    "How is it?"
+   ],
+   "chunks": [
+    {
+     "np": "Kasto",
+     "en": "how (what kind)",
+     "items": [
+      "w:kasto"
+     ]
+    },
+    {
+     "np": "chha",
+     "en": "is",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "food",
+    "mealtime"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-have-one-elder-brother",
+   "en": "I have one elder brother.",
+   "chunks": [
+    {
+     "np": "Mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "ekjanaa",
+     "en": "one (person)",
+     "items": [
+      "w:ek",
+      "g:janaa"
+     ]
+    },
+    {
+     "np": "daai",
+     "en": "elder brother",
+     "items": [
+      "w:daai"
+     ]
+    },
+    {
+     "np": "chha",
+     "en": "is",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:how-many-members-are-in-your-family",
+   "en": "How many members are in your family?",
+   "enAlts": [
+    "How many family members do you have?"
+   ],
+   "chunks": [
+    {
+     "np": "Tapaaiko",
+     "en": "your (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "pariwaarmaa",
+     "en": "in (your) family",
+     "items": [
+      "w:pariwaar",
+      "g:maa"
+     ]
+    },
+    {
+     "np": "katijanaa",
+     "en": "how many (people)",
+     "items": [
+      "w:kati",
+      "g:janaa"
+     ]
+    },
+    {
+     "np": "sadasya",
+     "en": "members",
+     "items": [
+      "w:sadasya"
+     ]
+    },
+    {
+     "np": "chhan",
+     "en": "are (plural)",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "in-laws",
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "tutor:i-have-one-cat",
+   "en": "I have one cat.",
+   "chunks": [
+    {
+     "np": "Mero",
+     "en": "my",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "eutaa",
+     "en": "one (thing)",
+     "items": [
+      "w:ek",
+      "g:wataa"
+     ]
+    },
+    {
+     "np": "biraalo",
+     "en": "cat",
+     "items": [
+      "w:biraalo"
+     ]
+    },
+    {
+     "np": "chha",
+     "en": "is",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "family"
+   ],
+   "source": "tutor",
+   "verified": true
+  },
+  {
+   "id": "seed:chunu-what-are-you-doing",
+   "en": "Chunu, what are you doing?",
+   "enAlts": [
+    "Chunu what are you doing?"
+   ],
+   "chunks": [
+    {
+     "np": "Chunu",
+     "en": "Chunu",
+     "items": []
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "timi",
+     "en": "you (familiar)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "ke",
+     "en": "what",
+     "items": [
+      "w:ke"
+     ]
+    },
+    {
+     "np": "gardai chhau",
+     "en": "are doing (timi)",
+     "items": [
+      "w:garnu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:chunu-are-you-hungry",
+   "en": "Chunu, are you hungry?",
+   "enAlts": [
+    "Chunu, do you feel hungry?"
+   ],
+   "chunks": [
+    {
+     "np": "Chunu",
+     "en": "Chunu",
+     "items": []
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "timilaai",
+     "en": "you / to you (familiar, + laai)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "bhok",
+     "en": "hunger",
+     "items": [
+      "w:bhok"
+     ]
+    },
+    {
+     "np": "laagyo",
+     "en": "felt",
+     "items": [
+      "w:laagnu",
+      "g:feeling"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "mealtime"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:are-you-tired",
+   "en": "Are you tired?",
+   "enAlts": [
+    "Do you feel tired?"
+   ],
+   "chunks": [
+    {
+     "np": "Timilaai",
+     "en": "you / to you (familiar, + laai)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "thakaai",
+     "en": "tiredness",
+     "items": [
+      "w:thakaai"
+     ]
+    },
+    {
+     "np": "laagyo",
+     "en": "felt",
+     "items": [
+      "w:laagnu",
+      "g:feeling"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:do-you-like-momo",
+   "en": "Do you like momo?",
+   "enAlts": [
+    "Do you like momos?"
+   ],
+   "chunks": [
+    {
+     "np": "Timilaai",
+     "en": "you / to you (familiar, + laai)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "momo",
+     "en": "momo (dumplings)",
+     "items": [
+      "w:momo"
+     ]
+    },
+    {
+     "np": "manparchha",
+     "en": "like(s)",
+     "items": [
+      "w:manparnu",
+      "g:like"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "food"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:i-really-like-your-food",
+   "en": "I really like your food.",
+   "enAlts": [
+    "I like your food a lot.",
+    "I like your food very much."
+   ],
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "timro",
+     "en": "your (familiar)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "dherai",
+     "en": "a lot, very, many",
+     "items": [
+      "w:dherai"
+     ]
+    },
+    {
+     "np": "manparchha",
+     "en": "like(s)",
+     "items": [
+      "w:manparnu",
+      "g:like"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "food"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:what-time-will-you-come-home",
+   "en": "What time will you come home?",
+   "enAlts": [
+    "What time do you come home?",
+    "When do you come home?"
+   ],
+   "chunks": [
+    {
+     "np": "Timi",
+     "en": "you (familiar)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "kati",
+     "en": "how much / how many",
+     "items": [
+      "w:kati"
+     ]
+    },
+    {
+     "np": "baje",
+     "en": "at (o'clock)",
+     "items": [
+      "w:baje",
+      "g:baje"
+     ]
+    },
+    {
+     "np": "ghar",
+     "en": "house, home",
+     "items": [
+      "w:ghar"
+     ]
+    },
+    {
+     "np": "aauchhau",
+     "en": "come (timi)",
+     "items": [
+      "w:aaunu",
+      "g:present-timi"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "plans"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:tonight-ill-cook",
+   "en": "Tonight I'll cook.",
+   "enAlts": [
+    "I will cook food this evening.",
+    "I'll cook tonight.",
+    "This evening I will cook food."
+   ],
+   "chunks": [
+    {
+     "np": "Aaja",
+     "en": "today",
+     "items": [
+      "w:aaja"
+     ]
+    },
+    {
+     "np": "belukaa",
+     "en": "evening",
+     "items": [
+      "w:belukaa"
+     ]
+    },
+    {
+     "np": "ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "pakaauchhu",
+     "en": "cook (I)",
+     "items": [
+      "w:pakaaunu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "food",
+    "plans"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:tomorrow-were-going-to-aama-and-buwas-house",
+   "en": "Tomorrow we're going to Aama and Buwa's house.",
+   "enAlts": [
+    "Tomorrow we go to Aama and Buwa's house.",
+    "Tomorrow we will go to Mom and Dad's house."
+   ],
+   "chunks": [
+    {
+     "np": "Bholi",
+     "en": "tomorrow",
+     "items": [
+      "w:bholi"
+     ]
+    },
+    {
+     "np": "haami",
+     "en": "we",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "Aama",
+     "en": "Aama (mother-in-law)",
+     "items": [
+      "w:aamaa"
+     ]
+    },
+    {
+     "np": "Buwako",
+     "en": "Buwa's",
+     "items": [
+      "w:buwa"
+     ]
+    },
+    {
+     "np": "ghar",
+     "en": "house, home",
+     "items": [
+      "w:ghar"
+     ]
+    },
+    {
+     "np": "jaanchhaun",
+     "en": "go (we)",
+     "items": [
+      "w:jaanu",
+      "g:present-haami"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "in-laws",
+    "plans"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:we-have-to-go-to-the-market",
+   "en": "We have to go to the market.",
+   "enAlts": [
+    "We need to go to the market."
+   ],
+   "chunks": [
+    {
+     "np": "Haami",
+     "en": "we",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "bajaar",
+     "en": "market",
+     "items": [
+      "w:bajaar"
+     ]
+    },
+    {
+     "np": "jaanu parchha",
+     "en": "have to go",
+     "items": [
+      "w:jaanu",
+      "g:must"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "plans"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:chunu-its-time-to-drink-tea",
+   "en": "Chunu, it's time to drink tea.",
+   "enAlts": [
+    "Chunu it's time for tea."
+   ],
+   "chunks": [
+    {
+     "np": "Chunu",
+     "en": "Chunu",
+     "items": []
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "chiyaa",
+     "en": "tea",
+     "items": [
+      "w:chiyaa"
+     ]
+    },
+    {
+     "np": "piune",
+     "en": "to drink (time to)",
+     "items": [
+      "w:piunu"
+     ]
+    },
+    {
+     "np": "belaa bhayo",
+     "en": "it's time",
+     "items": [
+      "w:belaa",
+      "g:time-to"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "food"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:after-eating-well-watch-a-movie",
+   "en": "After eating, we'll watch a movie.",
+   "enAlts": [
+    "After eating food, we watch a movie.",
+    "After we eat, we will watch a movie."
+   ],
+   "chunks": [
+    {
+     "np": "Khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaaepachhi",
+     "en": "after eating",
+     "items": [
+      "w:khaanu",
+      "g:after"
+     ]
+    },
+    {
+     "np": "haami",
+     "en": "we",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "film",
+     "en": "movie",
+     "items": [
+      "w:film"
+     ]
+    },
+    {
+     "np": "herchhaun",
+     "en": "watch (we)",
+     "items": [
+      "w:hernu",
+      "g:present-haami"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "plans"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:as-soon-as-i-reach-the-office-ill-call-you",
+   "en": "As soon as I reach the office, I'll call you.",
+   "enAlts": [
+    "I'll call you as soon as I get to the office.",
+    "I call you as soon as I reach the office."
+   ],
+   "chunks": [
+    {
+     "np": "Ma",
+     "en": "I",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "office",
+     "en": "office",
+     "items": [
+      "w:office"
+     ]
+    },
+    {
+     "np": "pugne bittikai",
+     "en": "as soon as (I) reach",
+     "items": [
+      "w:pugnu",
+      "g:as-soon-as"
+     ]
+    },
+    {
+     "np": "timilaai",
+     "en": "you / to you (familiar, + laai)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "phone",
+     "en": "phone",
+     "items": [
+      "w:phone"
+     ]
+    },
+    {
+     "np": "garchhu",
+     "en": "do (I)",
+     "items": [
+      "w:garnu",
+      "g:present"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "plans"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:did-you-eat",
+   "en": "Did you eat?",
+   "enAlts": [
+    "Have you eaten?"
+   ],
+   "chunks": [
+    {
+     "np": "Timile",
+     "en": "you (familiar, + le)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaayau",
+     "en": "ate (timi)",
+     "items": [
+      "w:khaanu",
+      "g:past-timi",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "wife",
+    "mealtime"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:aama-did-you-eat",
+   "en": "Aama, did you eat?",
+   "enAlts": [
+    "Aama, have you eaten?"
+   ],
+   "chunks": [
+    {
+     "np": "Aama",
+     "en": "Aama (mother-in-law)",
+     "items": [
+      "w:aamaa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "tapaaile",
+     "en": "you (respectful, + le)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaanu bhayo",
+     "en": "ate (respectful)",
+     "items": [
+      "w:khaanu",
+      "g:honorific-past",
+      "g:le-past"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law",
+    "mealtime"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:buwa-how-are-you",
+   "en": "Buwa, how are you?",
+   "enAlts": [
+    "Buwa, are you well?"
+   ],
+   "chunks": [
+    {
+     "np": "Buwa",
+     "en": "Buwa (father-in-law)",
+     "items": [
+      "w:buwa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "sanchai",
+     "en": "well, fine",
+     "items": [
+      "w:sanchai"
+     ]
+    },
+    {
+     "np": "hunuhunchha",
+     "en": "are (respectful)",
+     "items": [
+      "w:hunu",
+      "g:honorific-present"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "father-in-law"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:aama-do-you-like-tea",
+   "en": "Aama, do you like tea?",
+   "chunks": [
+    {
+     "np": "Aama",
+     "en": "Aama (mother-in-law)",
+     "items": [
+      "w:aamaa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "tapaailaai",
+     "en": "you / to you (respectful, + laai)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "chiyaa",
+     "en": "tea",
+     "items": [
+      "w:chiyaa"
+     ]
+    },
+    {
+     "np": "manparchha",
+     "en": "like(s)",
+     "items": [
+      "w:manparnu",
+      "g:like"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law",
+    "food"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:aama-the-food-is-very-tasty",
+   "en": "Aama, the food is very tasty.",
+   "enAlts": [
+    "Aama, the food is really delicious.",
+    "Aama, the food is very delicious."
+   ],
+   "chunks": [
+    {
+     "np": "Aama",
+     "en": "Aama (mother-in-law)",
+     "items": [
+      "w:aamaa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "dherai",
+     "en": "a lot, very, many",
+     "items": [
+      "w:dherai"
+     ]
+    },
+    {
+     "np": "mitho",
+     "en": "tasty, delicious",
+     "items": [
+      "w:mitho"
+     ]
+    },
+    {
+     "np": "chha",
+     "en": "is",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law",
+    "mealtime"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:buwa-please-drink-tea",
+   "en": "Buwa, please drink tea.",
+   "enAlts": [
+    "Buwa, please have tea."
+   ],
+   "chunks": [
+    {
+     "np": "Buwa",
+     "en": "Buwa (father-in-law)",
+     "items": [
+      "w:buwa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "chiyaa",
+     "en": "tea",
+     "items": [
+      "w:chiyaa"
+     ]
+    },
+    {
+     "np": "piunus",
+     "en": "please drink",
+     "items": [
+      "w:piunu",
+      "g:please"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "father-in-law",
+    "food"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:aama-please-sit",
+   "en": "Aama, please sit.",
+   "enAlts": [
+    "Aama, please have a seat."
+   ],
+   "chunks": [
+    {
+     "np": "Aama",
+     "en": "Aama (mother-in-law)",
+     "items": [
+      "w:aamaa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "basnus",
+     "en": "please sit",
+     "items": [
+      "w:basnu",
+      "g:please"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:aama-what-are-you-doing",
+   "en": "Aama, what are you doing?",
+   "chunks": [
+    {
+     "np": "Aama",
+     "en": "Aama (mother-in-law)",
+     "items": [
+      "w:aamaa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "ke",
+     "en": "what",
+     "items": [
+      "w:ke"
+     ]
+    },
+    {
+     "np": "gardai hunuhunchha",
+     "en": "are doing (respectful)",
+     "items": [
+      "w:garnu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:buwa-what-time-do-you-wake-up",
+   "en": "Buwa, what time do you wake up?",
+   "enAlts": [
+    "Buwa, at what time do you wake up?"
+   ],
+   "chunks": [
+    {
+     "np": "Buwa",
+     "en": "Buwa (father-in-law)",
+     "items": [
+      "w:buwa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "kati",
+     "en": "how much / how many",
+     "items": [
+      "w:kati"
+     ]
+    },
+    {
+     "np": "baje",
+     "en": "at (o'clock)",
+     "items": [
+      "w:baje",
+      "g:baje"
+     ]
+    },
+    {
+     "np": "uthnu hunchha",
+     "en": "wake up (respectful)",
+     "items": [
+      "w:uthnu",
+      "g:honorific-present"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "father-in-law"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:aama-are-you-hungry",
+   "en": "Aama, are you hungry?",
+   "enAlts": [
+    "Aama, do you feel hungry?"
+   ],
+   "chunks": [
+    {
+     "np": "Aama",
+     "en": "Aama (mother-in-law)",
+     "items": [
+      "w:aamaa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "tapaailaai",
+     "en": "you / to you (respectful, + laai)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "bhok",
+     "en": "hunger",
+     "items": [
+      "w:bhok"
+     ]
+    },
+    {
+     "np": "laagyo",
+     "en": "felt",
+     "items": [
+      "w:laagnu",
+      "g:feeling"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law",
+    "mealtime"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:aama-please-teach-me-nepali",
+   "en": "Aama, please teach me Nepali.",
+   "enAlts": [
+    "Aama, please teach me Nepali."
+   ],
+   "chunks": [
+    {
+     "np": "Aama",
+     "en": "Aama (mother-in-law)",
+     "items": [
+      "w:aamaa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "sikaaunus",
+     "en": "please teach",
+     "items": [
+      "w:sikaaunu",
+      "g:please"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:buwa-when-will-you-come-to-our-house",
+   "en": "Buwa, when will you come to our house?",
+   "enAlts": [
+    "Buwa, when are you coming to our house?"
+   ],
+   "chunks": [
+    {
+     "np": "Buwa",
+     "en": "Buwa (father-in-law)",
+     "items": [
+      "w:buwa"
+     ]
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "tapaai",
+     "en": "you (respectful)",
+     "items": [
+      "w:tapaai"
+     ]
+    },
+    {
+     "np": "haamro",
+     "en": "our",
+     "items": [
+      "w:haami"
+     ]
+    },
+    {
+     "np": "ghar",
+     "en": "house, home",
+     "items": [
+      "w:ghar"
+     ]
+    },
+    {
+     "np": "kahile",
+     "en": "when (question)",
+     "items": [
+      "w:kahile"
+     ]
+    },
+    {
+     "np": "aaunu hunchha",
+     "en": "come (respectful)",
+     "items": [
+      "w:aaunu",
+      "g:honorific-present"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "father-in-law",
+    "plans"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:i-dont-know-how-to-cook-nepali-food",
+   "en": "I don't know how to cook Nepali food.",
+   "chunks": [
+    {
+     "np": "Malaai",
+     "en": "I / to me (+ laai)",
+     "items": [
+      "w:ma"
+     ]
+    },
+    {
+     "np": "Nepali",
+     "en": "Nepali",
+     "items": [
+      "w:nepali"
+     ]
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "pakaauna aaudaina",
+     "en": "don't know how to cook",
+     "items": [
+      "w:pakaaunu",
+      "g:know-how-not"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "mother-in-law",
+    "food"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:ryan-what-are-you-doing",
+   "en": "Ryan, what are you doing?",
+   "chunks": [
+    {
+     "np": "Ryan",
+     "en": "Ryan",
+     "items": []
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "timi",
+     "en": "you (familiar)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "ke",
+     "en": "what",
+     "items": [
+      "w:ke"
+     ]
+    },
+    {
+     "np": "gardai chhau",
+     "en": "are doing (timi)",
+     "items": [
+      "w:garnu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:aiden-do-you-like-chocolate",
+   "en": "Aiden, do you like chocolate?",
+   "chunks": [
+    {
+     "np": "Aiden",
+     "en": "Aiden",
+     "items": []
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "timilaai",
+     "en": "you / to you (familiar, + laai)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "chocolate",
+     "en": "chocolate",
+     "items": [
+      "w:chocolate"
+     ]
+    },
+    {
+     "np": "manparchha",
+     "en": "like(s)",
+     "items": [
+      "w:manparnu",
+      "g:like"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews",
+    "food"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:ryan-and-aiden-are-playing-football",
+   "en": "Ryan and Aiden are playing football.",
+   "chunks": [
+    {
+     "np": "Ryan",
+     "en": "Ryan",
+     "items": []
+    },
+    {
+     "np": "ra",
+     "en": "and",
+     "items": [
+      "w:ra"
+     ]
+    },
+    {
+     "np": "Aiden",
+     "en": "Aiden",
+     "items": []
+    },
+    {
+     "np": "football",
+     "en": "football",
+     "items": [
+      "w:football"
+     ]
+    },
+    {
+     "np": "kheldai chhan",
+     "en": "are playing (they)",
+     "items": [
+      "w:khelnu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:siyon-knows-how-to-play-piano",
+   "en": "Siyon knows how to play piano.",
+   "enAlts": [
+    "Siyon knows how to play the piano."
+   ],
+   "chunks": [
+    {
+     "np": "Siyonlaai",
+     "en": "Siyon (laai)",
+     "items": []
+    },
+    {
+     "np": "piano",
+     "en": "piano",
+     "items": [
+      "w:piano"
+     ]
+    },
+    {
+     "np": "bajaauna aauchha",
+     "en": "knows how to play (music)",
+     "items": [
+      "w:bajaaunu",
+      "g:know-how"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:ryan-is-taller-than-aiden",
+   "en": "Ryan is taller than Aiden.",
+   "chunks": [
+    {
+     "np": "Ryan",
+     "en": "Ryan",
+     "items": []
+    },
+    {
+     "np": "Aidenbhandaa",
+     "en": "than Aiden",
+     "items": [
+      "g:than"
+     ]
+    },
+    {
+     "np": "aglo",
+     "en": "tall",
+     "items": [
+      "w:aglo"
+     ]
+    },
+    {
+     "np": "chha",
+     "en": "is",
+     "items": [
+      "w:chha",
+      "g:present-chha"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:aiden-and-siyon-are-eating",
+   "en": "Aiden and Siyon are eating.",
+   "enAlts": [
+    "Aiden and Siyon are eating food."
+   ],
+   "chunks": [
+    {
+     "np": "Aiden",
+     "en": "Aiden",
+     "items": []
+    },
+    {
+     "np": "ra",
+     "en": "and",
+     "items": [
+      "w:ra"
+     ]
+    },
+    {
+     "np": "Siyon",
+     "en": "Siyon",
+     "items": []
+    },
+    {
+     "np": "khaana",
+     "en": "food, meal",
+     "items": [
+      "w:khaana"
+     ]
+    },
+    {
+     "np": "khaadai chhan",
+     "en": "are eating (they)",
+     "items": [
+      "w:khaanu",
+      "g:continuous"
+     ]
+    },
+    {
+     "np": ".",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews",
+    "mealtime"
+   ],
+   "source": "seed",
+   "verified": false
+  },
+  {
+   "id": "seed:siyon-how-old-are-you",
+   "en": "Siyon, how old are you?",
+   "chunks": [
+    {
+     "np": "Siyon",
+     "en": "Siyon",
+     "items": []
+    },
+    {
+     "np": ",",
+     "en": "",
+     "items": []
+    },
+    {
+     "np": "timi",
+     "en": "you (familiar)",
+     "items": [
+      "w:timi"
+     ]
+    },
+    {
+     "np": "kati",
+     "en": "how much / how many",
+     "items": [
+      "w:kati"
+     ]
+    },
+    {
+     "np": "barsa",
+     "en": "year(s)",
+     "items": [
+      "w:barsa"
+     ]
+    },
+    {
+     "np": "bhayau",
+     "en": "became, are (timi)",
+     "items": [
+      "w:hunu",
+      "g:past-timi"
+     ]
+    },
+    {
+     "np": "?",
+     "en": "",
+     "items": []
+    }
+   ],
+   "tags": [
+    "nephews"
+   ],
+   "source": "seed",
+   "verified": false
+  }
+ ]
+}

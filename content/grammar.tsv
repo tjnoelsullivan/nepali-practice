@@ -1,0 +1,46 @@
+# id	pattern (romanized)	meaning	[unverified]
+g:greeting	namaste	greeting
+g:ho	X ho	is (identity: name, day, "what is")
+g:present-chha	chhu / chha / chhan	am / is / are (description, location)
+g:thiyo	thiyo	was
+g:present	ma: verb + chhu / dina	I do (simple present)
+g:present-neg	ma: verb + dina	I don't (simple present negative)
+g:present-timi	timi: verb + chhau	you do (timi, simple present)
+g:present-haami	haami: verb + chhaun	we do (simple present)
+g:present-wu	wu: verb + chha	he does (younger, simple present)
+g:present-wuni	wuni: verb + chhin	she does (younger, simple present)
+g:present-wuniharu	wuniharu: verb + chhan	they do (simple present)
+g:honorific-present	tapaai/wahaa: verb-nu hunchha	you / he / she do (respectful present)
+g:honorific-past	tapaai/wahaa: verb-nu bhayo	you / he / she did (respectful past)
+g:le-past	subject + le	subject marker with transitive verbs (past, perfect, have to)
+g:past	ma: verb + e	I did (simple past)
+g:past-neg	ma: verb + ena	I didn't (simple past negative)
+g:past-timi	timi: verb + yau	you did (timi, simple past)
+g:perfect	verb + eko chhu / eka chhaun	have done (present perfect)
+g:perfect-neg	verb + eko chhaina	haven't done (present perfect negative)
+g:continuous	verb + dai chhu / chhau / hunuhunchha	am doing (present continuous)
+g:must	verb-nu parchha	have to
+g:must-not	verb-nu pardaina	don't have to
+g:when	verb + daa / hudaa	when (doing / being)
+g:before	verb-nu aghi / noun + aghi	before / ago
+g:after	verb + e pachhi	after
+g:as-soon-as	verb + ne bittikai / naa saath	as soon as
+g:about-to	verb + na laagnu	about to
+g:than	X + bhandaa	than (comparison)
+g:telling-time	kati bajyo / X bajyo	telling the time
+g:baje	X baje	at X o'clock
+g:know-how	subject-laai verb-na aauchha	know how to
+g:know-how-not	subject-laai verb-na aaudaina	don't know how to
+g:feeling	subject-laai X laagyo	feel X (hungry, happy ...)
+g:feeling-not	subject-laai X laageko chhaina	don't feel X
+g:like	subject-laai X manparchha	like
+g:like-not	subject-laai X manpardaina	don't like
+g:time-to	verb + ne belaa bhayo	it's time to
+g:please	verb + nus	please do (polite request)
+g:please-not	na + verb + nus	please don't
+g:maa	X + maa	in / at / on
+g:baata	X + baata	from
+g:sanga	X + sanga	with
+g:ko-laagi	X + ko laagi	for
+g:janaa	number + janaa	counting people
+g:wataa	number + wataa	counting things / animals

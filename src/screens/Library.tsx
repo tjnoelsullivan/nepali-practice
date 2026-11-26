@@ -1,38 +1,68 @@
-const ITEMS = [
-  {
-    title: 'Family sentences',
-    body: 'Starter deck for your wife and in-laws, checked by your tutor.',
-    stage: 'Stage 1',
-    color: 'var(--flag-red)',
-  },
-  {
-    title: 'Tutor lessons',
-    body: 'Import slides twice a week; new words and grammar join your deck.',
-    stage: 'Stage 4',
-    color: 'var(--flag-blue)',
-  },
-  {
-    title: "Your wife's voice",
-    body: 'Record sentences together and train your ear on her voice.',
-    stage: 'Stage 5',
-    color: 'var(--flag-green)',
-  },
-  {
-    title: 'Backup',
-    body: 'Export everything to a file, and restore it on a new phone.',
-    stage: 'Stage 6',
-    color: 'var(--flag-yellow)',
-  },
+import { useState } from 'react'
+import { isKnown } from '../core/schedule'
+import { sentenceNepali } from '../core/types'
+import type { Deck } from '../hooks/useDeck'
+
+const LATER = [
+  { title: 'Tutor lessons', body: 'Import slides twice a week; new words and grammar join your deck.', stage: 'Stage 4', color: 'var(--flag-blue)' },
+  { title: "Your wife's voice", body: 'Record sentences together and train your ear on her voice.', stage: 'Stage 5', color: 'var(--flag-green)' },
+  { title: 'Backup', body: 'Export everything to a file, and restore it on a new phone.', stage: 'Stage 6', color: 'var(--flag-yellow)' },
 ]
 
-export function Library() {
+export function Library({ deck }: { deck: Deck }) {
+  const [tab, setTab] = useState<'sentences' | 'words'>('sentences')
+  const items = [...deck.items.values()].sort((a, b) => a.np.localeCompare(b.np))
+  const unverified = deck.sentences.filter((s) => !s.verified).length
+
   return (
     <>
       <header className="hero compact">
         <p className="eyebrow">Library</p>
         <h1>Your material</h1>
       </header>
-      {ITEMS.map((it) => (
+
+      <div className="segmented" role="tablist">
+        <button role="tab" aria-selected={tab === 'sentences'} className={tab === 'sentences' ? 'on' : ''} onClick={() => setTab('sentences')}>
+          Sentences · {deck.sentences.length}
+        </button>
+        <button role="tab" aria-selected={tab === 'words'} className={tab === 'words' ? 'on' : ''} onClick={() => setTab('words')}>
+          Words & grammar · {items.length}
+        </button>
+      </div>
+
+      {(unverified > 0 || deck.flagCount > 0) && (
+        <p className="muted small">
+          {unverified} unverified · {deck.flagCount} flagged for your tutor
+        </p>
+      )}
+
+      {tab === 'sentences' ? (
+        <section className="card list">
+          {deck.sentences.map((s) => (
+            <div key={s.id} className="row">
+              <div>
+                <div className="row-np">{sentenceNepali(s)}</div>
+                <div className="muted small">{s.en}</div>
+              </div>
+              {!s.verified && <span className="chip warn">Unverified</span>}
+            </div>
+          ))}
+        </section>
+      ) : (
+        <section className="card list">
+          {items.map((i) => (
+            <div key={i.id} className="row">
+              <div>
+                <div className="row-np">{i.np}</div>
+                <div className="muted small">{i.en}</div>
+              </div>
+              <span className="chip">{i.kind === 'grammar' ? 'grammar' : isKnown(deck.cards.get(i.id)) ? 'learning' : 'new'}</span>
+            </div>
+          ))}
+        </section>
+      )}
+
+      {LATER.map((it) => (
         <section key={it.title} className="card lib-item">
           <span className="lib-bar" style={{ background: it.color }} />
           <div>
@@ -42,7 +72,7 @@ export function Library() {
           <span className="chip">{it.stage}</span>
         </section>
       ))}
-      <p className="muted small center">Version 0.1 · Stage 0</p>
+      <p className="muted small center">Version 0.2 · Stage 1</p>
     </>
   )
 }
