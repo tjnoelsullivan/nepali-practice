@@ -1,10 +1,16 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { db } from '../db'
 import { gradeEnglish, gradeNepali } from '../core/grade'
 import { recordAttempt } from '../core/record'
 import { isDue, isKnown } from '../core/schedule'
 import { buildSession, type SessionItem } from '../core/session'
-import { sentenceNepali, type Sentence } from '../core/types'
+import { gradeSpoken, romanize } from '../core/devanagari'
+import { sentenceDevanagari, sentenceNepali, type Sentence } from '../core/types'
+import { aiGrade, type AiVerdict } from '../voice/aiGrade'
+import { ApiError, explainError } from '../voice/api'
+import { useVoiceSettings } from '../voice/settings'
+import { listenOnce, type Listening } from '../voice/stt'
+import { prefetch, speak, stopSpeaking, unlockAudio } from '../voice/tts'
 import type { Deck } from '../hooks/useDeck'
 
 type Phase = 'start' | 'drill' | 'done'
@@ -33,6 +39,7 @@ export function Practice({ deck }: { deck: Deck }) {
   }, [deck.cards, deck.items])
 
   const start = () => {
+    unlockAudio()
     const lastSeen = new Map([...deck.stats].map(([k, v]) => [k, new Date(v.lastSeen)]))
     const q = buildSession(deck.sentences, deck.cards, new Date(), { size: 10, maxNewItems: 20, lastSeen })
     requeued.current = new Set()
@@ -133,6 +140,7 @@ export function Practice({ deck }: { deck: Deck }) {
 
   const item = queue[pos]
   const sentence = byId.get(item.sentenceId)!
+  const next = queue[pos + 1] && byId.get(queue[pos + 1].sentenceId)
   return (
     <>
       <div className="progress-dots" aria-label={`Question ${pos + 1} of ${queue.length}`}>
@@ -145,20 +153,38 @@ export function Practice({ deck }: { deck: Deck }) {
         sentence={sentence}
         direction={item.direction}
         onDone={(r) => void onFinished(item, r)}
+        nextDev={next ? sentenceDevanagari(next) : ''}
       />
     </>
   )
+}
+
+const REGISTER: Record<string, string> = {
+  wife: 'his wife Chunu (timi)',
+  'mother-in-law': 'his mother-in-law Aama (tapaai)',
+  'father-in-law': 'his father-in-law Buwa (tapaai)',
+  'in-laws': 'his in-laws (tapaai)',
+  nephews: 'his young nephews (timi)',
 }
 
 function DrillCard({
   sentence,
   direction,
   onDone,
+  nextDev,
 }: {
   sentence: Sentence
   direction: SessionItem['direction']
   onDone: (r: Result) => void
+  nextDev: string
 }) {
+  const voice = useVoiceSettings()
+  const dev = sentenceDevanagari(sentence)
+  const [revealed, setRevealed] = useState(!voice.hideText || direction === 'en-np')
+  const [heard, setHeard] = useState('')
+  const [listening, setListening] = useState<Listening | null>(null)
+  const [voiceError, setVoiceError] = useState('')
+  const [ai, setAi] = useState<'checking' | AiVerdict | null>(null)
   const [hinted, setHinted] = useState<Set<number>>(new Set())
   const [answer, setAnswer] = useState('')
   const [checked, setChecked] = useState<null | {
@@ -167,11 +193,82 @@ function DrillCard({
     shown: string
     overridden?: boolean
     gaveUp?: boolean
+    spoken?: boolean
+    byAi?: boolean
   }>(null)
   const [saving, setSaving] = useState(false)
 
   const chunks = sentence.chunks.map((c, i) => ({ ...c, i })).filter((c) => c.en)
   const enToNp = direction === 'en-np'
+
+  const play = (slow = false) => {
+    setVoiceError('')
+    speak(dev, { slow }).catch((e) => setVoiceError(explainError(e)))
+  }
+
+  // Nepali -> English: read the sentence aloud as the card appears. Then warm up the next card.
+  useEffect(() => {
+    if (!enToNp && voice.autoplay && dev) speak(dev).catch((e) => setVoiceError(explainError(e)))
+    else prefetch(dev)
+    prefetch(nextDev)
+    return () => {
+      stopSpeaking()
+    }
+  }, [])
+
+  const register = sentence.tags.map((t) => REGISTER[t]).find(Boolean)
+
+  /** Ask Claude for a second opinion when the app's matcher says wrong. */
+  const secondOpinion = async (typed: string, spoken?: string) => {
+    setAi('checking')
+    const v = await aiGrade({
+      direction,
+      prompt: enToNp ? sentence.en : sentenceNepali(sentence),
+      expected: enToNp
+        ? [sentenceNepali(sentence), ...(sentence.npAlts ?? [])]
+        : [sentence.en, ...(sentence.enAlts ?? [])],
+      answer: typed,
+      heard: spoken,
+      register,
+    })
+    setAi(v)
+    if (v.verdict === 'correct') setChecked((c) => (c ? { ...c, correct: true, byAi: true } : c))
+  }
+
+  /** After grading: read the right answer aloud; returns true when a second opinion is worth asking. */
+  const afterCheck = (correct: boolean) => {
+    if (enToNp && voice.autoplay && dev) speak(dev).catch(() => {})
+    return !correct
+  }
+
+  const mic = async () => {
+    if (listening) {
+      listening.cancel()
+      setListening(null)
+      return
+    }
+    stopSpeaking()
+    setVoiceError('')
+    const l = listenOnce()
+    setListening(l)
+    try {
+      const h = (await l.result).trim()
+      setListening(null)
+      if (!h) {
+        setVoiceError("Didn't catch that. Tap the mic and try again.")
+        return
+      }
+      const typed = romanize(h)
+      setHeard(h)
+      setAnswer(typed)
+      const g = gradeSpoken(sentence, h)
+      setChecked({ correct: g.correct, chunkOk: g.chunks.map((c) => c.ok), shown: sentenceNepali(sentence), spoken: true })
+      if (afterCheck(g.correct)) void secondOpinion(typed, h)
+    } catch (e) {
+      setListening(null)
+      setVoiceError(e instanceof ApiError || !navigator.onLine || !(e instanceof Error) ? explainError(e) : micMessage(e))
+    }
+  }
 
   const hint = (i: number) => {
     if (checked) return
@@ -181,6 +278,9 @@ function DrillCard({
   const check = (gaveUp = false) => {
     if (gaveUp) {
       setHinted(new Set(chunks.map((c) => c.i)))
+      setRevealed(true)
+      listening?.cancel()
+      if (enToNp && voice.autoplay && dev) speak(dev).catch(() => {})
       setChecked({
         correct: false,
         shown: enToNp ? sentenceNepali(sentence) : sentence.en,
@@ -189,18 +289,24 @@ function DrillCard({
       })
       return
     }
+    setRevealed(true)
+    let correct: boolean
     if (enToNp) {
       const g = gradeNepali(sentence, answer)
+      correct = g.correct
       setChecked({ correct: g.correct, chunkOk: g.chunks.map((c) => c.ok), shown: g.bestAnswer })
     } else {
       const g = gradeEnglish(sentence, answer)
+      correct = g.correct
       setChecked({ correct: g.correct, shown: g.correct ? g.closest : sentence.en })
     }
+    if (afterCheck(correct)) void secondOpinion(answer)
   }
 
   const finish = async (override = false) => {
-    if (!checked || saving) return
+    if (!checked || saving || ai === 'checking') return
     setSaving(true)
+    stopSpeaking()
     const correct = checked.correct || override
     if (override) {
       await db.flags.add({
@@ -250,13 +356,33 @@ function DrillCard({
             </div>
           </>
         ) : (
-          <div className="np-words">
+          <>
+          {dev && (
+            <div className="listen-row">
+              <button className="listen" onClick={() => play(false)} aria-label="Play the Nepali">
+                <SpeakerIcon /> Listen
+              </button>
+              <button className="listen slow" onClick={() => play(true)} aria-label="Play slowly">
+                <TurtleIcon /> Slow
+              </button>
+              {!revealed && (
+                <button className="listen ghosty" onClick={() => setRevealed(true)}>
+                  Show text
+                </button>
+              )}
+            </div>
+          )}
+          <div className={'np-words' + (revealed ? '' : ' masked')} aria-hidden={!revealed}>
             {sentence.chunks.map((c, i) => {
               if (!c.en) return null
               const open = hinted.has(i) || !!checked
               const punct = sentence.chunks[i + 1] && !sentence.chunks[i + 1].en ? sentence.chunks[i + 1].np : ''
               return (
-                <button key={i} className={'np-word' + (open ? ' open' : '')} onClick={() => hint(i)}>
+                <button
+                  key={i}
+                  className={'np-word' + (open ? ' open' : '')}
+                  onClick={() => (revealed ? hint(i) : setRevealed(true))}
+                >
                   <strong>
                     {c.np}
                     {punct && <em className="punct">{punct}</em>}
@@ -266,8 +392,14 @@ function DrillCard({
               )
             })}
           </div>
+          </>
         )}
-        {!checked && <p className="muted small">Tap a word for a hint.</p>}
+        {!checked && (
+          <p className="muted small">
+            {revealed ? 'Tap a word for a hint.' : 'Listening practice: the text is hidden. Tap it to show.'}
+          </p>
+        )}
+        {voiceError && <p className="voice-error small">{voiceError}</p>}
       </section>
 
       {!checked ? (
@@ -289,24 +421,49 @@ function DrillCard({
               spellCheck={false}
               enterKeyHint="done"
             />
+            {enToNp && dev && (
+              <button
+                type="button"
+                className={'mic' + (listening ? ' live' : '')}
+                onClick={() => void mic()}
+                aria-label={listening ? 'Stop listening' : 'Speak your answer'}
+              >
+                <MicIcon />
+              </button>
+            )}
             <button type="submit" disabled={!answer.trim()}>
               Check
             </button>
           </form>
+          {listening && <p className="muted small center listening-note">Listening… say the sentence in Nepali.</p>}
           <button className="ghost center-btn" onClick={() => check(true)}>
             I don't know
           </button>
         </>
       ) : (
         <section className={'card feedback ' + (checked.correct ? 'good' : 'bad')}>
-          <p className="eyebrow">{checked.correct ? 'Correct' : checked.gaveUp ? 'Here it is' : 'Not quite'}</p>
+          <div className="feedback-head">
+            <p className="eyebrow">
+              {checked.correct ? (checked.byAi ? 'Correct (same meaning)' : 'Correct') : checked.gaveUp ? 'Here it is' : 'Not quite'}
+            </p>
+            {dev && (
+              <span className="listen-row tight">
+                <button className="listen icon" onClick={() => play(false)} aria-label="Play the Nepali">
+                  <SpeakerIcon />
+                </button>
+                <button className="listen icon slow" onClick={() => play(true)} aria-label="Play slowly">
+                  <TurtleIcon />
+                </button>
+              </span>
+            )}
+          </div>
           {enToNp ? (
             <p className="nepali">
               {sentence.chunks.map((c, i) => (
                 <span
                   key={i}
                   className={
-                    checked.correct || !checked.chunkOk || !c.en ? '' : checked.chunkOk[i] ? 'ok' : 'miss'
+                    checked.correct || checked.gaveUp || !checked.chunkOk || !c.en ? '' : checked.chunkOk[i] ? 'ok' : 'miss'
                   }
                 >
                   {c.np}
@@ -320,7 +477,15 @@ function DrillCard({
               {!checked.correct && <p className="muted small">{sentenceNepali(sentence)}</p>}
             </>
           )}
-          {answer && !checked.correct && <p className="muted small">You wrote: {answer}</p>}
+          {checked.spoken && heard ? (
+            <p className="muted small">You said (roughly): {answer}</p>
+          ) : (
+            answer && !checked.correct && <p className="muted small">You wrote: {answer}</p>
+          )}
+          {ai === 'checking' && <p className="muted small ai-note">Checking the meaning…</p>}
+          {ai && ai !== 'checking' && ai.feedback && ai.verdict !== 'unknown' && (
+            <p className="small ai-note">{ai.feedback}</p>
+          )}
           {checked.correct && !enToNp && checked.shown !== sentence.en && (
             <p className="muted small">Also: {sentence.en}</p>
           )}
@@ -328,12 +493,12 @@ function DrillCard({
             <p className="muted small">Also: {sentenceNepali(sentence)}</p>
           )}
           <div className="btn-row">
-            {!checked.correct && !checked.gaveUp && (
+            {!checked.correct && !checked.gaveUp && ai !== 'checking' && (
               <button className="ghost" onClick={() => void finish(true)} disabled={saving}>
                 I was right
               </button>
             )}
-            <button className="cta small-cta" onClick={() => void finish(false)} disabled={saving}>
+            <button className="cta small-cta" onClick={() => void finish(false)} disabled={saving || ai === 'checking'}>
               Continue <Arrow />
             </button>
           </div>
@@ -347,6 +512,40 @@ function Arrow() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  )
+}
+
+function micMessage(e: Error): string {
+  const m = e.message.toLowerCase()
+  if (m.includes('permission') || m.includes('notallowed') || m.includes('denied'))
+    return 'Microphone access is off. Allow it in Settings > Safari > Microphone (or for this app), then try again.'
+  return 'Speech recognition failed: ' + e.message.slice(0, 120)
+}
+
+function SpeakerIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="ico">
+      <path d="M4 9h4l5-4v14l-5-4H4z" />
+      <path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" />
+    </svg>
+  )
+}
+
+function TurtleIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="ico">
+      <path d="M4 15c0-4 3.5-7 8-7s8 3 8 7z" />
+      <path d="M20 13.5h1.5a1.5 1.5 0 0 0 0-3H19M6 15l-1 3M18 15l1 3M9 8.5l1.5 6.5M15 8.5l-1.5 6.5" />
+    </svg>
+  )
+}
+
+function MicIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="ico">
+      <rect x="9" y="3" width="6" height="11" rx="3" />
+      <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" />
     </svg>
   )
 }

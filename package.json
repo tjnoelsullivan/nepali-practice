@@ -12,7 +12,9 @@
     "deck": "node scripts/build-deck.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.14.0",
     "dexie": "^4.4.7",
+    "microsoft-cognitiveservices-speech-sdk": "^1.53.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "ts-fsrs": "^5.4.2"

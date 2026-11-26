@@ -30,6 +30,12 @@ for (const [id, np, en, verified] of tsv('content/grammar.tsv')) {
   items.set(id, { id, kind: 'grammar', np, en, source: 'tutor', verified: verified !== 'unverified' })
 }
 
+// devanagari: form \t Devanagari (for the Azure voice + speech matching; never displayed)
+const dev = new Map()
+for (const [form, d] of tsv('content/devanagari.tsv')) dev.set(norm(form), d)
+const devPunct = (p) => p.replace(/\./g, '।')
+const noDev = new Set()
+
 const sentences = []
 const missing = new Map()
 let verified = true
@@ -53,8 +59,10 @@ for (const raw of read('content/deck.txt').split('\n')) {
     const text = tok.replace(/_/g, ' ')
     const entry = lex.get(norm(text))
     if (!entry) missing.set(norm(text), (missing.get(norm(text)) ?? []).concat(en))
-    chunks.push({ np: text, en: entry?.gloss ?? '?', items: [...(entry && entry.id !== '-' ? [entry.id] : []), ...g] })
-    if (tail) chunks.push({ np: tail, en: '', items: [] })
+    const d = dev.get(norm(text))
+    if (!d) noDev.add(norm(text))
+    chunks.push({ np: text, en: entry?.gloss ?? '?', dev: d ?? '', items: [...(entry && entry.id !== '-' ? [entry.id] : []), ...g] })
+    if (tail) chunks.push({ np: tail, en: '', dev: devPunct(tail), items: [] })
   }
   const lineGrammar = grammar ? grammar.split(',').map((x) => x.trim()).filter(Boolean) : []
   const last = [...chunks].reverse().find((c) => c.en)
@@ -75,6 +83,10 @@ for (const raw of read('content/deck.txt').split('\n')) {
 if (missing.size) {
   console.error('Missing from lexicon/grammar:')
   for (const [k, v] of missing) console.error(`  ${k}\t(${v[0]})`)
+  process.exit(1)
+}
+if (noDev.size) {
+  console.error('Missing from devanagari.tsv:\n  ' + [...noDev].join('\n  '))
   process.exit(1)
 }
 const ids = new Set()

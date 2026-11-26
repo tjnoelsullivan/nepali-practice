@@ -1,0 +1,107 @@
+import { useState } from 'react'
+import { romanize } from '../core/devanagari'
+import { explainError, getAccessCode, setAccessCode } from '../voice/api'
+import { setVoiceSettings, useVoiceSettings } from '../voice/settings'
+import { checkMic, listenOnce } from '../voice/stt'
+import { speak, unlockAudio } from '../voice/tts'
+
+export function VoiceSettings() {
+  const v = useVoiceSettings()
+  const [code, setCode] = useState(getAccessCode())
+  const [saved, setSaved] = useState(false)
+  const [status, setStatus] = useState('')
+
+  const testVoice = () => {
+    unlockAudio()
+    setStatus('Playing…')
+    speak('नमस्ते। तपाईं सन्चै हुनुहुन्छ?')
+      .then(() => setStatus('Voice works.'))
+      .catch((e) => setStatus(explainError(e)))
+  }
+
+  const testMic = async () => {
+    setStatus('Asking for the microphone…')
+    if (!(await checkMic())) {
+      setStatus('Microphone access is off. Allow it in Settings > Safari > Microphone.')
+      return
+    }
+    setStatus('Listening… say "Namaste".')
+    try {
+      const heard = await listenOnce().result
+      setStatus(heard ? `Heard: ${romanize(heard)}` : "Didn't catch anything. Try again a little louder.")
+    } catch (e) {
+      setStatus(e instanceof Error && navigator.onLine && !('status' in e) ? e.message : explainError(e))
+    }
+  }
+
+  return (
+    <section className="card settings">
+      <h2>Voice & settings</h2>
+
+      <div className="setting">
+        <span>Voice</span>
+        <div className="segmented small-seg">
+          <button className={v.voice === 'female' ? 'on' : ''} onClick={() => setVoiceSettings({ voice: 'female' })}>
+            Hemkala (f)
+          </button>
+          <button className={v.voice === 'male' ? 'on' : ''} onClick={() => setVoiceSettings({ voice: 'male' })}>
+            Sagar (m)
+          </button>
+        </div>
+      </div>
+
+      <label className="setting">
+        <span>
+          Read sentences aloud
+          <small className="muted">Plays the Nepali automatically</small>
+        </span>
+        <input type="checkbox" className="toggle" checked={v.autoplay} onChange={(e) => setVoiceSettings({ autoplay: e.target.checked })} />
+      </label>
+
+      <label className="setting">
+        <span>
+          Listening practice
+          <small className="muted">Hide the Nepali text until you tap it</small>
+        </span>
+        <input type="checkbox" className="toggle" checked={v.hideText} onChange={(e) => setVoiceSettings({ hideText: e.target.checked })} />
+      </label>
+
+      <form
+        className="setting code"
+        onSubmit={(e) => {
+          e.preventDefault()
+          setAccessCode(code)
+          setSaved(true)
+        }}
+      >
+        <span>
+          Access code
+          <small className="muted">Only if you set APP_ACCESS_CODE in Vercel</small>
+        </span>
+        <div className="answer">
+          <input
+            type="password"
+            value={code}
+            onChange={(e) => {
+              setCode(e.target.value)
+              setSaved(false)
+            }}
+            autoComplete="off"
+            placeholder="Access code"
+          />
+          <button type="submit">{saved ? 'Saved' : 'Save'}</button>
+        </div>
+      </form>
+
+      <div className="btn-row">
+        <button className="ghost" onClick={testVoice}>
+          Test voice
+        </button>
+        <button className="ghost" onClick={() => void testMic()}>
+          Test microphone
+        </button>
+      </div>
+      {status && <p className="muted small">{status}</p>}
+    </section>
+  )
+}
