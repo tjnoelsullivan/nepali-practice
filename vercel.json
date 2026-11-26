@@ -25,6 +25,9 @@
     },
     "api/chunk.ts": {
       "maxDuration": 60
+    },
+    "api/suggest.ts": {
+      "maxDuration": 60
     }
   }
 }

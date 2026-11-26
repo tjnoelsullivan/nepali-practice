@@ -2,23 +2,41 @@ import { useEffect, useRef, useState } from 'react'
 import { db, type Recording } from '../db'
 import type { Deck } from '../hooks/useDeck'
 import { sentenceNepali } from '../core/types'
-import { explainError } from '../voice/api'
+import { api, explainError } from '../voice/api'
 import { deleteRecording, saveRecording } from '../voice/chunk'
 import { startRecording, type ActiveRecording } from '../voice/recorder'
 import { playRecording, stopSpeaking, unlockAudio } from '../voice/tts'
 
 type Clip = { blob: Blob; mime: string; durationMs: number }
-type State =
-  | { step: 'idle'; note?: string; questions?: string[]; error?: string }
-  | { step: 'recording'; rec: ActiveRecording; started: number }
-  | { step: 'review'; clip: Clip; error?: string }
-  | { step: 'saving'; clip: Clip }
+type Idea = { en: string; np: string }
+type Compose = { np: string; en: string; fromIdea?: Idea; clip?: Clip; rec?: { r: ActiveRecording; started: number } }
+
+const IDEAS_KEY = 'saathi.chunuIdeas'
+const loadIdeas = (): Idea[] => {
+  try {
+    return JSON.parse(localStorage.getItem(IDEAS_KEY) ?? '[]')
+  } catch {
+    return []
+  }
+}
+const storeIdeas = (ideas: Idea[]) => {
+  try {
+    localStorage.setItem(IDEAS_KEY, JSON.stringify(ideas))
+  } catch {
+    /* private mode */
+  }
+}
+
+const errText = (e: unknown) => (e instanceof Error && !('status' in e) && navigator.onLine ? e.message : explainError(e))
 
 export function Recordings({ deck }: { deck: Deck }) {
-  const [state, setState] = useState<State>({ step: 'idle' })
   const [list, setList] = useState<Recording[]>([])
-  const [np, setNp] = useState('')
-  const [en, setEn] = useState('')
+  const [ideas, setIdeas] = useState<Idea[]>(loadIdeas)
+  const [suggesting, setSuggesting] = useState(false)
+  const [compose, setCompose] = useState<Compose | null>(null)
+  const [saving, setSaving] = useState(false)
+  const [note, setNote] = useState<{ text: string; questions?: string[] } | null>(null)
+  const [error, setError] = useState('')
   const [confirmDel, setConfirmDel] = useState('')
   const [, tick] = useState(0)
   const fileInput = useRef<HTMLInputElement>(null)
@@ -27,58 +45,92 @@ export function Recordings({ deck }: { deck: Deck }) {
   useEffect(() => {
     void load()
   }, [])
+  useEffect(() => storeIdeas(ideas), [ideas])
   useEffect(() => {
-    if (state.step !== 'recording') return
+    if (!compose?.rec) return
     const t = setInterval(() => tick((n) => n + 1), 250)
     return () => clearInterval(t)
-  }, [state.step])
+  }, [compose?.rec])
+
+  const byId = new Map(deck.sentences.map((s) => [s.id, s]))
+
+  const suggest = async () => {
+    setSuggesting(true)
+    setError('')
+    try {
+      const avoid = [...ideas.map((i) => i.en), ...list.map((r) => byId.get(r.sentenceId)?.en ?? '')].filter(Boolean)
+      const r = await api('/api/suggest', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ avoid }),
+      })
+      const { sentences } = (await r.json()) as { sentences: Idea[] }
+      setIdeas((cur) => [...sentences, ...cur].slice(0, 30))
+    } catch (e) {
+      setError(errText(e))
+    } finally {
+      setSuggesting(false)
+    }
+  }
+
+  const open = (idea?: Idea) => {
+    unlockAudio()
+    setNote(null)
+    setError('')
+    setCompose({ np: idea?.np ?? '', en: idea?.en ?? '', fromIdea: idea })
+  }
 
   const record = async () => {
-    unlockAudio()
+    if (!compose) return
     stopSpeaking()
     try {
-      const rec = await startRecording()
-      setState({ step: 'recording', rec, started: Date.now() })
+      const r = await startRecording()
+      setCompose({ ...compose, clip: undefined, rec: { r, started: Date.now() } })
     } catch {
-      setState({ step: 'idle', error: 'Microphone access is off. Allow it in Settings > Safari > Microphone.' })
+      setError('Microphone access is off. Allow it in Settings > Safari > Microphone.')
     }
   }
 
   const stop = async () => {
-    if (state.step !== 'recording') return
-    const clip = await state.rec.stop()
+    if (!compose?.rec) return
+    const clip = await compose.rec.r.stop()
     if (clip.durationMs < 500 || clip.blob.size < 1000) {
-      setState({ step: 'idle', error: 'That was too short. Try again.' })
+      setCompose({ ...compose, rec: undefined })
+      setError('That was too short. Try again.')
       return
     }
-    setState({ step: 'review', clip })
+    setError('')
+    setCompose({ ...compose, rec: undefined, clip })
     playRecording(clip.blob).catch(() => {})
   }
 
   const pickFile = (f: File | undefined) => {
-    if (!f) return
-    unlockAudio()
-    setState({ step: 'review', clip: { blob: f, mime: f.type || 'audio/mp4', durationMs: 0 } })
+    if (!f || !compose) return
+    setCompose({ ...compose, clip: { blob: f, mime: f.type || 'audio/mp4', durationMs: 0 } })
     if (fileInput.current) fileInput.current.value = ''
   }
 
+  const close = () => {
+    compose?.rec?.r.cancel()
+    setCompose(null)
+    setError('')
+  }
+
   const save = async () => {
-    if (state.step !== 'review' || !np.trim()) return
-    const clip = state.clip
-    setState({ step: 'saving', clip })
+    if (!compose?.clip || !compose.np.trim()) return
+    setSaving(true)
+    setError('')
     try {
-      const { sentence, questions } = await saveRecording(clip, np.trim(), en.trim(), deck.items)
+      const { sentence, questions } = await saveRecording(compose.clip, compose.np.trim(), compose.en.trim(), deck.items)
+      if (compose.fromIdea) setIdeas((cur) => cur.filter((i) => i !== compose.fromIdea))
       await deck.refresh()
       await load()
-      setNp('')
-      setEn('')
-      setState({ step: 'idle', note: `Added "${sentenceNepali(sentence)}" (${sentence.en}).`, questions })
+      setCompose(null)
+      setNote({ text: `Added "${sentenceNepali(sentence)}" (${sentence.en}).`, questions })
     } catch (e) {
-      setState({
-        step: 'review',
-        clip,
-        error: e instanceof Error && !('status' in e) && navigator.onLine ? e.message : explainError(e),
-      })
+      setError(errText(e))
+    } finally {
+      setSaving(false)
     }
   }
 
@@ -93,61 +145,62 @@ export function Recordings({ deck }: { deck: Deck }) {
     await load()
   }
 
-  const byId = new Map(deck.sentences.map((s) => [s.id, s]))
-  const secs = state.step === 'recording' ? Math.floor((Date.now() - state.started) / 1000) : 0
+  const secs = compose?.rec ? Math.floor((Date.now() - compose.rec.started) / 1000) : 0
 
   return (
     <section className="card recordings">
       <h2>Chunu's voice</h2>
-      {state.step === 'idle' && (
+
+      {!compose ? (
         <>
           <p className="muted">
-            Record Chunu saying a sentence, then type what was said. It joins your practice as listening cards in Chunu's
-            voice.
+            Pick a sentence Chunu might say to you, or write your own. She records it, and it joins your practice as a
+            listening card in her voice.
           </p>
-          {state.note && <p className="ok-note small">{state.note}</p>}
-          {state.questions && state.questions.length > 0 && (
-            <ul className="questions small">
-              {state.questions.map((q, i) => (
-                <li key={i}>{q}</li>
-              ))}
-            </ul>
+          {note && (
+            <>
+              <p className="ok-note small">{note.text}</p>
+              {note.questions && note.questions.length > 0 && (
+                <ul className="questions small">
+                  {note.questions.map((q, i) => (
+                    <li key={i}>{q}</li>
+                  ))}
+                </ul>
+              )}
+            </>
           )}
-          {state.error && <p className="voice-error small">{state.error}</p>}
+          {error && <p className="voice-error small">{error}</p>}
           <div className="btn-row left">
-            <button className="cta small-cta" onClick={() => void record()}>
-              <MicDot /> Record
+            <button className="cta small-cta" onClick={() => void suggest()} disabled={suggesting}>
+              {suggesting ? 'Thinking…' : ideas.length ? 'More ideas' : 'Suggest sentences'}
             </button>
-            <label className="ghost file-btn">
-              <input ref={fileInput} type="file" accept="audio/*" onChange={(e) => pickFile(e.target.files?.[0])} />
-              Use a voice memo
-            </label>
+            <button className="ghost" onClick={() => open()}>
+              Write your own
+            </button>
           </div>
+
+          {ideas.length > 0 && (
+            <div className="ideas">
+              <p className="eyebrow">Ideas · tap one to edit and record</p>
+              {ideas.map((idea, i) => (
+                <div key={i} className="row idea">
+                  <button className="idea-main" onClick={() => open(idea)}>
+                    <span className="idea-en">{idea.en}</span>
+                    <span className="muted small">{idea.np}</span>
+                  </button>
+                  <button
+                    className="ghost tiny"
+                    aria-label="Remove idea"
+                    onClick={() => setIdeas((cur) => cur.filter((x) => x !== idea))}
+                  >
+                    ✕
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
         </>
-      )}
-
-      {state.step === 'recording' && (
-        <div className="rec-live">
-          <span className="rec-dot" aria-hidden="true" />
-          <strong>
-            Recording… {Math.floor(secs / 60)}:{String(secs % 60).padStart(2, '0')}
-          </strong>
-          <button className="cta small-cta" onClick={() => void stop()}>
-            Stop
-          </button>
-          <button
-            className="ghost"
-            onClick={() => {
-              state.rec.cancel()
-              setState({ step: 'idle' })
-            }}
-          >
-            Cancel
-          </button>
-        </div>
-      )}
-
-      {(state.step === 'review' || state.step === 'saving') && (
+      ) : (
         <form
           className="rec-form"
           onSubmit={(e) => {
@@ -155,24 +208,64 @@ export function Recordings({ deck }: { deck: Deck }) {
             void save()
           }}
         >
-          <button type="button" className="listen" onClick={() => playRecording(state.clip.blob).catch(() => {})}>
-            Play it back
-          </button>
           <label>
-            <span className="small muted">What Chunu said (romanized Nepali)</span>
-            <input value={np} onChange={(e) => setNp(e.target.value)} placeholder="Timi kati baje ghar aauchhau?" autoCapitalize="sentences" autoCorrect="off" spellCheck={false} required />
+            <span className="small muted">English</span>
+            <input
+              value={compose.en}
+              onChange={(e) => setCompose({ ...compose, en: e.target.value })}
+              placeholder="What time will you come home?"
+            />
           </label>
           <label>
-            <span className="small muted">English (optional; Claude translates if blank)</span>
-            <input value={en} onChange={(e) => setEn(e.target.value)} placeholder="What time will you come home?" />
+            <span className="small muted">Nepali (romanized). Edit it to match exactly what Chunu says.</span>
+            <input
+              value={compose.np}
+              onChange={(e) => setCompose({ ...compose, np: e.target.value })}
+              placeholder="Timi kati baje ghar aauchhau?"
+              autoCorrect="off"
+              spellCheck={false}
+            />
           </label>
-          {state.step === 'review' && state.error && <p className="voice-error small">{state.error}</p>}
+
+          {compose.rec ? (
+            <div className="rec-live">
+              <span className="rec-dot" aria-hidden="true" />
+              <strong>
+                Recording… {Math.floor(secs / 60)}:{String(secs % 60).padStart(2, '0')}
+              </strong>
+              <button type="button" className="cta small-cta" onClick={() => void stop()}>
+                Stop
+              </button>
+            </div>
+          ) : (
+            <div className="btn-row left">
+              <button type="button" className={compose.clip ? 'ghost' : 'cta small-cta'} onClick={() => void record()}>
+                <span className="rec-dot small" aria-hidden="true" /> {compose.clip ? 'Record again' : 'Record Chunu'}
+              </button>
+              {compose.clip ? (
+                <button type="button" className="listen" onClick={() => playRecording(compose.clip!.blob).catch(() => {})}>
+                  ▶ Play it back
+                </button>
+              ) : (
+                <label className="ghost file-btn">
+                  <input ref={fileInput} type="file" accept="audio/*" onChange={(e) => pickFile(e.target.files?.[0])} />
+                  Use a voice memo
+                </label>
+              )}
+            </div>
+          )}
+
+          <p className="muted small">
+            {compose.en.trim() ? '' : 'Leave English blank and Claude will translate it (marked unverified). '}
+            Chunu said it, so the Nepali counts as checked.
+          </p>
+          {error && <p className="voice-error small">{error}</p>}
           <div className="btn-row">
-            <button type="button" className="ghost" onClick={() => setState({ step: 'idle' })} disabled={state.step === 'saving'}>
-              Discard
+            <button type="button" className="ghost" onClick={close} disabled={saving}>
+              Cancel
             </button>
-            <button type="submit" className="cta small-cta" disabled={!np.trim() || state.step === 'saving'}>
-              {state.step === 'saving' ? 'Saving…' : 'Save'}
+            <button type="submit" className="cta small-cta" disabled={!compose.clip || !compose.np.trim() || saving || !!compose.rec}>
+              {saving ? 'Saving…' : 'Save'}
             </button>
           </div>
         </form>
@@ -205,8 +298,4 @@ export function Recordings({ deck }: { deck: Deck }) {
       )}
     </section>
   )
-}
-
-function MicDot() {
-  return <span className="rec-dot small" aria-hidden="true" />
 }
