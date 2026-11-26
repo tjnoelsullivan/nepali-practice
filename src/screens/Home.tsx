@@ -1,5 +1,6 @@
 import { GoalRing } from '../components/GoalRing'
 import { InstallHint } from '../components/InstallHint'
+import { OnTrack } from '../components/OnTrack'
 import { currentStreak, dayKey } from '../core/activity'
 import { usePrefs } from '../core/prefs'
 import { isDue } from '../core/schedule'
@@ -66,6 +67,8 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
           <path d="M5 12h14M13 6l6 6-6 6" />
         </svg>
       </button>
+
+      <OnTrack deck={deck} />
 
       <section className="card">
         <h2>Today</h2>

@@ -83,7 +83,7 @@ export function Library({ deck }: { deck: Deck }) {
           <span className="chip">{it.stage}</span>
         </section>
       ))}
-      <p className="muted small center">Version 0.4 · Stage 3 · Tap a sentence to hear it</p>
+      <p className="muted small center">Version 0.4.1 · On-track estimate · Tap a sentence to hear it</p>
     </>
   )
 }
