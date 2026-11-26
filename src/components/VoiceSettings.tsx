@@ -9,7 +9,7 @@ import { speak, unlockAudio } from '../voice/tts'
 
 export function VoiceSettings() {
   const v = useVoiceSettings()
-  const { goalMinutes, lessonDays } = usePrefs()
+  const { goalMinutes, lessonDays, sounds } = usePrefs()
   const gi = GOAL_CHOICES.indexOf(goalMinutes)
   const [code, setCode] = useState(getAccessCode())
   const [saved, setSaved] = useState(false)
@@ -103,6 +103,14 @@ export function VoiceSettings() {
           <small className="muted">Plays the Nepali automatically</small>
         </span>
         <input type="checkbox" className="toggle" checked={v.autoplay} onChange={(e) => setVoiceSettings({ autoplay: e.target.checked })} />
+      </label>
+
+      <label className="setting">
+        <span>
+          Sounds
+          <small className="muted">Chimes for answers and celebrations</small>
+        </span>
+        <input type="checkbox" className="toggle" checked={sounds} onChange={(e) => setPrefs({ sounds: e.target.checked })} />
       </label>
 
       <label className="setting">

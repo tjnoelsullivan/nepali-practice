@@ -2,14 +2,11 @@ import { useState } from 'react'
 import { isKnown } from '../core/schedule'
 import { LessonImport } from '../components/LessonImport'
 import { Recordings } from '../components/Recordings'
+import { Backup, TutorCheck } from '../components/Safety'
 import { VoiceSettings } from '../components/VoiceSettings'
 import { sentenceDevanagari, sentenceNepali } from '../core/types'
 import { speak, unlockAudio } from '../voice/tts'
 import type { Deck } from '../hooks/useDeck'
-
-const LATER = [
-  { title: 'Backup', body: 'Export everything to a file, and restore it on a new phone.', stage: 'Stage 6', color: 'var(--flag-yellow)' },
-]
 
 export function Library({ deck }: { deck: Deck }) {
   const [tab, setTab] = useState<'sentences' | 'words'>('sentences')
@@ -75,19 +72,13 @@ export function Library({ deck }: { deck: Deck }) {
 
       <Recordings deck={deck} />
 
+      <TutorCheck deck={deck} />
+
+      <Backup />
+
       <VoiceSettings />
 
-      {LATER.map((it) => (
-        <section key={it.title} className="card lib-item">
-          <span className="lib-bar" style={{ background: it.color }} />
-          <div>
-            <h2>{it.title}</h2>
-            <p className="muted">{it.body}</p>
-          </div>
-          <span className="chip">{it.stage}</span>
-        </section>
-      ))}
-      <p className="muted small center">Version 0.7 · Stage 5 + on-track · Tap a sentence to hear it</p>
+      <p className="muted small center">Version 1.0 · Tap a sentence to hear it</p>
     </>
   )
 }

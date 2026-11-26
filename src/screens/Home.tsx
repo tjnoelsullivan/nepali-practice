@@ -5,6 +5,7 @@ import { currentStreak, dayKey } from '../core/activity'
 import { usePrefs } from '../core/prefs'
 import { isDue } from '../core/schedule'
 import { useDays } from '../core/tracker'
+import { lastBackup } from '../backup'
 import type { Deck } from '../hooks/useDeck'
 
 function greeting() {
@@ -24,6 +25,10 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
   const minutesToday = Math.floor((today?.activeMs ?? 0) / 60_000)
   const goalMet = minutesToday >= goal
   const left = goal - minutesToday
+  const backedUp = lastBackup()
+  const backupDays = backedUp ? Math.floor((now.getTime() - backedUp.getTime()) / 86_400_000) : null
+  const practicedDays = [...days.values()].filter((d) => d.answers > 0).length
+  const nudgeBackup = practicedDays >= 3 && (backupDays === null || backupDays >= 7)
 
   return (
     <>
@@ -93,6 +98,12 @@ export function Home({ deck, onStart }: { deck: Deck; onStart: () => void }) {
               ? `${left} more active ${left === 1 ? 'minute' : 'minutes'} today to keep your ${streak}-day streak.`
               : `Reach your ${goal}-minute goal today to start a streak.`}
         </p>
+        {nudgeBackup && (
+          <p className="muted small">
+            {backupDays === null ? 'No backup yet.' : `Last backup ${backupDays} days ago.`} Your progress lives only on this
+            phone, so save a backup in Library.
+          </p>
+        )}
       </section>
     </>
   )

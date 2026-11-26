@@ -1,0 +1,36 @@
+/* Stage 6: tutor check list and backup */
+.safety h2 {
+  margin-bottom: 6px;
+}
+.safety-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+.check-list {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+.check-list .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.error-text {
+  color: var(--flag-red);
+}
+.restore-confirm {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  background: rgba(224, 75, 75, 0.1);
+}
+.small-cta.danger {
+  background: var(--flag-red);
+  color: var(--text);
+}

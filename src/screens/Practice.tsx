@@ -14,6 +14,10 @@ import { useVoiceSettings } from '../voice/settings'
 import { listenOnce, type Listening } from '../voice/stt'
 import { playRecording, prefetch, speak, stopSpeaking, unlockAudio } from '../voice/tts'
 import type { Deck } from '../hooks/useDeck'
+import { celebrate, playSound } from '../fx'
+import { dayKey } from '../core/activity'
+import { usePrefs } from '../core/prefs'
+import { useDays } from '../core/tracker'
 
 type Phase = 'start' | 'drill' | 'done'
 
@@ -32,6 +36,23 @@ export function Practice({ deck }: { deck: Deck }) {
   }, [phase])
 
   const byId = useMemo(() => new Map(deck.sentences.map((s) => [s.id, s])), [deck.sentences])
+
+  // Celebrate the moment today's goal is reached during a session (once a day).
+  const { days } = useDays()
+  const { goalMinutes } = usePrefs()
+  const [goalToast, setGoalToast] = useState(false)
+  const todayMs = days.get(dayKey(new Date()))?.activeMs ?? 0
+  const metBefore = useRef<boolean | null>(null)
+  useEffect(() => {
+    const met = todayMs >= goalMinutes * 60_000
+    if (metBefore.current === false && met && phase === 'drill') {
+      playSound('goal')
+      celebrate(120)
+      setGoalToast(true)
+      setTimeout(() => setGoalToast(false), 3500)
+    }
+    metBefore.current = met
+  }, [todayMs, goalMinutes, phase])
 
   const counts = useMemo(() => {
     const now = new Date()
@@ -68,6 +89,8 @@ export function Practice({ deck }: { deck: Deck }) {
     }
     if (pos + 1 >= q.length) {
       setPhase('done')
+      playSound('complete')
+      if (nextResults.filter((x) => x.correct).length >= nextResults.length / 2) celebrate()
       await deck.refresh()
     } else setPos(pos + 1)
   }
@@ -152,6 +175,11 @@ export function Practice({ deck }: { deck: Deck }) {
   const next = queue[pos + 1] && byId.get(queue[pos + 1].sentenceId)
   return (
     <>
+      {goalToast && (
+        <div className="goal-toast" role="status">
+          Daily goal met. Streak safe for today!
+        </div>
+      )}
       <div className="progress-dots" aria-label={`Question ${pos + 1} of ${queue.length}`}>
         {queue.map((_, i) => (
           <span key={i} className={i <= pos ? 'on' : ''} />
@@ -216,6 +244,12 @@ function DrillCard({
     byAi?: boolean
   }>(null)
   const [saving, setSaving] = useState(false)
+
+  // A chime when the answer is graded, and again if the second opinion says it was right after all.
+  const verdict = checked ? (checked.correct ? 'right' : 'wrong') : null
+  useEffect(() => {
+    if (verdict) playSound(verdict === 'right' ? 'correct' : 'wrong')
+  }, [verdict])
 
   const chunks = sentence.chunks.map((c, i) => ({ ...c, i })).filter((c) => c.en)
   const enToNp = direction === 'en-np'
