@@ -1,7 +1,7 @@
 // Plays Nepali sentences with the Azure voice through /api/tts.
 // iOS only lets a page play sound after a tap, so one shared <audio> element is "unlocked"
 // on the first tap and reused. Audio is cached on the phone so repeats work offline.
-import { api } from './api'
+import { api, ApiError } from './api'
 import { getVoiceSettings } from './settings'
 import { markActive } from '../core/tracker'
 
@@ -56,12 +56,37 @@ function ttsUrl(dev: string, slow: boolean): string {
   return `/api/tts?${p}`
 }
 
+/** Is this clip already on the phone? */
+export async function ttsCached(url: string): Promise<boolean> {
+  const cache = 'caches' in window ? await caches.open(CACHE).catch(() => null) : null
+  return !!(await cache?.match(url))
+}
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
+
+/**
+ * Fetch from the voice service, waiting and retrying when it says it's busy (Azure's free tier
+ * allows about 20 requests a minute). onWait is told how long it's waiting.
+ */
+async function fetchVoice(url: string, onWait?: (ms: number) => void): Promise<Response> {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      return await api(url)
+    } catch (e) {
+      if (!(e instanceof ApiError) || e.status !== 429 || attempt >= 12) throw e
+      const ms = Math.min(30_000, 5_000 * (attempt + 1))
+      onWait?.(ms)
+      await sleep(ms)
+    }
+  }
+}
+
 /** The audio for a /api/tts URL, from the phone's cache when it's been fetched before. */
-export async function ttsBlob(url: string): Promise<Blob> {
+export async function ttsBlob(url: string, onWait?: (ms: number) => void): Promise<Blob> {
   const cache = 'caches' in window ? await caches.open(CACHE).catch(() => null) : null
   const cached = await cache?.match(url)
   if (cached) return cached.blob()
-  const r = await api(url)
+  const r = await fetchVoice(url, onWait)
   const blob = await r.blob()
   await cache?.put(url, new Response(blob, { headers: { 'content-type': 'audio/mpeg' } })).catch(() => {})
   return blob

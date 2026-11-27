@@ -38,7 +38,13 @@ export async function GET(request: Request): Promise<Response> {
     },
     body: ssml,
   })
-  if (!r.ok) return json({ error: 'azure-tts', status: r.status }, 502)
+  // The free tier allows about 20 voice requests a minute; pass that on so the app can wait and retry.
+  if (r.status === 429) {
+    const res = json({ error: 'azure-busy', status: 429 }, 429)
+    res.headers.set('retry-after', r.headers.get('retry-after') ?? '10')
+    return res
+  }
+  if (!r.ok) return json({ error: `azure-tts-${r.status}`, status: r.status }, 502)
   return new Response(await r.arrayBuffer(), {
     headers: {
       'content-type': 'audio/mpeg',

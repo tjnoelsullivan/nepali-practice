@@ -181,7 +181,7 @@ export function Listen({ deck }: { deck: Deck }) {
                     style={{
                       width:
                         build.step === 'rendering'
-                          ? `${Math.round(((build.p.stage === 'voices' ? 0 : 60) + (build.p.done / Math.max(1, build.p.total)) * (build.p.stage === 'voices' ? 60 : 40)))}%`
+                          ? `${Math.max(5, Math.round((build.p.done / Math.max(1, build.p.total)) * 100))}%`
                           : '5%',
                     }}
                   />
@@ -189,10 +189,14 @@ export function Listen({ deck }: { deck: Deck }) {
                 <p className="small muted">
                   {build.step === 'writing'
                     ? 'Writing scenes…'
-                    : build.p.stage === 'voices'
-                      ? `Recording voices ${build.p.done} of ${build.p.total}…`
-                      : 'Putting it together…'}
+                    : `Recording voices… ${Math.round((build.p.done / Math.max(1, build.p.total)) * 100)}%`}
                 </p>
+                {build.step === 'rendering' && build.p.slowed && build.p.stage === 'voices' && (
+                  <p className="small muted">
+                    The free voice service allows about 20 clips a minute, so this can take a few minutes. Keep the
+                    screen on until it's done. Clips are saved, so the next episode is much faster.
+                  </p>
+                )}
                 <button className="ghost" onClick={() => abort.current?.abort()}>
                   Cancel
                 </button>

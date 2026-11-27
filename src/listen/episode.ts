@@ -68,10 +68,12 @@ export function lineSteps(s: Sentence, mode: LineMode, scene: string, cue = '', 
   const cap: Caption = { scene, en: s.en }
   const full: Caption = { scene, en: s.en, np }
   const steps: Step[] = []
-  if (cue) steps.push({ seg: { kind: 'en', text: cue }, caption: { scene } })
+  // The scene cue and the prompt are one narrator clip, so an episode asks for fewer voices.
+  const lead = cue ? cue.trim().replace(/([^.!?])$/, '$1.') + ' ' : ''
   if (mode === 'say') {
     // English prompt -> try it yourself -> hear it -> repeat -> hear it again.
-    steps.push({ seg: { kind: 'en', text: recall ? `Again: how would you say, ${s.en}` : `How would you say, ${s.en}` }, caption: cap })
+    const ask = recall ? `Again: how would you say, ${s.en}` : `How would you say, ${s.en}`
+    steps.push({ seg: { kind: 'en', text: lead + ask }, caption: cap })
     steps.push({ seg: { kind: 'pause', ms: sayPause(s) }, caption: cap })
     steps.push({ seg: voice, caption: full })
     steps.push({ seg: { kind: 'pause', ms: repeatPause(s) }, caption: full })
@@ -79,7 +81,7 @@ export function lineSteps(s: Sentence, mode: LineMode, scene: string, cue = '', 
     steps.push({ seg: { kind: 'pause', ms: 900 }, caption: full })
   } else {
     // English -> hear it -> repeat -> hear it slowly -> repeat.
-    steps.push({ seg: { kind: 'en', text: s.en }, caption: cap })
+    steps.push({ seg: { kind: 'en', text: lead + s.en }, caption: cap })
     steps.push({ seg: { kind: 'pause', ms: 500 }, caption: cap })
     steps.push({ seg: voice, caption: full })
     steps.push({ seg: { kind: 'pause', ms: repeatPause(s) }, caption: full })
@@ -144,8 +146,7 @@ export function planEpisode(
     for (const sc of usable) {
       if (ms >= target) break
       add([
-        { seg: { kind: 'en', text: sc.title + '.' }, caption: { scene: sc.title } },
-        { seg: { kind: 'en', text: sc.intro }, caption: { scene: sc.title } },
+        { seg: { kind: 'en', text: `${sc.title}. ${sc.intro}` }, caption: { scene: sc.title } },
         { seg: { kind: 'pause', ms: 800 }, caption: { scene: sc.title } },
       ])
       for (const l of sc.lines) {

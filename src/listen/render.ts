@@ -3,7 +3,7 @@
 // clips together with timers gets paused when the screen locks.
 import { Mp3Encoder } from '@breezystack/lamejs'
 import { db, recordingBlob } from '../db'
-import { speechUrl, ttsBlob } from '../voice/tts'
+import { speechUrl, ttsBlob, ttsCached } from '../voice/tts'
 import type { Caption, Step } from './episode'
 
 export const RATE = 24000
@@ -13,7 +13,13 @@ const FRAME = 1152
 /** Where each caption starts, in seconds into the episode. */
 export type Cue = { at: number; caption: Caption }
 export type Rendered = { mp3: ArrayBuffer; seconds: number; cues: Cue[] }
-export type Progress = { done: number; total: number; stage: 'voices' | 'assembling' }
+export type Progress = {
+  done: number
+  total: number
+  stage: 'voices' | 'assembling'
+  /** The voice service asked us to slow down (Azure free tier: about 20 clips a minute). */
+  slowed?: boolean
+}
 
 function clipKey(st: Step): string | null {
   const s = st.seg
@@ -23,15 +29,15 @@ function clipKey(st: Step): string | null {
   return (s.slow ? 'slow:' : 'np:') + s.dev
 }
 
-async function clipBlob(st: Step): Promise<Blob> {
+async function clipBlob(st: Step, onWait?: (ms: number) => void): Promise<Blob> {
   const s = st.seg
-  if (s.kind === 'en') return ttsBlob(speechUrl(s.text, { english: true }))
+  if (s.kind === 'en') return ttsBlob(speechUrl(s.text, { english: true }), onWait)
   if (s.kind === 'np') {
     if (s.audioId && !s.slow) {
       const rec = await db.recordings.get(s.audioId)
       if (rec) return recordingBlob(rec)
     }
-    return ttsBlob(speechUrl(s.dev, { slow: s.slow }))
+    return ttsBlob(speechUrl(s.dev, { slow: s.slow }), onWait)
   }
   throw new Error('no audio for a pause')
 }
@@ -55,15 +61,6 @@ async function toPcm(ctx: BaseAudioContext, blob: Blob): Promise<Int16Array> {
   return out
 }
 
-async function pool<T>(items: T[], n: number, fn: (t: T) => Promise<void>) {
-  let i = 0
-  await Promise.all(
-    Array.from({ length: Math.min(n, items.length) }, async () => {
-      while (i < items.length) await fn(items[i++])
-    }),
-  )
-}
-
 export async function renderEpisode(
   steps: Step[],
   onProgress: (p: Progress) => void,
@@ -71,40 +68,59 @@ export async function renderEpisode(
   /** Stop at the first scene or line that would start after this, then play the closing. */
   maxSeconds = Infinity,
 ): Promise<Rendered> {
-  // 1. Fetch and decode every distinct clip (repeats are reused).
-  const keys = [...new Set(steps.map(clipKey).filter((k): k is string => !!k))]
-  const first = new Map<string, Step>()
-  for (const st of steps) {
-    const k = clipKey(st)
-    if (k && !first.has(k)) first.set(k, st)
-  }
+  // Clips are fetched in playing order, a few steps ahead of the encoder, so an episode only
+  // asks the voice service for the clips it actually uses. Repeats are reused.
   const ctx = new OfflineAudioContext(1, 1, RATE)
-  const pcm = new Map<string, Int16Array>()
-  let done = 0
-  const failures: unknown[] = []
-  onProgress({ done, total: keys.length, stage: 'voices' })
-  await pool(keys, 4, async (k) => {
-    if (signal?.aborted) throw new DOMException('Cancelled', 'AbortError')
-    const st = first.get(k)!
-    try {
-      pcm.set(k, await toPcm(ctx, await clipBlob(st)))
-    } catch (e) {
-      try {
-        // A recording that won't decode falls back to the synthetic voice.
-        if (st.seg.kind === 'np' && st.seg.audioId) pcm.set(k, await toPcm(ctx, await ttsBlob(speechUrl(st.seg.dev))))
-        else throw e
-      } catch (e2) {
-        failures.push(e2)
-        pcm.set(k, new Int16Array(0))
-      }
+  const loads = new Map<string, Promise<Int16Array>>()
+  let fetched = 0
+  let failed = 0
+  let firstError: unknown = null
+  // Fetch freely until the voice service says it's busy, then pace requests to fit the free
+  // tier (one every 3.2 s, under 20 a minute). Clips already on the phone skip the queue.
+  let slowed = false
+  let nextSlot = 0
+  let seconds = 0
+  const report = () => onProgress({ done: Math.min(seconds, maxSeconds), total: maxSeconds, stage: 'voices', slowed })
+  const onWait = () => {
+    slowed = true
+    report()
+  }
+  const paced = async (st: Step) => {
+    const sg = st.seg
+    if (!slowed || sg.kind === 'pause' || (sg.kind === 'np' && sg.audioId && !sg.slow)) return
+    const url = sg.kind === 'en' ? speechUrl(sg.text, { english: true }) : speechUrl(sg.dev, { slow: sg.slow })
+    if (await ttsCached(url)) return
+    const wait = nextSlot - Date.now()
+    nextSlot = Math.max(Date.now(), nextSlot) + 3200
+    if (wait > 0) await new Promise((r) => setTimeout(r, wait))
+  }
+  const load = (st: Step): Promise<Int16Array> => {
+    const k = clipKey(st)!
+    let p = loads.get(k)
+    if (!p) {
+      p = (async () => {
+        await paced(st)
+        try {
+          return await toPcm(ctx, await clipBlob(st, onWait))
+        } catch (e) {
+          try {
+            // A recording that won't decode falls back to the synthetic voice.
+            if (st.seg.kind === 'np' && st.seg.audioId) return await toPcm(ctx, await ttsBlob(speechUrl(st.seg.dev), onWait))
+            throw e
+          } catch (e2) {
+            failed++
+            firstError ??= e2
+            return new Int16Array(0)
+          }
+        } finally {
+          fetched++
+        }
+      })()
+      loads.set(k, p)
     }
-    onProgress({ done: ++done, total: keys.length, stage: 'voices' })
-  })
+    return p
+  }
 
-  // A few missing clips just leave a gap; many means the voice service isn't reachable.
-  if (failures.length > Math.max(2, keys.length * 0.1)) throw failures[0]
-
-  // 2. Encode in order, with silence for pauses, noting where each caption starts.
   const enc = new Mp3Encoder(1, RATE, KBPS)
   const parts: Uint8Array[] = []
   const cues: Cue[] = []
@@ -124,28 +140,46 @@ export async function renderEpisode(
     }
     carry = buf.slice(whole)
     samples += data.length
+    seconds = samples / RATE
   }
+  const LOOKAHEAD = 10
+  const outroStart = steps.findIndex((st) => st.outro)
   let lastCaption = ''
   let ending = false
+  report()
   for (let i = 0; i < steps.length; i++) {
     if (signal?.aborted) throw new DOMException('Cancelled', 'AbortError')
+    if (!ending && steps[i].boundary && !steps[i].outro && seconds >= maxSeconds) {
+      ending = true
+      if (outroStart > i) i = outroStart
+    }
     const st = steps[i]
-    if (!ending && st.boundary && !st.outro && samples / RATE >= maxSeconds) ending = true
     if (ending && !st.outro) continue
+    // Start fetching the next few voices while this one is encoded.
+    let ahead = 0
+    for (let j = i + 1; j < steps.length && ahead < LOOKAHEAD; j++) {
+      if (steps[j].seg.kind === 'pause') continue
+      if (ending && !steps[j].outro) continue
+      void load(steps[j])
+      ahead++
+    }
     const key = JSON.stringify(st.caption)
     if (key !== lastCaption) {
-      cues.push({ at: samples / RATE, caption: st.caption })
+      cues.push({ at: seconds, caption: st.caption })
       lastCaption = key
     }
     if (st.seg.kind === 'pause') push(new Int16Array(Math.round((st.seg.ms / 1000) * RATE)))
     else {
-      const clip = pcm.get(clipKey(st)!)!
-      if (!clip.length) continue
-      push(clip)
-      push(new Int16Array(Math.round(0.25 * RATE))) // a breath between voices
+      const clip = await load(st)
+      // A few missing clips just leave a gap; many means the voice service isn't reachable.
+      if (failed > Math.max(2, fetched * 0.1)) throw firstError
+      if (clip.length) {
+        push(clip)
+        push(new Int16Array(Math.round(0.25 * RATE))) // a breath between voices
+      }
     }
-    if (i % 20 === 0) {
-      onProgress({ done: i, total: steps.length, stage: 'assembling' })
+    if (i % 10 === 0) {
+      report()
       await new Promise((r) => setTimeout(r, 0))
     }
   }
