@@ -135,3 +135,14 @@ describe('learner marks an accepted answer wrong', async () => {
     expect((await d.sentenceStats.get('s'))?.npEnCorrect).toBe(2)
   })
 })
+
+describe('listening and the streak', () => {
+  it('listening time counts toward the goal but not active minutes', () => {
+    const days = new Map<string, DayRecord>([
+      ['2026-11-25', { date: '2026-11-25', activeMs: 5 * 60_000, listenMs: 10 * 60_000, answers: 3, goalMs: 15 * 60_000 }],
+      ['2026-11-26', { date: '2026-11-26', activeMs: 0, listenMs: 15 * 60_000, answers: 0 }],
+    ])
+    expect(currentStreak(days, new Date(2026, 10, 26, 12), 15 * 60_000)).toBe(2)
+    expect(days.get('2026-11-26')!.activeMs).toBe(0)
+  })
+})

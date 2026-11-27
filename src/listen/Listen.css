@@ -1,0 +1,101 @@
+/* Listen tab */
+.listen-player {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.lp-scene {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--sun);
+  min-height: 1.4em;
+}
+.lp-play {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--sun), var(--ember));
+  box-shadow: 0 10px 30px rgba(240, 138, 75, 0.35);
+  display: grid;
+  place-items: center;
+}
+.lp-play svg {
+  width: 36px;
+  height: 36px;
+  fill: var(--bg);
+}
+.lp-play.on {
+  animation: lp-breathe 2.4s ease-in-out infinite;
+}
+@keyframes lp-breathe {
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 12px 38px rgba(240, 138, 75, 0.5);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-play.on {
+    animation: none;
+  }
+}
+.lp-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.lp-bar input {
+  flex: 1;
+  accent-color: var(--sun);
+}
+.lp-bar button {
+  border: 1px solid var(--card-border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 6px 8px;
+  font: inherit;
+  font-size: 0.8rem;
+}
+.lp-times {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.lp-caption {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 247, 234, 0.05);
+}
+.lp-np {
+  margin-top: 4px;
+  font-weight: 600;
+  color: var(--sun);
+}
+.lp-build {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+.lp-progress {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 247, 234, 0.1);
+  overflow: hidden;
+}
+.lp-progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--sun), var(--ember));
+  transition: width 0.3s;
+}
+.listen-player + .card .segmented,
+.card .segmented.small-seg {
+  margin: 10px 0;
+}
+.error-text {
+  color: var(--flag-red);
+}

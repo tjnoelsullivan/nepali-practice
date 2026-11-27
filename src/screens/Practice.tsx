@@ -15,7 +15,7 @@ import { listenOnce, type Listening } from '../voice/stt'
 import { playRecording, prefetch, speak, stopSpeaking, unlockAudio } from '../voice/tts'
 import type { Deck } from '../hooks/useDeck'
 import { celebrate, playSound } from '../fx'
-import { dayKey } from '../core/activity'
+import { dayKey, goalProgressMs } from '../core/activity'
 import { usePrefs } from '../core/prefs'
 import { useDays } from '../core/tracker'
 
@@ -41,7 +41,7 @@ export function Practice({ deck }: { deck: Deck }) {
   const { days } = useDays()
   const { goalMinutes } = usePrefs()
   const [goalToast, setGoalToast] = useState(false)
-  const todayMs = days.get(dayKey(new Date()))?.activeMs ?? 0
+  const todayMs = goalProgressMs(days.get(dayKey(new Date())))
   const metBefore = useRef<boolean | null>(null)
   useEffect(() => {
     const met = todayMs >= goalMinutes * 60_000
