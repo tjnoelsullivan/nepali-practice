@@ -3,6 +3,7 @@
 // server; the browser gets a 10-minute token from /api/speech-token.
 import { api } from './api'
 import { markActive } from '../core/tracker'
+import { micStream, touchMic } from './mic'
 
 type Token = { token: string; region: string; at: number }
 let tok: Token | null = null
@@ -27,18 +28,22 @@ export function listenOnce(): Listening {
   let cancelled = false
   let close: () => void = () => {}
   const result = (async () => {
-    const [sdk, t] = await Promise.all([import('microsoft-cognitiveservices-speech-sdk'), token()])
-    if (cancelled) return ''
+    const [sdk, t, stream] = await Promise.all([import('microsoft-cognitiveservices-speech-sdk'), token(), micStream()])
+    if (cancelled) {
+      stream.getTracks().forEach((x) => x.stop())
+      return ''
+    }
     const cfg = sdk.SpeechConfig.fromAuthorizationToken(t.token, t.region)
     cfg.speechRecognitionLanguage = 'ne-NP'
     cfg.setProperty(sdk.PropertyId.SpeechServiceConnection_EndSilenceTimeoutMs, '1200')
     cfg.setProperty(sdk.PropertyId.SpeechServiceConnection_InitialSilenceTimeoutMs, '8000')
-    const rec = new sdk.SpeechRecognizer(cfg, sdk.AudioConfig.fromDefaultMicrophoneInput())
+    const rec = new sdk.SpeechRecognizer(cfg, sdk.AudioConfig.fromStreamInput(stream))
     close = () => rec.close()
     return await new Promise<string>((resolve, reject) => {
       rec.recognizeOnceAsync(
         (r) => {
           markActive()
+          touchMic()
           rec.close()
           if (r.reason === sdk.ResultReason.RecognizedSpeech) resolve(r.text ?? '')
           else if (r.reason === sdk.ResultReason.Canceled) {
@@ -70,7 +75,7 @@ export function listenOnce(): Listening {
 /** Ask for the mic once, so the first real answer isn't interrupted by the permission prompt. */
 export async function checkMic(): Promise<boolean> {
   try {
-    const s = await navigator.mediaDevices.getUserMedia({ audio: true })
+    const s = await micStream()
     s.getTracks().forEach((t) => t.stop())
     return true
   } catch {
