@@ -51,6 +51,8 @@ export function explainError(e: unknown): string {
   if (e instanceof ApiError) {
     if (e.code === 'access-code') return 'Enter your access code in Library > Settings.'
     if (e.code === 'azure-not-configured') return 'Azure Speech keys are not set in Vercel yet.'
+    if (e.code === 'azure-busy') return 'The voice service is busy (free tier limit). Wait a minute and try again.'
+    if (e.code.startsWith('azure-tts')) return `The voice service returned an error (${e.code.replace('azure-tts-', '')}). Try again in a minute.`
     if (e.code === 'claude-not-configured') return 'The Claude key is not set in Vercel yet.'
     if (e.status === 404) return 'Voice needs the deployed app (not available in this preview).'
     return `Server error (${e.code}).`

@@ -28,6 +28,9 @@
     },
     "api/suggest.ts": {
       "maxDuration": 60
+    },
+    "api/scenes.ts": {
+      "maxDuration": 120
     }
   }
 }
